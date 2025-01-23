@@ -52,7 +52,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="/logo.png"
+              src="/lovable-uploads/logo.png"
               alt="Pauget et Fils"
               className="h-12 w-auto"
             />
