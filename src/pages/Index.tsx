@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 
 const Index = () => {
   return (
@@ -10,7 +12,7 @@ const Index = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/hero-image.jpg')",
+            backgroundImage: "url('/hero-bg.png')",
           }}
         />
         <div className="container mx-auto px-4 relative z-20">
@@ -63,6 +65,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Key Figures Section */}
+      <KeyFiguresSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Contact CTA Section */}
       <section className="py-20 bg-accent text-accent-foreground">
