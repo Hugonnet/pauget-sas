@@ -17,7 +17,7 @@ const App = () => (
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-grow pt-20">
+          <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
               {/* Additional routes will be added here */}

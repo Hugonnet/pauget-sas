@@ -1,20 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const menuItems = [
     { name: "Accueil", path: "/" },
@@ -41,63 +31,61 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="bg-white w-full z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center space-x-2">
-            <img
-              src="/lovable-uploads/logo.png"
-              alt="Pauget et Fils"
-              className="h-12 w-auto"
-            />
-          </Link>
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-6">
+          <div className="flex justify-between items-center">
+            <Link to="/" className="flex items-center">
+              <img
+                src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
+                alt="Pauget et Fils"
+                className="h-32 w-auto"
+              />
+            </Link>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {menuItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.path}
-                  className={`text-secondary-foreground hover:text-primary transition-colors duration-200 ${
-                    location.pathname === item.path ? "text-primary" : ""
-                  }`}
-                >
-                  {item.name}
-                </Link>
-                {item.subItems && (
-                  <div className="absolute left-0 mt-2 w-60 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200">
-                    <div className="pt-2">
-                      <div className="bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        {item.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
+          <nav className="hidden lg:flex">
+            <ul className="flex space-x-8">
+              {menuItems.map((item) => (
+                <li key={item.name} className="relative group">
+                  <Link
+                    to={item.path}
+                    className={`text-lg font-medium hover:text-primary transition-colors duration-200 ${
+                      location.pathname === item.path ? "text-primary" : "text-secondary-foreground"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.subItems && (
+                    <div className="absolute left-0 mt-2 w-60 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200">
+                      <div className="pt-2">
+                        <div className="bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </li>
+              ))}
+            </ul>
           </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
 
@@ -109,11 +97,11 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 py-6">
           <div className="flex justify-between items-center mb-8">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center">
               <img
-                src="/logo.png"
+                src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
                 alt="Pauget et Fils"
-                className="h-12 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
             <button
@@ -129,7 +117,7 @@ const Header = () => {
                 <Link
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-lg ${
+                  className={`block text-lg font-medium ${
                     location.pathname === item.path
                       ? "text-primary"
                       : "text-secondary-foreground"
