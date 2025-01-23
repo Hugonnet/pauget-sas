@@ -100,21 +100,21 @@ const services = [
     title: "Plâtrerie",
     description:
       "Des solutions sur-mesure pour vos travaux de plâtrerie, du traditionnel au contemporain.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+    image: "/hero-bg.png",
     link: "/platrerie",
   },
   {
     title: "Peinture",
     description:
       "Une expertise reconnue en peinture intérieure et extérieure pour sublimer vos espaces.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "/hero-bg.png",
     link: "/peintures",
   },
   {
     title: "Isolation",
     description:
       "Des solutions d'isolation performantes pour un confort optimal et des économies d'énergie.",
-    image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9",
+    image: "/hero-bg.png",
     link: "/isolation",
   },
 ];
