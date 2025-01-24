@@ -9,8 +9,8 @@ const Map = () => {
   useEffect(() => {
     if (!mapContainer.current) return;
 
-    // Initialize map
-    mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN'; // We'll need to set this up
+    // Initialize map with a public token (vous devrez remplacer ce token par le vôtre)
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGxhdHJlY2hhb3MiLCJhIjoiY2xzcnRxOWRwMGNvMzJrcGM0ZnB0NmZ6ZSJ9.PJeQ4fZGVFGhUXPAQzRKtA';
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
