@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="py-12" style={{ background: 'linear-gradient(to bottom, #2DA1BA, #024196)' }}>
+    <footer className="py-12" style={{ background: 'linear-gradient(to bottom, #F9EBDF, #998475)' }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo Column */}
           <div className="flex justify-center md:justify-start">
             <img 
-              src="/lovable-uploads/a9b52115-b61b-4e22-82b6-57b5fd44b3ab.png" 
+              src="/lovable-uploads/74a83115-7afa-4489-bc0d-6ff5037638f0.png" 
               alt="Pauget et Fils Logo" 
-              className="h-32 object-contain"
+              className="h-48 object-contain"
             />
           </div>
 
@@ -74,10 +74,26 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/politique-de-confidentialite"
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Politique de confidentialité
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mentions-legales"
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Mentions légales
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Column (moved to last position) */}
+          {/* Contact Column */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-white">Pauget et Fils</h3>
             <div className="space-y-2">
