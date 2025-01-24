@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo Column */}
           <div className="flex justify-center md:justify-start">
             <img 
-              src="/lovable-uploads/748088dd-9eb3-4d2a-ba04-2953ffdd00a4.png" 
+              src="/lovable-uploads/9dccdd9e-61ea-425c-96af-8e7f9242ede2.png" 
               alt="Pauget et Fils Logo" 
               className="h-64 object-contain"
             />
