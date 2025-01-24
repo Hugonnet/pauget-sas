@@ -71,26 +71,6 @@ const Index = () => {
 
       {/* Testimonials Section */}
       <TestimonialsSection />
-
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-accent text-accent-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Prêt à démarrer votre projet ?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de vos besoins et obtenir
-            un devis personnalisé.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-md transition-colors duration-200"
-          >
-            <span>Nous contacter</span>
-            <ArrowRight size={20} />
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };
