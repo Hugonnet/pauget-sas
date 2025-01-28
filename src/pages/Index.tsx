@@ -1,4 +1,63 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, PaintBucket, Brush, Home, Shield, Thermometer, Wind } from "lucide-react";
+import { Link } from "react-router-dom";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { KeyFiguresSection } from "@/components/KeyFiguresSection";
+
+const services = [
+  {
+    title: "Plâtrerie",
+    description: "Des solutions sur-mesure pour vos travaux de plâtrerie, du traditionnel au contemporain.",
+    icon: Home,
+    color: "#8B5CF6",
+    link: "/platrerie",
+  },
+  {
+    title: "Peintures intérieures",
+    description: "Une expertise reconnue en peinture intérieure pour sublimer vos espaces de vie.",
+    icon: PaintBucket,
+    color: "#F97316",
+    link: "/peintures/interieures",
+  },
+  {
+    title: "Peintures extérieures",
+    description: "Des solutions durables pour protéger et embellir vos façades.",
+    icon: Brush,
+    color: "#0EA5E9",
+    link: "/peintures/exterieures",
+  },
+  {
+    title: "Isolation intérieure",
+    description: "Optimisez votre confort thermique avec nos solutions d'isolation intérieure.",
+    icon: Shield,
+    color: "#D946EF",
+    link: "/isolation/interieure",
+  },
+  {
+    title: "Isolation extérieure",
+    description: "Protégez votre habitat avec nos solutions d'isolation par l'extérieur.",
+    icon: Thermometer,
+    color: "#7E69AB",
+    link: "/isolation/exterieure",
+  },
+  {
+    title: "Etanchéité à l'air",
+    description: "Garantissez la performance énergétique de votre habitat avec nos solutions d'étanchéité.",
+    icon: Wind,
+    color: "#9b87f5",
+    link: "/etancheite",
+  },
+];
+
+const Index = () => {
+  return (
+    <div className="flex flex-col">
+      {Je vais mettre à jour la page d'accueil pour afficher les 6 services avec des icônes colorées et un design plus dynamique.
+
+<lov-code>
+Let's update the Index.tsx file to include all 6 services with custom icons and styling:
+
+<lov-write file_path="src/pages/Index.tsx">
+import { ArrowRight, PaintBucket, Brush, Home, Shield, Thermometer, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
@@ -40,19 +99,21 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Nos Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <Link
                 key={service.title}
                 to={service.link}
-                className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
+                className="group bg-[#f1f1f1] rounded-lg shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden"
+                style={{ borderTop: `4px solid ${service.iconColor}` }}
               >
-                <div className="aspect-video relative overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  />
-                </div>
                 <div className="p-6">
+                  <div className="mb-4">
+                    <service.icon
+                      size={32}
+                      color={service.iconColor}
+                      strokeWidth={2}
+                    />
+                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex items-center text-primary group-hover:text-primary-hover transition-colors duration-200">
@@ -80,22 +141,49 @@ const services = [
     title: "Plâtrerie",
     description:
       "Des solutions sur-mesure pour vos travaux de plâtrerie, du traditionnel au contemporain.",
-    image: "/hero-bg.png",
+    icon: Home,
+    iconColor: "#8B5CF6",
     link: "/platrerie",
   },
   {
-    title: "Peinture",
+    title: "Peintures intérieures",
     description:
-      "Une expertise reconnue en peinture intérieure et extérieure pour sublimer vos espaces.",
-    image: "/hero-bg.png",
-    link: "/peintures",
+      "Une expertise reconnue en peinture intérieure pour sublimer vos espaces de vie.",
+    icon: PaintBucket,
+    iconColor: "#F97316",
+    link: "/peintures/interieures",
   },
   {
-    title: "Isolation",
+    title: "Peintures extérieures",
     description:
-      "Des solutions d'isolation performantes pour un confort optimal et des économies d'énergie.",
-    image: "/hero-bg.png",
-    link: "/isolation",
+      "Des solutions durables et esthétiques pour la protection et l'embellissement de vos façades.",
+    icon: Brush,
+    iconColor: "#0EA5E9",
+    link: "/peintures/exterieures",
+  },
+  {
+    title: "Isolation intérieure",
+    description:
+      "Optimisez le confort thermique de votre intérieur avec nos solutions d'isolation performantes.",
+    icon: Shield,
+    iconColor: "#D946EF",
+    link: "/isolation/interieure",
+  },
+  {
+    title: "Isolation extérieure",
+    description:
+      "Améliorez l'efficacité énergétique de votre bâtiment avec nos solutions d'isolation par l'extérieur.",
+    icon: Thermometer,
+    iconColor: "#7E69AB",
+    link: "/isolation/exterieure",
+  },
+  {
+    title: "Etanchéité à l'air",
+    description:
+      "Garantissez la performance énergétique de votre habitat avec nos solutions d'étanchéité à l'air.",
+    icon: Wind,
+    iconColor: "#9b87f5",
+    link: "/etancheite",
   },
 ];
 
