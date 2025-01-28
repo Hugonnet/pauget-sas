@@ -10,7 +10,7 @@ const Map = () => {
     if (!mapContainer.current) return;
 
     // Initialize map with a public token (vous devrez remplacer ce token par le vôtre)
-    mapboxgl.accessToken = 'pk.eyJ1IjoicGxhdHJlY2hhb3MiLCJhIjoiY2xzcnRxOWRwMGNvMzJrcGM0ZnB0NmZ6ZSJ9.PJeQ4fZGVFGhUXPAQzRKtA';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXRpaHVnbyIsImEiOiJjbTZnYzU4bjUwY21uMmxzYms2ejZubTl2In0.V_R0UAV0XAuugnaq6q0gwg';
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
