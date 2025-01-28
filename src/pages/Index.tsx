@@ -8,59 +8,45 @@ const services = [
     title: "Plâtrerie",
     description: "Des solutions sur-mesure pour vos travaux de plâtrerie, du traditionnel au contemporain.",
     icon: Home,
-    color: "#8B5CF6",
+    iconColor: "#8B5CF6",
     link: "/platrerie",
   },
   {
     title: "Peintures intérieures",
     description: "Une expertise reconnue en peinture intérieure pour sublimer vos espaces de vie.",
     icon: PaintBucket,
-    color: "#F97316",
+    iconColor: "#F97316",
     link: "/peintures/interieures",
   },
   {
     title: "Peintures extérieures",
     description: "Des solutions durables pour protéger et embellir vos façades.",
     icon: Brush,
-    color: "#0EA5E9",
+    iconColor: "#0EA5E9",
     link: "/peintures/exterieures",
   },
   {
     title: "Isolation intérieure",
     description: "Optimisez votre confort thermique avec nos solutions d'isolation intérieure.",
     icon: Shield,
-    color: "#D946EF",
+    iconColor: "#D946EF",
     link: "/isolation/interieure",
   },
   {
     title: "Isolation extérieure",
     description: "Protégez votre habitat avec nos solutions d'isolation par l'extérieur.",
     icon: Thermometer,
-    color: "#7E69AB",
+    iconColor: "#7E69AB",
     link: "/isolation/exterieure",
   },
   {
     title: "Etanchéité à l'air",
     description: "Garantissez la performance énergétique de votre habitat avec nos solutions d'étanchéité.",
     icon: Wind,
-    color: "#9b87f5",
+    iconColor: "#9b87f5",
     link: "/etancheite",
   },
 ];
-
-const Index = () => {
-  return (
-    <div className="flex flex-col">
-      {Je vais mettre à jour la page d'accueil pour afficher les 6 services avec des icônes colorées et un design plus dynamique.
-
-<lov-code>
-Let's update the Index.tsx file to include all 6 services with custom icons and styling:
-
-<lov-write file_path="src/pages/Index.tsx">
-import { ArrowRight, PaintBucket, Brush, Home, Shield, Thermometer, Wind } from "lucide-react";
-import { Link } from "react-router-dom";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
-import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 
 const Index = () => {
   return (
@@ -135,56 +121,5 @@ const Index = () => {
     </div>
   );
 };
-
-const services = [
-  {
-    title: "Plâtrerie",
-    description:
-      "Des solutions sur-mesure pour vos travaux de plâtrerie, du traditionnel au contemporain.",
-    icon: Home,
-    iconColor: "#8B5CF6",
-    link: "/platrerie",
-  },
-  {
-    title: "Peintures intérieures",
-    description:
-      "Une expertise reconnue en peinture intérieure pour sublimer vos espaces de vie.",
-    icon: PaintBucket,
-    iconColor: "#F97316",
-    link: "/peintures/interieures",
-  },
-  {
-    title: "Peintures extérieures",
-    description:
-      "Des solutions durables et esthétiques pour la protection et l'embellissement de vos façades.",
-    icon: Brush,
-    iconColor: "#0EA5E9",
-    link: "/peintures/exterieures",
-  },
-  {
-    title: "Isolation intérieure",
-    description:
-      "Optimisez le confort thermique de votre intérieur avec nos solutions d'isolation performantes.",
-    icon: Shield,
-    iconColor: "#D946EF",
-    link: "/isolation/interieure",
-  },
-  {
-    title: "Isolation extérieure",
-    description:
-      "Améliorez l'efficacité énergétique de votre bâtiment avec nos solutions d'isolation par l'extérieur.",
-    icon: Thermometer,
-    iconColor: "#7E69AB",
-    link: "/isolation/exterieure",
-  },
-  {
-    title: "Etanchéité à l'air",
-    description:
-      "Garantissez la performance énergétique de votre habitat avec nos solutions d'étanchéité à l'air.",
-    icon: Wind,
-    iconColor: "#9b87f5",
-    link: "/etancheite",
-  },
-];
 
 export default Index;
