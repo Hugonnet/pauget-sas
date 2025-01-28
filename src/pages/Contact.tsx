@@ -136,18 +136,18 @@ const Contact = () => {
             <div className="space-y-4">
               <p className="flex items-center gap-2">
                 <span className="font-semibold">Adresse:</span>
-                <span>123 Rue Example, 69000 Lyon</span>
+                <span>4 Rue du Commerce, 01460 Port</span>
               </p>
               <p className="flex items-center gap-2">
                 <span className="font-semibold">Téléphone:</span>
-                <a href="tel:+33123456789" className="text-primary hover:underline">
-                  +33 1 23 45 67 89
+                <a href="tel:0672019849" className="text-primary hover:underline">
+                  06 72 01 98 49
                 </a>
               </p>
               <p className="flex items-center gap-2">
                 <span className="font-semibold">Email:</span>
                 <a href="mailto:contact@example.com" className="text-primary hover:underline">
-                  contact@example.com
+                  contact@platrerie-peinture-pauget.fr
                 </a>
               </p>
             </div>
