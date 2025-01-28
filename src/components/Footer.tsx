@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png" 
               alt="Pauget et Fils Logo" 
-              className="h-64 object-contain"
+              className="h-56 object-contain" // Réduit de h-64 à h-56 (environ 10%)
             />
           </div>
 
