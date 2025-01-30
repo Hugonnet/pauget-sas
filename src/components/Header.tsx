@@ -13,8 +13,7 @@ const Header = () => {
     { name: "Plâtrerie", path: "/platrerie" },
     {
       name: "Peintures",
-      path: "/peintures",
-      disabled: true,
+      path: "/#",
       subItems: [
         { name: "Peintures intérieures", path: "/peintures/interieures" },
         { name: "Peintures extérieures", path: "/peintures/exterieures" },
@@ -22,8 +21,7 @@ const Header = () => {
     },
     {
       name: "Isolation",
-      path: "/isolation",
-      disabled: true,
+      path: "/#",
       subItems: [
         { name: "Isolation intérieure", path: "/isolation/interieure" },
         { name: "Isolation extérieure", path: "/isolation/exterieure" },

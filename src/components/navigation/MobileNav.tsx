@@ -36,21 +36,15 @@ const MobileNav = ({ isOpen, setIsOpen, menuItems }: MobileNavProps) => {
         <nav className="space-y-4">
           {menuItems.map((item) => (
             <div key={item.name} className="space-y-2">
-              {!item.disabled ? (
-                <Link
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block text-lg font-medium transition-colors duration-200 
-                    ${location.pathname === item.path ? "text-white bg-primary" : "text-secondary-foreground hover:text-white"}`}
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                <span className="block text-lg font-medium text-gray-400 cursor-not-allowed">
-                  {item.name}
-                </span>
-              )}
-              {item.subItems && !item.disabled && (
+              <Link
+                to={item.path}
+                onClick={() => setIsOpen(false)}
+                className={`block text-lg font-medium transition-colors duration-200 
+                  ${location.pathname === item.path ? "text-white bg-primary" : "text-secondary-foreground hover:text-white"}`}
+              >
+                {item.name}
+              </Link>
+              {item.subItems && (
                 <div className="pl-4 space-y-2">
                   {item.subItems.map((subItem) => (
                     <Link
