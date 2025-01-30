@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Colonne 1 - Logo et informations */}
           <div className="flex flex-col items-center md:items-start">
             <img
-              src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
+              src="/logo.png"
               alt="Pauget et Fils"
               className="h-[19.44px] w-auto mb-4"
             />
