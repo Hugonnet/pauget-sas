@@ -37,8 +37,8 @@ export default {
           foreground: "#FFFFFF",
         },
         card: {
-          DEFAULT: "#FDE1D3",
-          hover: "#FCE0D0",
+          DEFAULT: "#CAB9AB",
+          hover: "#BCA89A",
         },
       },
       borderRadius: {
