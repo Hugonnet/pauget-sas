@@ -8,10 +8,10 @@ const PeinturesExterieures = () => {
         {/* Hero Section */}
         <section className="mb-16 animate-fadeIn">
           <h1 className="text-4xl md:text-5xl font-bold text-accent mb-6">
-            Peinture Extérieure Professionnelle
+            Rénovation et Protection de vos Façades
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
-            Protégez et embellissez votre façade avec nos solutions de peinture extérieure durables.
+            Donnez une nouvelle vie à vos façades avec nos solutions de peinture extérieure professionnelles et durables.
           </p>
         </section>
 
@@ -24,14 +24,14 @@ const PeinturesExterieures = () => {
                 Notre Expertise en Peinture Extérieure
               </h2>
               <p className="text-gray-600 mb-4">
-                Pauget et Fils vous propose des solutions de peinture extérieure adaptées à tous types de surfaces. 
-                Nos produits de haute qualité garantissent une protection optimale contre les intempéries.
+                Depuis plus de 30 ans, Pauget et Fils met son savoir-faire au service de vos projets de rénovation extérieure. 
+                Nos solutions de peinture sont spécialement sélectionnées pour leur qualité et leur durabilité face aux conditions climatiques.
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Traitement des façades</li>
-                <li>Protection contre l'humidité</li>
-                <li>Résistance aux UV</li>
-                <li>Finitions durables</li>
+                <li>Diagnostic complet de vos façades</li>
+                <li>Préparation minutieuse des surfaces</li>
+                <li>Application de peintures haute performance</li>
+                <li>Finitions soignées et durables</li>
               </ul>
             </section>
 
@@ -43,19 +43,19 @@ const PeinturesExterieures = () => {
                 <div className="p-4 bg-white rounded-lg shadow-sm">
                   <h3 className="font-medium mb-2">Ravalement de Façade</h3>
                   <p className="text-gray-600">
-                    Rénovation complète de vos façades pour une nouvelle jeunesse.
+                    Un traitement complet pour restaurer et protéger vos murs extérieurs, incluant le nettoyage, la réparation et la mise en peinture.
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg shadow-sm">
-                  <h3 className="font-medium mb-2">Imperméabilisation</h3>
+                  <h3 className="font-medium mb-2">Protection Hydrofuge</h3>
                   <p className="text-gray-600">
-                    Protection efficace contre les infiltrations d'eau.
+                    Application de revêtements imperméabilisants pour protéger durablement vos façades contre les infiltrations d'eau.
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg shadow-sm">
-                  <h3 className="font-medium mb-2">Décoration</h3>
+                  <h3 className="font-medium mb-2">Finitions Décoratives</h3>
                   <p className="text-gray-600">
-                    Mise en valeur esthétique de votre extérieur.
+                    Large gamme de finitions et de teintes pour personnaliser l'aspect de votre façade selon vos préférences.
                   </p>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const PeinturesExterieures = () => {
             <div className="relative h-96 rounded-xl overflow-hidden shadow-lg animate-fadeIn">
               <img
                 src="https://images.unsplash.com/photo-1524230572899-a752b3835840"
-                alt="Façade peinte professionnellement"
+                alt="Façade rénovée par nos soins"
                 className="object-cover w-full h-full"
               />
             </div>
@@ -75,14 +75,14 @@ const PeinturesExterieures = () => {
               <div className="relative h-48 rounded-lg overflow-hidden shadow-md animate-fadeIn">
                 <img
                   src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a"
-                  alt="Détail de peinture extérieure"
+                  alt="Travaux de peinture en cours"
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden shadow-md animate-fadeIn">
                 <img
                   src="https://images.unsplash.com/photo-1486718448742-163732cd1544"
-                  alt="Finition de façade"
+                  alt="Détail d'une finition de façade"
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -93,16 +93,16 @@ const PeinturesExterieures = () => {
         {/* Call to Action */}
         <section className="bg-white p-8 rounded-xl shadow-sm text-center animate-fadeIn">
           <h2 className="text-2xl font-semibold mb-4">
-            Prêt à Rénover Votre Extérieur ?
+            Prêt à Transformer votre Façade ?
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Contactez-nous pour un devis gratuit et personnalisé. Notre équipe est à votre écoute pour réaliser vos projets de peinture extérieure.
+            Contactez-nous pour bénéficier d'un diagnostic gratuit et d'un devis personnalisé. Notre équipe d'experts est à votre écoute pour vous conseiller sur les meilleures solutions adaptées à vos besoins.
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-md transition-colors duration-200"
           >
-            <span>Demander un devis</span>
+            <span>Demander un devis gratuit</span>
             <ArrowRight size={20} />
           </Link>
         </section>
