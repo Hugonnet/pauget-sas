@@ -26,7 +26,7 @@ const Header = () => {
       ],
     },
     { name: "Étanchéité à l'air", path: "/etancheite" },
-    { name: "Nos partenaires", path: "/partenaires" },
+    { name: "Nos réalisations", path: "/realisations" },
     { name: "Contact", path: "/contact" },
   ];
 

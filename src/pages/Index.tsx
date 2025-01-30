@@ -1,6 +1,5 @@
 import { ArrowRight, PaintBucket, Brush, Home, Shield, Thermometer, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PartnersSection } from "@/components/PartnersSection";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 
 const services = [
@@ -115,9 +114,6 @@ const Index = () => {
 
       {/* Key Figures Section */}
       <KeyFiguresSection />
-
-      {/* Partners Section */}
-      <PartnersSection />
     </div>
   );
 };

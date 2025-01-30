@@ -15,7 +15,8 @@ import Isolation from "./pages/Isolation";
 import IsolationInterieure from "./pages/IsolationInterieure";
 import IsolationExterieure from "./pages/IsolationExterieure";
 import Etancheite from "./pages/Etancheite";
-import Partenaires from "./pages/Partenaires";
+import Realisations from "./pages/Realisations";
+import RealisationDetail from "./pages/RealisationDetail";
 
 const queryClient = new QueryClient();
 
@@ -38,7 +39,8 @@ const App = () => (
               <Route path="/isolation/interieure" element={<IsolationInterieure />} />
               <Route path="/isolation/exterieure" element={<IsolationExterieure />} />
               <Route path="/etancheite" element={<Etancheite />} />
-              <Route path="/partenaires" element={<Partenaires />} />
+              <Route path="/realisations" element={<Realisations />} />
+              <Route path="/realisations/:slug" element={<RealisationDetail />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
