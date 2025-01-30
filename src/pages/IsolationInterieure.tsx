@@ -8,12 +8,12 @@ const IsolationInterieure = () => {
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
         {/* Image de fond avec overlay diagonal */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1439337153520-7082a56a81f4')",
-          }}
-        />
+<div 
+  className="absolute inset-0 bg-cover bg-center"
+  style={{
+    backgroundImage: "url('/lovable-uploads/44008185-81d2-457f-adc3-94dc0a65b25c.png')",
+  }}
+/>
         
         {/* Overlay diagonal avec dégradé */}
         <div className="absolute inset-0">

@@ -43,7 +43,6 @@ const Header = () => {
               />
             </Link>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
@@ -52,14 +51,13 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex">
             <ul className="flex space-x-8">
               {menuItems.map((item) => (
                 <li key={item.name} className="relative group">
                   <Link
                     to={item.path}
-                    className={`text-lg font-medium hover:text-primary transition-colors duration-200 ${
+                    className={`text-lg font-medium hover:text-white transition-colors duration-200 ${
                       location.pathname === item.path ? "text-primary" : "text-secondary-foreground"
                     }`}
                   >
@@ -73,7 +71,7 @@ const Header = () => {
                             <Link
                               key={subItem.name}
                               to={subItem.path}
-                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
+                              className="block px-4 py-3 text-sm text-gray-700 hover:text-white hover:bg-primary transition-colors duration-200"
                             >
                               {subItem.name}
                             </Link>
@@ -89,7 +87,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={`lg:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -117,7 +114,7 @@ const Header = () => {
                 <Link
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-lg font-medium ${
+                  className={`block text-lg font-medium hover:text-white transition-colors duration-200 ${
                     location.pathname === item.path
                       ? "text-primary"
                       : "text-secondary-foreground"
@@ -132,7 +129,7 @@ const Header = () => {
                         key={subItem.name}
                         to={subItem.path}
                         onClick={() => setIsOpen(false)}
-                        className="block text-sm text-gray-600 hover:text-primary transition-colors duration-200"
+                        className="block text-sm text-gray-600 hover:text-white transition-colors duration-200"
                       >
                         {subItem.name}
                       </Link>
