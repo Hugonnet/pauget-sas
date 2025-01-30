@@ -1,4 +1,4 @@
-import { ArrowRight, Ruler, Shield, Star, Tool } from "lucide-react";
+import { ArrowRight, Ruler, Shield, Star, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -44,7 +44,7 @@ const Platrerie = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
+                className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
               >
                 <div className="text-primary mb-4">
                   <service.icon size={40} />
@@ -125,7 +125,7 @@ const Platrerie = () => {
       {/* Section CTA */}
       <section className="py-20">
         <div className="container">
-          <div className="bg-card rounded-2xl p-12 text-center relative overflow-hidden">
+          <div className="bg-[#CAB9AB] rounded-2xl p-12 text-center relative overflow-hidden">
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-6">
                 Prêt à Concrétiser Votre Projet de Plâtrerie ?
@@ -157,7 +157,7 @@ const services = [
   {
     title: "Plafonds & Cloisons",
     description: "Solutions sur mesure pour vos plafonds suspendus et cloisons, alliant esthétique et fonctionnalité.",
-    icon: Tool
+    icon: Wrench
   },
   {
     title: "Isolation Acoustique",
