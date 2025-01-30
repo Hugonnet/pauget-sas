@@ -7,23 +7,27 @@ const Platrerie = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Overlay diagonal */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40 transform -skew-y-6 origin-top-left z-10" />
-        
-        {/* Image de fond */}
+        {/* Image de fond avec overlay diagonal */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')",
-            filter: "brightness(0.8)"
           }}
         />
+        
+        {/* Overlay diagonal avec dégradé */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute bottom-0 w-full h-32 bg-background transform -skew-y-3 origin-bottom-right translate-y-16" />
+        </div>
         
         {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl font-bold mb-6">
-              Expert en Plâtrerie Traditionnelle et Moderne
+              Expert en Plâtrerie<br />
+              Traditionnelle et Moderne
             </h1>
             <p className="text-xl opacity-90 mb-8">
               Plus de 30 ans d'expertise dans la réalisation de vos projets de plâtrerie, 
@@ -33,10 +37,10 @@ const Platrerie = () => {
         </div>
       </section>
 
-      {/* Section Services */}
-      <section className="py-20 -mt-20">
+      {/* Section Services avec plus d'espacement */}
+      <section className="py-32">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -139,25 +143,6 @@ const services = [
     title: "Isolation Acoustique",
     description: "Expertise en isolation phonique pour un confort acoustique optimal dans vos espaces.",
     icon: Shield
-  }
-];
-
-const process = [
-  {
-    title: "Étude et Conseil",
-    description: "Analyse approfondie de vos besoins et proposition de solutions adaptées à votre projet."
-  },
-  {
-    title: "Préparation",
-    description: "Sélection des matériaux et préparation minutieuse des surfaces pour un résultat optimal."
-  },
-  {
-    title: "Réalisation",
-    description: "Mise en œuvre experte avec un souci constant du détail et de la qualité."
-  },
-  {
-    title: "Finitions",
-    description: "Soins particuliers apportés aux finitions pour un rendu impeccable."
   }
 ];
 
