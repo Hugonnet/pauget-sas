@@ -1,24 +1,78 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const figures = [
   {
-    number: "30+",
+    number: 30,
+    suffix: "+",
     label: "Années d'expérience",
   },
   {
-    number: "1000+",
+    number: 1000,
+    suffix: "+",
     label: "Projets réalisés",
   },
   {
-    number: "100%",
+    number: 100,
+    suffix: "%",
     label: "Clients satisfaits",
   },
   {
-    number: "15",
+    number: 15,
     label: "Artisans qualifiés",
   },
 ];
+
+const CountUp = ({ end, duration = 2, suffix = "" }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime = null;
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
+      setCount(Math.floor(progress * end));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [end, duration, isVisible]);
+
+  return (
+    <span ref={elementRef}>
+      {count}
+      {suffix}
+    </span>
+  );
+};
 
 export const KeyFiguresSection = () => {
   const ref = useRef(null);
@@ -47,7 +101,7 @@ export const KeyFiguresSection = () => {
                   delay: index * 0.1,
                 }}
               >
-                {figure.number}
+                <CountUp end={figure.number} suffix={figure.suffix || ""} />
               </motion.p>
               <motion.p
                 className="text-gray-600"

@@ -31,7 +31,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white w-full z-50 shadow-sm">
+    <header className="w-full z-50 shadow-sm" style={{ background: 'linear-gradient(to top, #F9EBDF, #998475)' }}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-6">
           <div className="flex justify-between items-center">
