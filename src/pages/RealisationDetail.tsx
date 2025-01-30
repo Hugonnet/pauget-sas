@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 import { Badge } from "@/components/ui/badge";
 
 const realisations = {
@@ -96,8 +95,6 @@ const RealisationDetail = () => {
               </div>
             ))}
           </div>
-
-          <KeyFiguresSection />
         </div>
       </div>
     </div>

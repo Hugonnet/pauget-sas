@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="py-12" style={{ background: 'linear-gradient(to bottom, #F9EBDF, #998475)' }}>
+    <footer className="py-12 border-t-4 border-[#C4A484]" style={{ background: 'linear-gradient(to bottom, #F9EBDF, #998475)' }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo Column */}
