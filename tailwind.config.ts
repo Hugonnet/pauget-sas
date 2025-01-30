@@ -22,7 +22,7 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "#f7efe8",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#C4A484",
@@ -35,6 +35,10 @@ export default {
         accent: {
           DEFAULT: "#4A4A4A",
           foreground: "#FFFFFF",
+        },
+        card: {
+          DEFAULT: "#FDE1D3",
+          hover: "#FCE0D0",
         },
       },
       borderRadius: {
@@ -59,12 +63,17 @@ export default {
           "0%": { transform: "translateY(100px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         fadeIn: "fadeIn 0.5s ease-out",
         slideUp: "slideUp 0.5s ease-out",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },
