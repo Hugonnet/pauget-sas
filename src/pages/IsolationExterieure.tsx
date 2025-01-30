@@ -5,13 +5,11 @@ import { motion } from "framer-motion";
 const IsolationExterieure = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Image de fond avec overlay diagonal */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/afe7f329-65c3-40bc-a03f-1e73dbf925d6.png')",
+            backgroundImage: "url('/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png')",
           }}
         />
         

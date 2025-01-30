@@ -5,15 +5,13 @@ import { motion } from "framer-motion";
 const IsolationInterieure = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Image de fond avec overlay diagonal */}
-<div 
-  className="absolute inset-0 bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/lovable-uploads/44008185-81d2-457f-adc3-94dc0a65b25c.png')",
-  }}
-/>
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/lovable-uploads/748088dd-9eb3-4d2a-ba04-2953ffdd00a4.png')",
+          }}
+        />
         
         {/* Overlay diagonal avec dégradé */}
         <div className="absolute inset-0">

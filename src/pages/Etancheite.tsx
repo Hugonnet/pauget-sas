@@ -5,13 +5,11 @@ import { motion } from "framer-motion";
 const Etancheite = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Image de fond avec overlay diagonal */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/74a83115-7afa-4489-bc0d-6ff5037638f0.png')",
+            backgroundImage: "url('/lovable-uploads/9dccdd9e-61ea-425c-96af-8e7f9242ede2.png')",
           }}
         />
         

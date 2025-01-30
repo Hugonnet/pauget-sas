@@ -1,17 +1,20 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
+import DesktopNav from "./navigation/DesktopNav";
+import MobileNav from "./navigation/MobileNav";
+import { MenuItem } from "./navigation/types";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { name: "Accueil", path: "/" },
     { name: "Plâtrerie", path: "/platrerie" },
     {
       name: "Peintures",
       path: "/peintures",
+      disabled: true,
       subItems: [
         { name: "Peintures intérieures", path: "/peintures/interieures" },
         { name: "Peintures extérieures", path: "/peintures/exterieures" },
@@ -20,6 +23,7 @@ const Header = () => {
     {
       name: "Isolation",
       path: "/isolation",
+      disabled: true,
       subItems: [
         { name: "Isolation intérieure", path: "/isolation/interieure" },
         { name: "Isolation extérieure", path: "/isolation/exterieure" },
@@ -47,100 +51,15 @@ const Header = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              <Menu size={24} />
             </button>
           </div>
 
-          <nav className="hidden lg:flex">
-            <ul className="flex space-x-8">
-              {menuItems.map((item) => (
-                <li key={item.name} className="relative group">
-                  <Link
-                    to={item.path}
-                    className={`text-lg font-medium hover:text-white transition-colors duration-200 ${
-                      location.pathname === item.path ? "text-primary" : "text-secondary-foreground"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.subItems && (
-                    <div className="absolute left-0 mt-2 w-60 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200">
-                      <div className="pt-2">
-                        <div className="bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          {item.subItems.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.path}
-                              className="block px-4 py-3 text-sm text-gray-700 hover:text-white hover:bg-primary transition-colors duration-200"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <DesktopNav menuItems={menuItems} />
         </div>
       </div>
 
-      <div
-        className={`lg:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between items-center mb-8">
-            <Link to="/" className="flex items-center">
-              <img
-                src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png"
-                alt="Pauget et Fils"
-                className="h-24 w-auto"
-              />
-            </Link>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
-            >
-              <X size={24} />
-            </button>
-          </div>
-          <nav className="space-y-4">
-            {menuItems.map((item) => (
-              <div key={item.name} className="space-y-2">
-                <Link
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block text-lg font-medium hover:text-white transition-colors duration-200 ${
-                    location.pathname === item.path
-                      ? "text-primary"
-                      : "text-secondary-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-                {item.subItems && (
-                  <div className="pl-4 space-y-2">
-                    {item.subItems.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.path}
-                        onClick={() => setIsOpen(false)}
-                        className="block text-sm text-gray-600 hover:text-white transition-colors duration-200"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-        </div>
-      </div>
+      <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} menuItems={menuItems} />
     </header>
   );
 };
