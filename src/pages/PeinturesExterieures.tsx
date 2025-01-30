@@ -36,10 +36,10 @@ const PeinturesExterieures = () => {
         <div className="relative z-10 h-full flex items-center">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fadeIn">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Peinture Extérieure Professionnelle
               </h1>
-              <p className="text-xl text-white/90 mb-8 animate-slideUp">
+              <p className="text-xl text-white/90 mb-8">
                 Protégez et embellissez durablement vos façades avec nos solutions
                 de peinture extérieure haute performance.
               </p>
