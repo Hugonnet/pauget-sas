@@ -23,12 +23,12 @@ const PeinturesExterieures = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section avec clip diagonal */}
-      <section className="relative h-[60vh] clip-diagonal bg-primary overflow-hidden">
+      <section className="relative h-[60vh] clip-diagonal overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1433086966358-54859d0ed716')",
+              "url('/lovable-uploads/f322515b-ccbf-411d-9046-cf52c2ca8941.png')",
           }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -66,7 +66,7 @@ const PeinturesExterieures = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 animate-float"
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 <div className="mb-4">
                   <service.icon

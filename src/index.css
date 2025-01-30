@@ -104,5 +104,6 @@
 @layer utilities {
   .clip-diagonal {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    background-color: #FDE1D3;
   }
 }

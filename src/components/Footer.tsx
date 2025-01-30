@@ -4,22 +4,25 @@ const Footer = () => {
   return (
     <footer className="bg-white">
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col items-center">
-          <img
-            src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
-            alt="Pauget et Fils"
-            className="h-24 w-auto mb-6"
-          />
-          <p className="text-gray-600 text-center">
-            © {new Date().getFullYear()} Pauget et Fils. Tous droits réservés.
-          </p>
-          <nav className="mt-4">
-            <ul className="flex space-x-4">
-              <li>
-                <Link to="/" className="text-gray-600 hover:text-primary">
-                  Accueil
-                </Link>
-              </li>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Colonne 1 - Logo et informations */}
+          <div className="flex flex-col items-center md:items-start">
+            <img
+              src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
+              alt="Pauget et Fils"
+              className="h-[21.6px] w-auto mb-4"
+            />
+            <p className="text-gray-600 text-sm">
+              © {new Date().getFullYear()} Pauget et Fils
+              <br />
+              Tous droits réservés.
+            </p>
+          </div>
+
+          {/* Colonne 2 - Services */}
+          <div>
+            <h3 className="font-semibold mb-4">Nos Services</h3>
+            <ul className="space-y-2">
               <li>
                 <Link to="/platrerie" className="text-gray-600 hover:text-primary">
                   Plâtrerie
@@ -40,6 +43,13 @@ const Footer = () => {
                   Étanchéité
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Colonne 3 - Informations */}
+          <div>
+            <h3 className="font-semibold mb-4">Informations</h3>
+            <ul className="space-y-2">
               <li>
                 <Link to="/partenaires" className="text-gray-600 hover:text-primary">
                   Partenaires
@@ -51,7 +61,18 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </nav>
+          </div>
+
+          {/* Colonne 4 - Contact */}
+          <div>
+            <h3 className="font-semibold mb-4">Contactez-nous</h3>
+            <address className="text-gray-600 not-italic">
+              <p>123 rue des Artisans</p>
+              <p>69000 Lyon</p>
+              <p>Tél : 04 72 00 00 00</p>
+              <p>Email : contact@paugetetfils.fr</p>
+            </address>
+          </div>
         </div>
       </div>
     </footer>
