@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#FDE1D3" }}>
+    <div className="min-h-screen bg-background">
       <div className="clip-diagonal bg-primary/10 pb-20">
         <div className="container mx-auto px-4 pt-12">
           <h1 className="text-4xl font-bold mb-8">Contact</h1>
@@ -44,9 +44,9 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 -mt-8">
+      <div className="container mx-auto px-4 -mt-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
             
             <Form {...form}>
@@ -58,7 +58,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Nom</FormLabel>
                       <FormControl>
-                        <Input placeholder="Votre nom" {...field} />
+                        <Input placeholder="Votre nom" {...field} className="bg-white/90" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -72,7 +72,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="votre@email.com" {...field} />
+                        <Input type="email" placeholder="votre@email.com" {...field} className="bg-white/90" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -86,7 +86,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Téléphone</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder="Votre numéro de téléphone" {...field} />
+                        <Input type="tel" placeholder="Votre numéro de téléphone" {...field} className="bg-white/90" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -100,7 +100,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Sujet</FormLabel>
                       <FormControl>
-                        <Input placeholder="Sujet de votre message" {...field} />
+                        <Input placeholder="Sujet de votre message" {...field} className="bg-white/90" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -116,7 +116,7 @@ const Contact = () => {
                       <FormControl>
                         <Textarea 
                           placeholder="Votre message" 
-                          className="min-h-[150px]"
+                          className="min-h-[150px] bg-white/90"
                           {...field} 
                         />
                       </FormControl>
@@ -127,7 +127,7 @@ const Contact = () => {
 
                 <Button 
                   type="submit" 
-                  className="w-full"
+                  className="w-full bg-primary hover:bg-primary-hover"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Envoi en cours..." : "Envoyer"}
@@ -137,7 +137,7 @@ const Contact = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
               <div className="space-y-4">
                 <p className="flex items-center gap-2">
@@ -159,7 +159,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="h-[400px] bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="h-[400px] bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
               <Map />
             </div>
           </div>

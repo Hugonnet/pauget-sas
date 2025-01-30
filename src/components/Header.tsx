@@ -31,13 +31,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full z-50 shadow-sm" style={{ background: 'linear-gradient(to top, #F9EBDF, #998475)' }}>
+    <header className="w-full z-50 shadow-sm" style={{ background: 'linear-gradient(to bottom, #998475, #F9EBDF)' }}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-6">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
+                src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png"
                 alt="Pauget et Fils"
                 className="h-32 w-auto"
               />
@@ -99,7 +99,7 @@ const Header = () => {
           <div className="flex justify-between items-center mb-8">
             <Link to="/" className="flex items-center">
               <img
-                src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
+                src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png"
                 alt="Pauget et Fils"
                 className="h-24 w-auto"
               />
