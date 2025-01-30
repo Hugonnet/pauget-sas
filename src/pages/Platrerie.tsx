@@ -11,7 +11,7 @@ const Platrerie = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')",
+            backgroundImage: "url('/lovable-uploads/01d0836d-25c4-4b2e-bc6d-ae8eeaea0cf9.png')",
           }}
         />
         
