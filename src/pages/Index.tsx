@@ -57,15 +57,15 @@ const Index = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/hero-bg.png')",
+            backgroundImage: "url('/lovable-uploads/hero-bg.png')",
           }}
         />
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
               Experts en plâtrerie et peinture depuis plus de 30 ans
             </h1>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90 mb-8 animate-slideUp">
               Donnez vie à vos projets avec Pauget et Fils, votre partenaire de confiance
               pour tous vos travaux de rénovation et d'aménagement.
             </p>
