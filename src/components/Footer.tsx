@@ -10,10 +10,10 @@ const Footer = () => {
             <img
               src="/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png"
               alt="Pauget et Fils"
-              className="h-[21.6px] w-auto mb-4"
+              className="h-[19.44px] w-auto mb-4"
             />
             <p className="text-gray-600 text-sm">
-              © {new Date().getFullYear()} Pauget et Fils
+              © 2025 Pauget et Fils
               <br />
               Tous droits réservés.
             </p>
