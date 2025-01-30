@@ -9,7 +9,7 @@ const Etancheite = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/9dccdd9e-61ea-425c-96af-8e7f9242ede2.png')",
+            backgroundImage: "url('/lovable-uploads/etancheite-a-l-air.png')",
           }}
         />
         
