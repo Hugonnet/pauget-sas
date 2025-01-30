@@ -7,30 +7,29 @@ const Platrerie = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
+        {/* Overlay diagonal */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40 transform -skew-y-6 origin-top-left z-10" />
+        
+        {/* Image de fond */}
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40 z-10 transform -skew-y-6 translate-y-[-10%]" 
-        />
-        <div 
-          className="absolute inset-0 bg-cover bg-center" 
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')",
-            filter: "grayscale(30%)"
-          }} 
+            filter: "brightness(0.8)"
+          }}
         />
+        
+        {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl text-white"
-          >
+          <div className="max-w-2xl text-white">
             <h1 className="text-5xl font-bold mb-6">
               Expert en Plâtrerie Traditionnelle et Moderne
             </h1>
             <p className="text-xl opacity-90 mb-8">
-              Plus de 30 ans d'expertise dans la réalisation de vos projets de plâtrerie, avec un savoir-faire artisanal transmis de génération en génération.
+              Plus de 30 ans d'expertise dans la réalisation de vos projets de plâtrerie, 
+              avec un savoir-faire artisanal transmis de génération en génération.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -44,7 +43,7 @@ const Platrerie = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
+                className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="text-primary mb-4">
                   <service.icon size={40} />
@@ -64,7 +63,9 @@ const Platrerie = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-lg text-gray-700">
-                Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets de plâtrerie. Notre entreprise familiale perpétue un savoir-faire artisanal tout en intégrant les techniques modernes pour des réalisations de qualité.
+                Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets de plâtrerie. 
+                Notre entreprise familiale perpétue un savoir-faire artisanal tout en intégrant les techniques modernes 
+                pour des réalisations de qualité.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center space-x-3">
@@ -96,32 +97,6 @@ const Platrerie = () => {
         </div>
       </section>
 
-      {/* Section Processus */}
-      <section className="py-20">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-16">Notre Processus de Travail</h2>
-          <div className="max-w-4xl mx-auto">
-            {process.map((step, index) => (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="flex items-start mb-12 relative"
-              >
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold shrink-0">
-                  {index + 1}
-                </div>
-                <div className="ml-6">
-                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Section CTA */}
       <section className="py-20">
         <div className="container">
@@ -131,7 +106,8 @@ const Platrerie = () => {
                 Prêt à Concrétiser Votre Projet de Plâtrerie ?
               </h2>
               <p className="text-gray-700 max-w-2xl mx-auto mb-8">
-                Contactez-nous pour un devis personnalisé et gratuit. Notre équipe d'experts est à votre écoute pour réaliser vos projets dans les règles de l'art.
+                Contactez-nous pour un devis personnalisé et gratuit. Notre équipe d'experts est à votre écoute 
+                pour réaliser vos projets dans les règles de l'art.
               </p>
               <Link
                 to="/contact"
