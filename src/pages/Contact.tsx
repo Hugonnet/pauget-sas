@@ -33,18 +33,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="clip-diagonal bg-primary/10 pb-20">
-        <div className="container mx-auto px-4 pt-12">
-          <h1 className="text-4xl font-bold mb-8">Contact</h1>
-          <p className="text-lg mb-12 max-w-2xl">
-            Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
-            N'hésitez pas à nous contacter pour obtenir un devis gratuit.
-          </p>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#F1F1F1]">
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold mb-8">Contact</h1>
+        <p className="text-lg mb-12 max-w-2xl">
+          Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
+          N'hésitez pas à nous contacter pour obtenir un devis gratuit.
+        </p>
 
-      <div className="container mx-auto px-4 -mt-8 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
@@ -127,7 +123,7 @@ const Contact = () => {
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary hover:bg-primary-hover"
+                  className="w-full bg-primary hover:bg-primary-hover text-white"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Envoi en cours..." : "Envoyer"}
@@ -146,20 +142,20 @@ const Contact = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">Téléphone:</span>
-                  <a href="tel:0474962814" className="text-primary hover:underline">
+                  <a href="tel:0474962814" className="text-white hover:underline">
                     04 74 96 28 14
                   </a>
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">Email:</span>
-                  <a href="mailto:contact@paugetetfils.fr" className="text-primary hover:underline">
+                  <a href="mailto:contact@paugetetfils.fr" className="text-white hover:underline">
                     contact@paugetetfils.fr
                   </a>
                 </p>
               </div>
             </div>
 
-            <div className="h-[400px] bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
+            <div className="h-[450px] bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
               <Map />
             </div>
           </div>
