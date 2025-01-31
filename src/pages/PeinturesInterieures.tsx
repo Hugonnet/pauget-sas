@@ -11,7 +11,7 @@ const PeinturesInterieures = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/dc46236e-0d85-4872-8b2d-04edf381dbcd.png')",
+            backgroundImage: "url('/lovable-uploads/peintures-interieures.png')",
           }}
         />
         
