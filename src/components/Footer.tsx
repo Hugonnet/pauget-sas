@@ -98,25 +98,25 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-white">Pauget et Fils</h3>
             <div className="space-y-2">
               <a
-                href="tel:+33474962814"
+                href="tel:0672019849"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Phone size={20} className="text-[#C4A484]" />
-                <span>04 74 96 28 14</span>
+                <span>06 72 01 98 49</span>
               </a>
               <a
-                href="mailto:contact@paugetetfils.fr"
+                href="mailto:contact@platrerie-peinture-pauget.fr"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Mail size={20} className="text-[#C4A484]" />
-                <span>contact@paugetetfils.fr</span>
+                <span>contact@platrerie-peinture-pauget.fr</span>
               </a>
               <div className="flex items-start space-x-2 text-white/90">
                 <MapPin size={20} className="mt-1 flex-shrink-0 text-[#C4A484]" />
                 <span>
-                  ZA Le Grand Champ,
+                  4 Rue du Commerce,
                   <br />
-                  01290 Crottet
+                  01460 Port
                 </span>
               </div>
             </div>
