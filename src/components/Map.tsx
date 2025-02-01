@@ -10,12 +10,12 @@ const Map = () => {
     if (!mapContainer.current) return;
 
     // Initialize map with a public token (vous devrez remplacer ce token par le vôtre)
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZXRpaHVnbyIsImEiOiJjbTZnYzU4bjUwY21uMmxzYms2ejZubTl2In0.V_R0UAV0XAuugnaq6q0gwg';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXRpaHVnbyIsImEiOiJjbTZtY3kxaWIwaWR3Mm1zOGQ3b3NrZHM2In0.xUHWE1dwHF3aXfywnST-jg';
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/light-v11',
-      center: [4.8357, 45.7640], // Lyon coordinates
+      center: [5.568050861358643, 46.16690444946289], // Port coordinates
       zoom: 13,
     });
 
@@ -27,7 +27,7 @@ const Map = () => {
 
     // Add marker for the business location
     new mapboxgl.Marker()
-      .setLngLat([4.8357, 45.7640]) // Update with actual coordinates
+      .setLngLat([5.568050861358643, 46.16690444946289]) // Update with actual coordinates
       .addTo(map.current);
 
     // Cleanup
