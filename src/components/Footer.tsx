@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png" 
               alt="Pauget et Fils Logo" 
-              className="h-26 object-contain"
+              className="h-20 object-contain"
             />
           </div>
 
