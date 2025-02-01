@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png" 
               alt="Pauget et Fils Logo" 
-              className="h-[140px] object-contain"
+              className="h-[170px] object-contain"
             />
           </div>
 
@@ -112,11 +112,11 @@ const Footer = () => {
                 <span>contact@paugetetfils.fr</span>
               </a>
               <div className="flex items-start space-x-2 text-white/90">
-                <MapPin size={20} className="mt-1 flex-shrink-0 text-[#C4A484]" />
+                <MapPin size={20} className="mt-1 flex-shrink-0 text-[#222222]" />
                 <span>
-                  ZA Le Grand Champ,
+                  4 Rue du Commerce,
                   <br />
-                  01290 Crottet
+                  01460 Port
                 </span>
               </div>
             </div>
