@@ -18,7 +18,7 @@ export const CTASection = () => {
               rel="noopener noreferrer"
               className="group inline-flex items-center space-x-2 text-lg text-primary hover:text-primary-hover transition-colors duration-200"
             >
-              <span>Retrouvez également nos enduits de façades :</span>
+              <span>Retrouvez également nos enduits de façades </span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
             </a>
           </div>
