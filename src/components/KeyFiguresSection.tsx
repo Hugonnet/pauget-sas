@@ -18,7 +18,7 @@ const figures = [
     label: "Clients satisfaits",
   },
   {
-    number:10,
+    number: 10,
     label: "Employés qualifiés",
   },
 ];
@@ -79,7 +79,7 @@ export const KeyFiguresSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="py-20">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="bg-[#f1f1f1] rounded-lg p-8">
           <h2 className="text-3xl font-bold text-center mb-12">Nos chiffres clés</h2>

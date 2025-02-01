@@ -1,5 +1,6 @@
 import { ArrowRight, PaintBucket, Brush, Home, Shield, Thermometer, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 import { CTASection } from "@/components/CTASection";
 
@@ -51,6 +52,14 @@ const services = [
 const Index = () => {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Peinture et isolation | Port, Ain (01) | Joël Pauget et ses fils</title>
+        <meta 
+          name="description" 
+          content="Depuis 1997, notre entreprise familiale prend en charge tous vos travaux de plâtrerie, de peintures ou d'isolation avec un grand professionnalisme." 
+        />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-black/40 z-10" />
