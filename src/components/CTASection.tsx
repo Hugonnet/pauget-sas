@@ -9,7 +9,7 @@ export const CTASection = () => {
           <img
             src="/lovable-uploads/273e7d36-d8ba-4735-8839-37edf8f5d9cd.png"
             alt="Lespinat Pauget Facades"
-            className="w-[250px] object-contain"
+            className="w-[200px] object-contain"
           />
           <div className="flex flex-col items-center md:items-start">
             <a
