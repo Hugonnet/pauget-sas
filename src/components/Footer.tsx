@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png" 
               alt="Pauget et Fils Logo" 
-              className="h-56 object-contain" // Réduit de h-64 à h-56 (environ 10%)
+              className="h-56 object-contain"
             />
           </div>
 
@@ -101,18 +101,18 @@ const Footer = () => {
                 href="tel:+33474962814"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
-                <Phone size={20} />
+                <Phone size={20} className="text-[#C4A484]" />
                 <span>04 74 96 28 14</span>
               </a>
               <a
                 href="mailto:contact@paugetetfils.fr"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
-                <Mail size={20} />
+                <Mail size={20} className="text-[#C4A484]" />
                 <span>contact@paugetetfils.fr</span>
               </a>
               <div className="flex items-start space-x-2 text-white/90">
-                <MapPin size={20} className="mt-1 flex-shrink-0" />
+                <MapPin size={20} className="mt-1 flex-shrink-0 text-[#C4A484]" />
                 <span>
                   ZA Le Grand Champ,
                   <br />
