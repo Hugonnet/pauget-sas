@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png" 
               alt="Pauget et Fils Logo" 
-              className="h-[160px] object-contain"
+              className="h-[140px] object-contain"
             />
           </div>
 
@@ -98,25 +98,25 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-white">Pauget et Fils</h3>
             <div className="space-y-2">
               <a
-                href="tel:0672019849"
+                href="tel:+33474962814"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Phone size={20} className="text-[#C4A484]" />
-                <span>06 72 01 98 49</span>
+                <span>04 74 96 28 14</span>
               </a>
               <a
-                href="mailto:contact@platrerie-peinture-pauget.fr"
+                href="mailto:contact@paugetetfils.fr"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Mail size={20} className="text-[#C4A484]" />
-                <span>contact@platrerie-peinture-pauget.fr</span>
+                <span>contact@paugetetfils.fr</span>
               </a>
               <div className="flex items-start space-x-2 text-white/90">
                 <MapPin size={20} className="mt-1 flex-shrink-0 text-[#C4A484]" />
                 <span>
-                  4 Rue du Commerce,
+                  ZA Le Grand Champ,
                   <br />
-                  01460 Port
+                  01290 Crottet
                 </span>
               </div>
             </div>

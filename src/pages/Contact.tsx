@@ -138,7 +138,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">Adresse:</span>
-                  <span>4, Rue du Commerce, 01460 Port</span>
+                  <span>ZA Le Grand Champ, 01290 Crottet</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">Téléphone:</span>
@@ -148,8 +148,8 @@ const Contact = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">Email:</span>
-                  <a href="mailto:contact@platrerie-peinture-pauget.fr" className="text-white hover:underline">
-                    contact@platrerie-peinture-pauget.fr
+                  <a href="mailto:contact@paugetetfils.fr" className="text-white hover:underline">
+                    contact@paugetetfils.fr
                   </a>
                 </p>
               </div>
