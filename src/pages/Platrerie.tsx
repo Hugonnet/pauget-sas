@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 import { CTASection } from "@/components/CTASection";
 
 const services = [
@@ -24,7 +23,7 @@ const services = [
 
 const Platrerie = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-primary/10">
+    <div className="min-h-screen bg-[#FDE1D3]">
       <Helmet>
         <title>Plâtrerie | Travaux de plâtrerie | Joël Pauget et ses fils</title>
         <meta 
@@ -44,7 +43,7 @@ const Platrerie = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-[#f1f1f1] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <img
                 src={service.image}
@@ -69,7 +68,6 @@ const Platrerie = () => {
           </Link>
         </div>
 
-        <KeyFiguresSection />
         <CTASection />
       </div>
     </div>
