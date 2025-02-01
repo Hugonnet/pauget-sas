@@ -1,6 +1,7 @@
 import { ArrowRight, PaintBucket, Brush, Home, Shield, Thermometer, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
+import { CTASection } from "@/components/CTASection";
 
 const services = [
   {
@@ -114,6 +115,9 @@ const Index = () => {
 
       {/* Key Figures Section */}
       <KeyFiguresSection />
+
+      {/* CTA Section */}
+      <CTASection />
     </div>
   );
 };
