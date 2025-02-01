@@ -149,7 +149,7 @@ const Contact = () => {
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">Email:</span>
                   <a href="mailto:contact@platrerie-peinture-pauget.fr" className="text-white hover:underline">
-                    contact@platrerie-peinture-paugetet.fr
+                    contact@platrerie-peinture-pauget.fr
                   </a>
                 </p>
               </div>
