@@ -9,7 +9,7 @@ export const CTASection = () => {
           <img
             src="/lovable-uploads/273e7d36-d8ba-4735-8839-37edf8f5d9cd.png"
             alt="Lespinat Pauget Facades"
-            className="w-[250px] object-contain"
+            className="w-[300px] object-contain"
           />
           <div className="flex flex-col items-center md:items-start">
             <a
@@ -18,7 +18,7 @@ export const CTASection = () => {
               rel="noopener noreferrer"
               className="group inline-flex items-center space-x-2 text-lg text-primary hover:text-primary-hover transition-colors duration-200"
             >
-              <span>Retrouvez-nous également pour vos enduits de façades de toutes natures</span>
+              <span style="margin-top:20px">Retrouvez également nos enduits de façades</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
             </a>
           </div>
