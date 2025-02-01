@@ -25,6 +25,34 @@ const realisations: Realisation[] = [
     slug: "isolation-exterieure-maison",
     image: "/lovable-uploads/hero-bg.png",
     tags: ["Isolation", "Extérieur", "Ravalement"]
+  },
+  {
+    title: "Rénovation d'une cage d'escalier",
+    description: "Travaux de plâtrerie et peinture dans une copropriété",
+    slug: "renovation-cage-escalier",
+    image: "/lovable-uploads/01d0836d-25c4-4b2e-bc6d-ae8eeaea0cf9.png",
+    tags: ["Plâtrerie", "Peinture", "Copropriété"]
+  },
+  {
+    title: "Isolation des combles perdus",
+    description: "Isolation thermique des combles avec laine de verre soufflée",
+    slug: "isolation-combles-perdus",
+    image: "/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png",
+    tags: ["Isolation", "Combles", "Économies d'énergie"]
+  },
+  {
+    title: "Ravalement de façade historique",
+    description: "Restauration et mise en valeur d'une façade du XIXe siècle",
+    slug: "ravalement-facade-historique",
+    image: "/lovable-uploads/74a83115-7afa-4489-bc0d-6ff5037638f0.png",
+    tags: ["Ravalement", "Restauration", "Patrimoine"]
+  },
+  {
+    title: "Réfection complète d'une toiture",
+    description: "Isolation et étanchéité d'une toiture de 200m²",
+    slug: "refection-toiture",
+    image: "/lovable-uploads/9ef8c30e-6313-4fe5-96e7-d72f91236c9b.png",
+    tags: ["Toiture", "Isolation", "Étanchéité"]
   }
 ];
 
