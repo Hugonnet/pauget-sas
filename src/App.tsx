@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Platrerie from "./pages/Platrerie";
@@ -17,6 +18,8 @@ import IsolationExterieure from "./pages/IsolationExterieure";
 import Etancheite from "./pages/Etancheite";
 import Realisations from "./pages/Realisations";
 import RealisationDetail from "./pages/RealisationDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import LegalNotice from "./pages/LegalNotice";
 
 const queryClient = new QueryClient();
 
@@ -42,9 +45,12 @@ const App = () => (
               <Route path="/realisations" element={<Realisations />} />
               <Route path="/realisations/:slug" element={<RealisationDetail />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+              <Route path="/mentions-legales" element={<LegalNotice />} />
             </Routes>
           </main>
           <Footer />
+          <CookieBanner />
         </div>
       </BrowserRouter>
     </TooltipProvider>
