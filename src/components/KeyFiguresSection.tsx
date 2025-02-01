@@ -8,7 +8,7 @@ const figures = [
     label: "Années d'expérience",
   },
   {
-    number: 1000,
+    number: 850,
     suffix: "+",
     label: "Projets réalisés",
   },
@@ -18,8 +18,8 @@ const figures = [
     label: "Clients satisfaits",
   },
   {
-    number: 15,
-    label: "Artisans qualifiés",
+    number:10,
+    label: "Employés qualifiés",
   },
 ];
 
