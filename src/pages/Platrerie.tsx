@@ -1,10 +1,19 @@
 import { ArrowRight, Ruler, Shield, Star, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Platrerie = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Plâtrerie - Pauget & Fils | Expert en plâtrerie traditionnelle</title>
+        <meta 
+          name="description" 
+          content="Découvrez notre expertise en plâtrerie traditionnelle et moderne. Plus de 30 ans d'expérience dans la réalisation de plafonds, cloisons et doublages dans la région de Bourg-en-Bresse." 
+        />
+      </Helmet>
+
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
         {/* Image de fond avec overlay diagonal */}
@@ -37,7 +46,7 @@ const Platrerie = () => {
         </div>
       </section>
 
-      {/* Section Services avec plus d'espacement */}
+      {/* Section Services */}
       <section className="py-32">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
