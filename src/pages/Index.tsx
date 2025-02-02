@@ -1,5 +1,6 @@
 import { ArrowRight, PaintBucket, Brush, Home, Shield, Thermometer, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 import { CTASection } from "@/components/CTASection";
 
@@ -51,6 +52,11 @@ const services = [
 const Index = () => {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Pauget & Fils - Experts en plâtrerie et peinture depuis plus de 30 ans</title>
+        <meta name="description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation. Plus de 30 ans d'expertise à votre service dans la région de Bourg-en-Bresse." />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-black/40 z-10" />
@@ -81,7 +87,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
+      <section className="py-20 bg-[#F8EBDF]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Nos Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -115,11 +121,15 @@ const Index = () => {
 
       {/* Key Figures Section */}
       <section className="bg-[#f1f1f1]">
-        <KeyFiguresSection />
+        <div className="container mx-auto">
+          <KeyFiguresSection />
+        </div>
       </section>
 
       {/* CTA Section */}
-      <CTASection />
+      <section className="bg-[#F8EBDF]">
+        <CTASection />
+      </section>
     </div>
   );
 };
