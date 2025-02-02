@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { X, Edit2 } from "lucide-react";
+import { X, Edit2, Plus } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -48,9 +48,11 @@ const RealisationDetail = () => {
   const [editingTagIndex, setEditingTagIndex] = useState<number | null>(null);
   const [editedTagValue, setEditedTagValue] = useState("");
   const [localTags, setLocalTags] = useState<string[]>([]);
+  const [isAddingTag, setIsAddingTag] = useState(false);
+  const [newTagValue, setNewTagValue] = useState("");
+  
   const realisation = slug ? realisations[slug as keyof typeof realisations] : null;
 
-  // Initialize localTags with realisation tags when component mounts or slug changes
   useState(() => {
     if (realisation) {
       setLocalTags(realisation.tags);
@@ -93,6 +95,18 @@ const RealisationDetail = () => {
     }
   };
 
+  const handleAddTag = () => {
+    if (newTagValue.trim()) {
+      setLocalTags([...localTags, newTagValue.trim()]);
+      setNewTagValue("");
+      setIsAddingTag(false);
+      toast({
+        title: "Tag ajouté",
+        description: "Le nouveau tag a été ajouté avec succès",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-primary/10">
       <Helmet>
@@ -104,7 +118,7 @@ const RealisationDetail = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-6">{realisation.title}</h1>
           
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8 items-center">
             {localTags.map((tag, index) => (
               <div key={index} className="flex items-center gap-1">
                 {editingTagIndex === index ? (
@@ -153,6 +167,39 @@ const RealisationDetail = () => {
                 )}
               </div>
             ))}
+            
+            {isAddingTag ? (
+              <div className="flex gap-2">
+                <Input
+                  value={newTagValue}
+                  onChange={(e) => setNewTagValue(e.target.value)}
+                  placeholder="Nouveau tag"
+                  className="h-7 w-32"
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      handleAddTag();
+                    }
+                  }}
+                />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleAddTag}
+                >
+                  Ajouter
+                </Button>
+              </div>
+            ) : (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setIsAddingTag(true)}
+                className="flex items-center gap-1"
+              >
+                <Plus className="h-4 w-4" />
+                Ajouter un tag
+              </Button>
+            )}
           </div>
 
           <div className="relative h-[500px] rounded-xl overflow-hidden mb-8">
