@@ -13,7 +13,7 @@ const figures = [
     label: "Projets réalisés",
   },
   {
-    number: 250,
+    number: 100,
     suffix: "%",
     label: "Clients satisfaits",
   },
