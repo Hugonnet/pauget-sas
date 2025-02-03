@@ -81,7 +81,7 @@ export const KeyFiguresSection = () => {
   return (
     <section ref={ref} className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Nos chiffres clés</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Chiffres clés</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {figures.map((figure, index) => (
             <motion.div
