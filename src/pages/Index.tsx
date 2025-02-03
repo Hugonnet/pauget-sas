@@ -59,7 +59,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/30 z-10" />
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
