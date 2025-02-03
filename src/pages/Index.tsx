@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 import { CTASection } from "@/components/CTASection";
+import { CompanyPresentation } from "@/components/CompanyPresentation";
 
 const services = [
   {
@@ -85,6 +86,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Company Presentation Section */}
+      <CompanyPresentation />
 
       {/* Services Section */}
       <section className="py-20 bg-[#F8EBDF]">

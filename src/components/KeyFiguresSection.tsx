@@ -79,9 +79,9 @@ export const KeyFiguresSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="py-20">
-      <div className="container max-w-7xl mx-auto px-4">
-        <div className="bg-[#f1f1f1] rounded-2xl p-8 shadow-sm max-w-[1280px] mx-auto">
+    <section ref={ref} className="py-20 bg-[#F8EBDF]">
+      <div className="container mx-auto px-4">
+        <div className="max-w-[1280px] mx-auto bg-[#f1f1f1] rounded-2xl p-8 shadow-sm">
           <h2 className="text-3xl font-bold text-center mb-12">Chiffres clés</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {figures.map((figure, index) => (
