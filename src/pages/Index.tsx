@@ -124,14 +124,14 @@ const Index = () => {
       </section>
 
       {/* Key Figures Section */}
-      <section className="bg-[#f1f1f1]">
+      <section className="bg-[#F8EBDF]">
         <div className="container mx-auto">
           <KeyFiguresSection />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#F1F1F1]">
+      <section className="bg-[#F8EBDF]">
         <CTASection />
       </section>
     </div>
