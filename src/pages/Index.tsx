@@ -54,8 +54,8 @@ const Index = () => {
   return (
     <div className="flex flex-col">
       <Helmet>
-        <title>Pauget & Fils - Experts en plâtrerie et peinture depuis plus de 30 ans</title>
-        <meta name="description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation. Plus de 30 ans d'expertise à votre service dans la région de Bourg-en-Bresse." />
+        <title>Entreprise de Plâtrerie, Peinture et Isolation à Port - Joël Pauget et ses fils</title>
+        <meta name="description" content="Joël Pauget et ses fils, experts en plâtrerie, peinture et isolation à Port, Ain. Depuis 1997, nous réalisons vos travaux de construction et rénovation avec savoir-faire et engagement environnemental." />
       </Helmet>
 
       {/* Hero Section */}
