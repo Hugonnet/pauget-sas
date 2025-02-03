@@ -9,9 +9,9 @@ const Etancheite = () => {
       <section className="relative h-[70vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{
+          style={
             backgroundImage: "url('/lovable-uploads/etancheite-a-l-air.png')",
-          }}
+          }
         />
         
         {/* Overlay diagonal avec dégradé */}
