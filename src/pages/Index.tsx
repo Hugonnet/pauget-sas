@@ -125,7 +125,7 @@ const Index = () => {
 
       {/* Key Figures Section */}
       <section className="py-20 bg-[#F8EBDF]">
-        <div className="container mx-auto">
+        <div className="container md-auto">
           <KeyFiguresSection />
         </div>
       </section>
