@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 const Etancheite = () => {
   return (
     <div className="min-h-screen bg-background">
-      
       <section className="relative h-[70vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={
-            backgroundImage: "url('/lovable-uploads/etancheite-a-l-air.png')",
-          }
+          style={{
+            backgroundImage: "url('/lovable-uploads/etancheite-a-l-air.png')"
+          }}
         />
         
         {/* Overlay diagonal avec dégradé */}
