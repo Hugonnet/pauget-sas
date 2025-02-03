@@ -1,10 +1,19 @@
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const PeinturesInterieures = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Peinture Intérieure à Port | Expert en Décoration & Rénovation | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Transformez votre intérieur avec nos services de peinture professionnelle à Port. Finitions impeccables, conseils personnalisés et devis gratuit. Plus de 30 ans d'expertise en peinture décorative."
+        />
+      </Helmet>
+
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
         {/* Image de fond avec overlay diagonal */}

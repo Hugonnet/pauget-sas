@@ -77,8 +77,11 @@ const Realisations = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-primary/10">
       <Helmet>
-        <title>Nos Réalisations - Pauget & Fils</title>
-        <meta name="description" content="Découvrez nos réalisations en plâtrerie, peinture et isolation. Des projets de qualité réalisés par nos artisans qualifiés." />
+        <title>Nos Réalisations en Plâtrerie & Peinture à Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Découvrez nos réalisations en plâtrerie, peinture et isolation à Port. Projets résidentiels et commerciaux, avant/après, témoignages clients. Plus de 30 ans d'expertise."
+        />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">

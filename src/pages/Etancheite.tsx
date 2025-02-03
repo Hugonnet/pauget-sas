@@ -1,10 +1,19 @@
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Etancheite = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Test d'Étanchéité à l'Air RT2012 à Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Tests d'infiltrométrie et solutions d'étanchéité à l'air à Port. Conformité RT2012, optimisation énergétique, diagnostic professionnel. Intervention rapide et devis gratuit."
+        />
+      </Helmet>
+
       <section className="relative h-[70vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"

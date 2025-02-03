@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { Helmet } from "react-helmet";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -34,6 +35,13 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-[#F1F1F1]">
+      <Helmet>
+        <title>Contactez Pauget & Fils | Artisan Plâtrier-Peintre à Port</title>
+        <meta 
+          name="description" 
+          content="Contactez Pauget & Fils pour vos projets de plâtrerie, peinture et isolation à Port. Devis gratuit, conseil personnalisé. Plus de 30 ans d'expérience à votre service."
+        />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8">Contact</h1>
         <p className="text-lg mb-12 max-w-2xl">

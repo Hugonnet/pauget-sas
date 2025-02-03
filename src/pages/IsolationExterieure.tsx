@@ -1,10 +1,19 @@
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const IsolationExterieure = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Isolation Thermique par l'Extérieur (ITE) à Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Spécialiste de l'isolation thermique par l'extérieur à Port. Économies d'énergie garanties, protection durable de vos façades. Entreprise certifiée, devis gratuit."
+        />
+      </Helmet>
+
       <section className="relative h-[70vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -164,30 +173,30 @@ const IsolationExterieure = () => {
 
 const services = [
   {
-    title: "Système ITE Complet",
-    description: "Une solution globale pour une isolation thermique optimale de vos façades.",
+    title: "Diagnostic Complet",
+    description: "Analyse approfondie de votre bâtiment pour une solution d'isolation adaptée à vos besoins spécifiques.",
     features: [
-      "Protection thermique totale",
-      "Suppression des ponts thermiques",
-      "Finitions personnalisables"
+      "Évaluation thermique",
+      "Analyse des ponts thermiques",
+      "Rapport détaillé"
     ]
   },
   {
-    title: "Bardage Isolant",
-    description: "Une solution esthétique et performante pour l'isolation de vos murs extérieurs.",
+    title: "Matériaux Performants",
+    description: "Utilisation de systèmes d'isolation certifiés et éco-responsables pour une efficacité maximale.",
     features: [
-      "Large choix de finitions",
-      "Ventilation optimale",
-      "Protection durable"
+      "Isolation par l'extérieur",
+      "Matériaux durables",
+      "Conformité aux normes"
     ]
   },
   {
-    title: "Enduit Thermique",
-    description: "Une solution complète alliant isolation et finition décorative.",
+    title: "Installation Experte",
+    description: "Mise en œuvre par des professionnels qualifiés pour une finition impeccable et durable.",
     features: [
-      "Application professionnelle",
-      "Résistance aux intempéries",
-      "Aspect esthétique soigné"
+      "Équipe certifiée",
+      "Suivi de chantier",
+      "Satisfaction garantie"
     ]
   }
 ];

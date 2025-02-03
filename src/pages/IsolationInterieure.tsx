@@ -1,10 +1,19 @@
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const IsolationInterieure = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Isolation Intérieure à Port | Solutions Thermiques & Phoniques | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Améliorez le confort et réduisez vos factures avec notre expertise en isolation intérieure à Port. Solutions sur mesure pour murs, combles et cloisons. Certification RGE."
+        />
+      </Helmet>
+
       <section className="relative h-[70vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"

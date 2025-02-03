@@ -1,10 +1,19 @@
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const PeinturesExterieures = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Peinture Extérieure & Ravalement de Façade à Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Experts en peinture extérieure et ravalement de façade à Port. Protection durable, embellissement et valorisation de votre patrimoine. Devis gratuit pour vos travaux de rénovation extérieure."
+        />
+      </Helmet>
+
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
         {/* Image de fond avec overlay diagonal */}
