@@ -51,10 +51,6 @@ export const CompanyPresentation = () => {
                 </p>
               </div>
             </div>
-
-            <p className="mt-8 font-medium">
-              Confiez vos travaux de plâtrerie, peinture et isolation à une équipe de professionnels passionnés. Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.
-            </p>
           </div>
         </motion.div>
       </div>

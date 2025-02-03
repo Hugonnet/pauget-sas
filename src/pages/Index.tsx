@@ -131,7 +131,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#F8EBDF]">
+      <section className="bg-[#F1F1F1]">
         <CTASection />
       </section>
     </div>
