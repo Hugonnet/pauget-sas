@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 const Etancheite = () => {
   return (
     <div className="min-h-screen bg-background">
+        <Helmet>
+        <title>Etanchéité - Pauget & Fils | Expert en plâtrerie traditionnelle</title>
+        <meta 
+          name="description" 
+          content="Découvrez notre expertise en plâtrerie traditionnelle et moderne. Plus de 30 ans d'expérience dans la réalisation de plafonds, cloisons et doublages dans la région de Bourg-en-Bresse." 
+        />
+      </Helmet>
       <section className="relative h-[70vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
