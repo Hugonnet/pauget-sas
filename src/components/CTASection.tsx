@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 export const CTASection = () => {
   return (
-    <section className="py-16">
+    <section className="py-12">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-24 bg-white rounded-lg p-8 shadow-sm">
+        <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-center gap-16 bg-white rounded-lg p-8 shadow-sm">
           <img
             src="/lovable-uploads/lespinat-pauget-logo-transparent.png"
             alt="Lespinat Pauget Facades"
-            className="w-[300px] object-contain"
+            className="w-[200px] object-contain"
           />
           <div className="flex flex-col items-center md:items-start">
             <a
