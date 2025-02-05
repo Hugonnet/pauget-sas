@@ -79,7 +79,7 @@ export const KeyFiguresSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div ref={ref} className="max-w-7xl mx-auto bg-[#F1F1F1] rounded-2xl p-8">
+    <div ref={ref} className="container mx-auto bg-[#F1F1F1] rounded-2xl p-8">
       <h2 className="text-3xl font-bold text-center mb-12">Chiffres clés</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {figures.map((figure, index) => (
