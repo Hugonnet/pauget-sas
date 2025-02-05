@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export const CTASection = () => {
   return (
-    <section className="py-12">
+    <section className="py-8">
       <div className="container mx-auto px-4">
-        <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-16 bg-white rounded-lg p-8 shadow-sm">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16 bg-white rounded-lg p-8 shadow-sm">
           <div className="flex flex-col items-center md:items-start">
             <a
               href="https://www.lespinat-pauget-facades.fr"
