@@ -51,6 +51,21 @@ export const CompanyPresentation = () => {
                 </p>
               </div>
             </div>
+
+            <div className="mt-12 flex flex-col md:flex-row items-center gap-8">
+              <div className="md:w-2/3">
+                <p className="text-white/90">
+                  Notre entreprise est certifiée Qualibat RGE : le label Qualibat RGE (Reconnu Garant de l'Environnement) est une certification délivrée aux entreprises du bâtiment qui répondent à des critères stricts de qualité et de performance énergétique. Il garantit le sérieux et le savoir-faire des professionnels dans la réalisation de travaux de rénovation énergétique, d'isolation et d'amélioration thermique des bâtiments. Pour les clients, faire appel à une entreprise certifiée <strong>Qualibat RGE</strong> permet non seulement d'assurer des prestations conformes aux normes en vigueur, mais aussi de bénéficier d'aides financières comme MaPrimeRénov' ou l'éco-prêt à taux zéro.
+                </p>
+              </div>
+              <div className="md:w-1/3 flex justify-center">
+                <img 
+                  src="/lovable-uploads/qualibat-rge.webp" 
+                  alt="Certification Qualibat RGE" 
+                  className="w-48 h-48 object-contain"
+                />
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
