@@ -7,20 +7,18 @@ const PeinturesInterieures = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Peinture Intérieure à Port | Expert en Décoration & Rénovation | Pauget & Fils</title>
+        <title>Peinture Intérieure à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Transformez votre intérieur avec nos services de peinture professionnelle à Port. Finitions impeccables, conseils personnalisés et devis gratuit. Plus de 30 ans d'expertise en peinture décorative."
+          content="Experts en peinture intérieure à Port. Finitions soignées, conseils personnalisés et devis gratuit pour tous vos projets de peinture intérieure."
         />
       </Helmet>
 
-      {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Image de fond avec overlay diagonal */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/hero-peintures-interieures.webp')",
+            backgroundImage: "url('/lovable-uploads/peinture-interieure.jpg')",
           }}
         />
         
@@ -48,13 +46,13 @@ const PeinturesInterieures = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl opacity-90"
             >
-              Transformez votre intérieur avec notre expertise en peinture. Des finitions impeccables pour un résultat qui dure.
+              Transformez vos espaces intérieurs avec nos services de peinture sur mesure.
             </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Section Services avec plus d'espacement */}
+      {/* Section Services */}
       <section className="py-32">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -82,66 +80,6 @@ const PeinturesInterieures = () => {
         </div>
       </section>
 
-      {/* Section Expertise */}
-      <section className="py-20 bg-gradient-to-b from-background to-card/30">
-        <div className="container">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h2 className="text-3xl font-bold mb-8">Notre Expertise en Peinture Intérieure</h2>
-            <p className="text-lg text-gray-700 mb-12">
-              Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets de peinture intérieure. 
-              Notre entreprise familiale perpétue un savoir-faire artisanal tout en intégrant les techniques modernes 
-              pour des réalisations de qualité exceptionnelle.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <div className="bg-card p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-white">Préparation Minutieuse</h3>
-                <p className="text-white/90">
-                  Nous accordons une attention particulière à la préparation des surfaces pour garantir une finition parfaite et durable.
-                </p>
-              </div>
-              <div className="bg-card p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-white">Techniques Professionnelles</h3>
-                <p className="text-white/90">
-                  Nos peintres qualifiés utilisent des techniques éprouvées et des outils professionnels pour un résultat impeccable.
-                </p>
-              </div>
-              <div className="bg-card p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-white">Produits de Qualité</h3>
-                <p className="text-white/90">
-                  Nous sélectionnons uniquement des peintures et des matériaux de première qualité pour assurer la longévité de nos travaux.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative h-[600px] rounded-xl overflow-hidden shadow-lg"
-            >
-              <img
-                src="/lovable-uploads/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png"
-                alt="Expertise en peinture intérieure"
-                className="object-cover w-full h-full"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Section CTA */}
       <section className="py-20">
         <div className="container">
@@ -153,11 +91,11 @@ const PeinturesInterieures = () => {
           >
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-6 text-white">
-                Prêt à Transformer Votre Intérieur ?
+                Prêt à Embellir Votre Intérieur ?
               </h2>
               <p className="text-white/90 max-w-2xl mx-auto mb-8">
                 Contactez-nous pour un devis personnalisé et gratuit. Notre équipe d'experts est à votre écoute 
-                pour réaliser vos projets dans les règles de l'art.
+                pour réaliser vos projets de peinture intérieure.
               </p>
               <Link
                 to="/contact"
@@ -176,33 +114,32 @@ const PeinturesInterieures = () => {
 
 const services = [
   {
+    title: "Peinture Murs",
+    description: "Finitions soignées pour vos murs intérieurs.",
+    features: [
+      "Peinture acrylique",
+      "Peinture satinée",
+      "Peinture mate"
+    ]
+  },
+  {
+    title: "Peinture Plafonds",
+    description: "Solutions adaptées pour vos plafonds.",
+    features: [
+      "Peinture blanche",
+      "Peinture anti-moisissure",
+      "Peinture acoustique"
+    ]
+  },
+  {
     title: "Peinture Décorative",
-    description: "Donnez du caractère à vos espaces avec nos techniques décoratives personnalisées.",
+    description: "Ajoutez une touche personnelle à vos espaces.",
     features: [
-      "Effets décoratifs variés",
-      "Harmonisation des couleurs",
-      "Conseils personnalisés"
-    ]
-  },
-  {
-    title: "Peinture Traditionnelle",
-    description: "Des finitions classiques et élégantes pour tous vos espaces de vie.",
-    features: [
-      "Murs et plafonds",
-      "Boiseries",
-      "Revêtements spéciaux"
-    ]
-  },
-  {
-    title: "Rénovation Complète",
-    description: "Rafraîchissez vos intérieurs avec nos solutions de rénovation sur mesure.",
-    features: [
-      "Diagnostic complet",
-      "Préparation soignée",
-      "Finitions durables"
+      "Effets de matière",
+      "Peinture à effet",
+      "Faux finis"
     ]
   }
 ];
 
 export default PeinturesInterieures;
-
