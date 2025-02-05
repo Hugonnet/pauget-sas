@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
@@ -24,37 +25,39 @@ import LegalNotice from "./pages/LegalNotice";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <HashRouter>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/platrerie" element={<Platrerie />} />
-              <Route path="/peintures" element={<Peintures />} />
-              <Route path="/peintures/interieures" element={<PeinturesInterieures />} />
-              <Route path="/peintures/exterieures" element={<PeinturesExterieures />} />
-              <Route path="/isolation" element={<Isolation />} />
-              <Route path="/isolation/interieure" element={<IsolationInterieure />} />
-              <Route path="/isolation/exterieure" element={<IsolationExterieure />} />
-              <Route path="/etancheite" element={<Etancheite />} />
-              <Route path="/realisations" element={<Realisations />} />
-              <Route path="/realisations/:slug" element={<RealisationDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
-              <Route path="/mentions-legales" element={<LegalNotice />} />
-            </Routes>
-          </main>
-          <Footer />
-          <CookieBanner />
-        </div>
-      </HashRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <HashRouter>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/platrerie" element={<Platrerie />} />
+                <Route path="/peintures" element={<Peintures />} />
+                <Route path="/peintures/interieures" element={<PeinturesInterieures />} />
+                <Route path="/peintures/exterieures" element={<PeinturesExterieures />} />
+                <Route path="/isolation" element={<Isolation />} />
+                <Route path="/isolation/interieure" element={<IsolationInterieure />} />
+                <Route path="/isolation/exterieure" element={<IsolationExterieure />} />
+                <Route path="/etancheite" element={<Etancheite />} />
+                <Route path="/realisations" element={<Realisations />} />
+                <Route path="/realisations/:slug" element={<RealisationDetail />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+                <Route path="/mentions-legales" element={<LegalNotice />} />
+              </Routes>
+            </main>
+            <Footer />
+            <CookieBanner />
+          </div>
+        </HashRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
