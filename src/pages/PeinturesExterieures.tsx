@@ -1,4 +1,5 @@
-import { ArrowRight, Star } from "lucide-react";
+
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -19,7 +20,7 @@ const PeinturesExterieures = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold text-center mb-12"
+            className="text-4xl font-bold text-center mb-12 text-accent"
           >
             Nos Services de Peinture Extérieure
           </motion.h1>
@@ -29,16 +30,16 @@ const PeinturesExterieures = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="bg-card p-8 rounded-xl shadow-lg"
+              className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <h2 className="text-2xl font-semibold mb-4 text-white">Ravalement de Façade</h2>
-              <p className="text-white/90 mb-6">
+              <h2 className="text-2xl font-semibold mb-4 text-accent">Ravalement de Façade</h2>
+              <p className="text-accent/90 mb-6">
                 Redonnez vie à vos façades avec notre service de ravalement. 
                 Une protection durable contre les intempéries.
               </p>
               <Link 
                 to="/ravalement-facade"
-                className="inline-flex items-center space-x-2 text-primary hover:text-primary/80"
+                className="inline-flex items-center space-x-2 text-primary hover:text-primary-hover transition-colors duration-200"
               >
                 <span>En savoir plus</span>
                 <ArrowRight size={20} />
@@ -49,16 +50,16 @@ const PeinturesExterieures = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-card p-8 rounded-xl shadow-lg"
+              className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <h2 className="text-2xl font-semibold mb-4 text-white">Peinture de Façade</h2>
-              <p className="text-white/90 mb-6">
+              <h2 className="text-2xl font-semibold mb-4 text-accent">Peinture de Façade</h2>
+              <p className="text-accent/90 mb-6">
                 Protégez et embellissez vos façades avec nos solutions de peinture extérieure. 
                 Une finition impeccable pour un résultat durable.
               </p>
               <Link 
                 to="/peinture-facade"
-                className="inline-flex items-center space-x-2 text-primary hover:text-primary/80"
+                className="inline-flex items-center space-x-2 text-primary hover:text-primary-hover transition-colors duration-200"
               >
                 <span>En savoir plus</span>
                 <ArrowRight size={20} />
