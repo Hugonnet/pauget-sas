@@ -79,44 +79,40 @@ export const KeyFiguresSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="py-8 bg-[#F8EBDF]">
-      <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto bg-[#F1F1F1] rounded-2xl p-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Chiffres clés</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {figures.map((figure, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <motion.p
-                  className="text-4xl font-bold text-primary mb-2"
-                  initial={{ scale: 0 }}
-                  animate={isInView ? { scale: 1 } : { scale: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    delay: index * 0.1,
-                  }}
-                >
-                  <CountUp end={figure.number} suffix={figure.suffix || ""} />
-                </motion.p>
-                <motion.p
-                  className="text-gray-600"
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
-                >
-                  {figure.label}
-                </motion.p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+    <div ref={ref} className="max-w-7xl mx-auto bg-[#F1F1F1] rounded-2xl p-8">
+      <h2 className="text-3xl font-bold text-center mb-12">Chiffres clés</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {figures.map((figure, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="text-center"
+          >
+            <motion.p
+              className="text-4xl font-bold text-primary mb-2"
+              initial={{ scale: 0 }}
+              animate={isInView ? { scale: 1 } : { scale: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                delay: index * 0.1,
+              }}
+            >
+              <CountUp end={figure.number} suffix={figure.suffix || ""} />
+            </motion.p>
+            <motion.p
+              className="text-gray-600 md:text-justify"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
+            >
+              {figure.label}
+            </motion.p>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };

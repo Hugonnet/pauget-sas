@@ -52,7 +52,7 @@ const services = [
 
 const Index = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col space-y-0">
       <Helmet>
         <title>Entreprise de Plâtrerie, Peinture et Isolation à Port - Joël Pauget et ses fils</title>
         <meta name="description" content="Joël Pauget et ses fils, experts en plâtrerie, peinture et isolation à Port, Ain. Depuis 1997, nous réalisons vos travaux de construction et rénovation avec savoir-faire et engagement environnemental." />
@@ -72,7 +72,7 @@ const Index = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
               Experts en plâtrerie et peinture depuis plus de 30 ans
             </h1>
-            <p className="text-xl text-white/90 mb-8 animate-slideUp">
+            <p className="text-xl text-white/90 mb-8 animate-slideUp md:text-justify">
               Donnez vie à vos projets avec Pauget et Fils, votre partenaire de confiance
               pour tous vos travaux de rénovation et d'aménagement.
             </p>
@@ -91,10 +91,10 @@ const Index = () => {
       <CompanyPresentation />
 
       {/* Services Section */}
-      <section className="py-20 bg-[#F8EBDF]">
+      <section className="py-12 bg-[#F8EBDF]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Nos Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service) => (
               <Link
                 key={service.title}
@@ -111,7 +111,7 @@ const Index = () => {
                     />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className="text-gray-600 mb-4 md:text-justify">{service.description}</p>
                   <div className="flex items-center text-primary group-hover:text-primary-hover transition-colors duration-200">
                     <span>En savoir plus</span>
                     <ArrowRight size={20} className="ml-2" />
@@ -124,8 +124,8 @@ const Index = () => {
       </section>
 
       {/* Key Figures Section */}
-      <section className="py-20 bg-[#F8EBDF]">
-        <div className="container md-auto">
+      <section className="py-12 bg-[#F8EBDF]">
+        <div className="container mx-auto">
           <KeyFiguresSection />
         </div>
       </section>
