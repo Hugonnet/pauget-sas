@@ -1,8 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Helmet } from "react-helmet-async";
 
 const LegalNotice = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Mentions Légales - Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Mentions légales de Pauget & Fils. Informations juridiques sur notre entreprise."
+        />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center">Mentions Légales</h1>
         

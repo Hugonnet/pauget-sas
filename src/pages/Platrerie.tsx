@@ -1,7 +1,7 @@
 import { ArrowRight, Ruler, Shield, Star, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Platrerie = () => {
   return (
@@ -156,3 +156,4 @@ const services = [
 ];
 
 export default Platrerie;
+

@@ -1,6 +1,15 @@
+import { Helmet } from "react-helmet-async";
+
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Politique de Confidentialité - Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Politique de confidentialité de Pauget & Fils. Découvrez comment nous protégeons vos données personnelles."
+        />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8">Politique de Confidentialité</h1>
         
