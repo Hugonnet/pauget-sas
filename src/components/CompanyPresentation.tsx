@@ -44,18 +44,11 @@ export const CompanyPresentation = () => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Expérience et Savoir-Faire</h3>
                 <p className="text-white/90 md:text-justify">
                   Avec plus de 20 ans d'expérience, nous allions techniques traditionnelles et matériaux innovants pour des prestations de qualité.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Engagement Environnemental</h3>
-                <p className="text-white/90 md:text-justify">
-                  Labellisés RGE, nous sommes engagés dans la rénovation énergétique et veillons au tri et au traitement des déchets de nos chantiers.
                 </p>
               </div>
 
