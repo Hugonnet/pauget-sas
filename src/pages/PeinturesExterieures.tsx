@@ -1,4 +1,3 @@
-
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -65,95 +64,83 @@ const PeinturesExterieures = () => {
             Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture extérieure. Depuis 1997, nous mettons notre expertise au service de vos projets de rénovation et d'embellissement de façades dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.
           </motion.p>
 
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl font-bold text-center mb-12 text-accent"
-          >
-            Nos Services de Peinture Extérieure
-          </motion.h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-card p-8 rounded-xl shadow-lg"
             >
-              <h2 className="text-2xl font-semibold mb-4 text-accent">Ravalement de Façade</h2>
-              <p className="text-accent/90 mb-6">
-                Redonnez vie à vos façades avec notre service de ravalement. 
-                Une protection durable contre les intempéries.
+              <h2 className="text-2xl font-semibold mb-4 text-white">Peinture Extérieure</h2>
+              <p className="text-white/90">
+                Notre équipe de peintres professionnels intervient pour protéger et embellir vos façades, boiseries et autres surfaces extérieures. Nous vous conseillons sur le choix des peintures adaptées à chaque support, en tenant compte des contraintes climatiques locales et de vos préférences esthétiques.
               </p>
-              <Link 
-                to="/ravalement-facade"
-                className="inline-flex items-center space-x-2 text-primary hover:text-primary-hover transition-colors duration-200"
-              >
-                <span>En savoir plus</span>
-                <ArrowRight size={20} />
-              </Link>
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-card p-8 rounded-xl shadow-lg"
             >
-              <h2 className="text-2xl font-semibold mb-4 text-accent">Peinture de Façade</h2>
-              <p className="text-accent/90 mb-6">
-                Protégez et embellissez vos façades avec nos solutions de peinture extérieure. 
-                Une finition impeccable pour un résultat durable.
+              <h2 className="text-2xl font-semibold mb-4 text-white">Ravalement de Façade</h2>
+              <p className="text-white/90">
+                Nous réalisons des travaux de ravalement de façade, incluant le nettoyage, la réparation des fissures et l'application de revêtements protecteurs. Ces interventions permettent de préserver l'intégrité de votre bâtiment tout en améliorant son apparence.
               </p>
-              <Link 
-                to="/peinture-facade"
-                className="inline-flex items-center space-x-2 text-primary hover:text-primary-hover transition-colors duration-200"
-              >
-                <span>En savoir plus</span>
-                <ArrowRight size={20} />
-              </Link>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="bg-card p-8 rounded-xl shadow-lg"
+            >
+              <h2 className="text-2xl font-semibold mb-4 text-white">Traitement et Protection des Supports</h2>
+              <p className="text-white/90">
+                Nous proposons des solutions de traitement et de protection pour vos surfaces extérieures, telles que l'application de produits anti-mousse, hydrofuges ou anti-graffitis, afin de garantir la durabilité et la propreté de vos ouvrages.
+              </p>
             </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* Réalisations Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-card/30">
-        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="bg-card p-8 rounded-xl shadow-lg mb-16"
+          >
+            <h2 className="text-2xl font-semibold mb-6 text-white">Pourquoi Choisir Joël Pauget et ses fils ?</h2>
+            <ul className="space-y-4 text-white/90">
+              <li className="flex items-start gap-2">
+                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <p><span className="font-semibold">Expérience et Savoir-Faire :</span> Avec plus de 20 ans d'expérience, nous maîtrisons les techniques de peinture extérieure et utilisons des matériaux de qualité pour des résultats durables.</p>
+              </li>
+              <li className="flex items-start gap-2">
+                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <p><span className="font-semibold">Engagement Environnemental :</span> Labellisés RGE, nous sommes engagés dans le respect de l'environnement et veillons au tri et au traitement des déchets de nos chantiers.</p>
+              </li>
+              <li className="flex items-start gap-2">
+                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <p><span className="font-semibold">Proximité et Réactivité :</span> Entreprise familiale, nous offrons un accompagnement personnalisé et une communication transparente tout au long de vos projets.</p>
+              </li>
+            </ul>
+          </motion.div>
+
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            transition={{ delay: 1 }}
+            className="text-center"
           >
-            {realisations.map((realisation, index) => (
-              <motion.div
-                key={realisation.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative h-48">
-                  <img 
-                    src={realisation.image} 
-                    alt={realisation.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-accent">{realisation.title}</h3>
-                  <p className="text-accent/80 mb-4">{realisation.description}</p>
-                  <ul className="space-y-2 mb-4">
-                    {realisation.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-2 text-accent/70">
-                        <Star className="w-4 h-4 text-primary" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
+            <p className="text-lg text-accent/90 max-w-3xl mx-auto mb-8">
+              Confiez vos travaux de peinture extérieure à une équipe de professionnels passionnés. Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg transition-colors duration-200"
+            >
+              <span>Demander un devis gratuit</span>
+              <ArrowRight size={20} />
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -161,38 +148,4 @@ const PeinturesExterieures = () => {
   );
 };
 
-const realisations = [
-  {
-    title: "Ravalement Complet",
-    description: "Rénovation complète de façade avec traitement des fissures",
-    image: "/lovable-uploads/realisation-joints-plafond-placo.jpeg",
-    features: [
-      "Nettoyage haute pression",
-      "Traitement des fissures",
-      "Finition imperméable"
-    ]
-  },
-  {
-    title: "Peinture Décorative",
-    description: "Application de peinture décorative sur façade",
-    image: "/lovable-uploads/hero-peintures-exterieures.webp",
-    features: [
-      "Préparation du support",
-      "Peinture minérale",
-      "Protection UV"
-    ]
-  },
-  {
-    title: "Isolation Thermique",
-    description: "Isolation thermique par l'extérieur avec enduit décoratif",
-    image: "/lovable-uploads/isolation-exterieure.png",
-    features: [
-      "Pose des panneaux isolants",
-      "Enduit de finition",
-      "Économies d'énergie"
-    ]
-  }
-];
-
 export default PeinturesExterieures;
-
