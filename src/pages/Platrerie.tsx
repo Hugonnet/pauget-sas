@@ -101,7 +101,7 @@ const Platrerie = () => {
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                src="/lovable-uploads/platrerie.webp"
                 alt="Expertise en plâtrerie"
                 className="object-cover w-full h-full"
               />
