@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const CompanyPresentation = () => {
   return (
-    <section className="py-8 bg-[#F8EBDF]">
+    <section className="py-16 bg-[#F8EBDF]">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -10,7 +10,7 @@ export const CompanyPresentation = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto bg-card rounded-2xl p-8 md:p-12 text-white shadow-lg"
         >
-          <h2 className="text-3xl font-bold mb-8">Notre entreprise</h2>
+          
           
           <div className="space-y-6">
             <p className="md:text-justify">
