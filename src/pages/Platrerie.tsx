@@ -46,19 +46,7 @@ const Platrerie = () => {
         </div>
       </section>
 
-      {/* Section Introduction */}
-      <section className="py-16">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-lg text-gray-700 text-justify leading-relaxed"
-          >
-            Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de plâtrerie, offrant des services de qualité pour vos projets de construction et de rénovation. Notre équipe de professionnels expérimentés est dédiée à fournir des solutions sur mesure, alliant savoir-faire traditionnel et techniques modernes, pour créer des espaces intérieurs esthétiques et fonctionnels.
-          </motion.div>
-        </div>
-      </section>
+     
 
       {/* Section Services */}
       <section className="py-32">
@@ -90,9 +78,8 @@ const Platrerie = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-lg text-gray-700">
-                Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets de plâtrerie. 
-                Notre entreprise familiale perpétue un savoir-faire artisanal tout en intégrant les techniques modernes 
-                pour des réalisations de qualité.
+                Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de plâtrerie, offrant des services de qualité pour vos projets de construction et de rénovation. 
+                Notre équipe de professionnels expérimentés est dédiée à fournir des solutions sur mesure, alliant savoir-faire traditionnel et techniques modernes, pour créer des espaces intérieurs esthétiques et fonctionnels.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center space-x-3">
