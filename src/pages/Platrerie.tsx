@@ -140,18 +140,18 @@ const Platrerie = () => {
 
 const services = [
   {
-    title: "Plâtrerie Traditionnelle",
-    description: "Techniques ancestrales et matériaux nobles pour des finitions authentiques qui traversent le temps.",
+    title: "Création de Cloisons et Doublages",
+    description: "Nous réalisons la pose de cloisons sèches et de doublages en plaques de plâtre, permettant de structurer vos espaces selon vos besoins. Ces installations offrent une excellente isolation thermique et acoustique, contribuant au confort de votre habitat.",
     icon: Ruler
   },
   {
-    title: "Plafonds & Cloisons",
-    description: "Solutions sur mesure pour vos plafonds suspendus et cloisons, alliant esthétique et fonctionnalité.",
+    title: "Faux Plafonds et Plafonds Suspendus",
+    description: "Notre expertise inclut la conception et la mise en place de faux plafonds et de plafonds suspendus, idéaux pour dissimuler les installations techniques, améliorer l'acoustique et apporter une touche esthétique à vos pièces.",
     icon: Wrench
   },
   {
-    title: "Isolation Acoustique",
-    description: "Expertise en isolation phonique pour un confort acoustique optimal dans vos espaces.",
+    title: "Enduits et Finitions",
+    description: "Nous appliquons des enduits de lissage et de finition pour obtenir des surfaces parfaitement lisses et prêtes à peindre ou à tapisser. Nos techniques garantissent des murs et plafonds aux finitions impeccables, reflétant notre engagement envers la qualité.",
     icon: Shield
   }
 ];
