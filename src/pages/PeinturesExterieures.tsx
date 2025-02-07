@@ -131,7 +131,7 @@ const PeinturesExterieures = () => {
             transition={{ delay: 1 }}
             className="text-center"
           >
-            <p className="text-lg text-accent/90 max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-accent/90 max-w-10xl mx-auto mb-8">
               Confiez vos travaux de peinture extérieure à une équipe de professionnels passionnés. Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.
             </p>
             <Link
