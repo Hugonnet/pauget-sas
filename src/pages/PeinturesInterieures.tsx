@@ -80,6 +80,25 @@ const PeinturesInterieures = () => {
         </div>
       </section>
 
+      {/* Section Présentation */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold mb-6 text-center">
+              Sublimez Vos Espaces avec Joël Pauget et ses fils
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              Spécialistes en peinture intérieure, nous apportons élégance et modernité à vos espaces. Que ce soit pour une rénovation ou une construction neuve, nous appliquons des peintures de qualité adaptées à chaque surface : murs, plafonds, boiseries. Grâce à notre expertise, nous vous conseillons sur les finitions et les teintes idéales pour harmoniser votre intérieur. Nous utilisons des produits durables et respectueux de l'environnement pour un rendu impeccable et pérenne. Faites confiance à Joël Pauget et ses fils pour embellir votre habitat avec professionnalisme et savoir-faire.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Section CTA */}
       <section className="py-20">
         <div className="container">
