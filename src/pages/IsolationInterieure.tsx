@@ -18,7 +18,7 @@ const IsolationInterieure = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/9ef8c30e-6313-4fe5-96e7-d72f91236c9b.png')",
+            backgroundImage: "url('/lovable-uploads/hero-bg-isolation-interieure.webp')",
           }}
         />
         
