@@ -17,18 +17,18 @@ export const CTASection = () => {
               <ArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
             </a>
           </div>
-           <a
-              href="https://www.lespinat-pauget-facades.fr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center space-x-2 text-lg text-primary hover:text-primary-hover transition-colors duration-200"
-            >
-          <img
-            src="/lovable-uploads/lespinat-pauget-logo-transparent.png"
-            alt="Lespinat Pauget Facades"
-            className="w-[200px] object-contain"
-            </a>
-          />
+          <a
+            href="https://www.lespinat-pauget-facades.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center space-x-2 text-lg text-primary hover:text-primary-hover transition-colors duration-200"
+          >
+            <img
+              src="/lovable-uploads/lespinat-pauget-logo-transparent.png"
+              alt="Lespinat Pauget Facades"
+              className="w-[200px] object-contain"
+            />
+          </a>
         </div>
       </div>
     </section>
