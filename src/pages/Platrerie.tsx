@@ -49,7 +49,7 @@ const Platrerie = () => {
      
 
       {/* Section Services */}
-      <section className="py-32">
+      <section className="py-20">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
