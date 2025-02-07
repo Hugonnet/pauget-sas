@@ -56,13 +56,7 @@ const PeinturesExterieures = () => {
       {/* Services Section */}
       <section className="py-32">
         <div className="container">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-lg text-accent/90 max-w-10xl mx-auto mb-12 md:text-justify"
-          >
-            Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture extérieure. Depuis 1997, nous mettons notre expertise au service de vos projets de rénovation et d'embellissement de façades dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.
-          </motion.p>
+        
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div 
@@ -102,12 +96,21 @@ const PeinturesExterieures = () => {
             </motion.div>
           </div>
 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-lg text-accent/90 max-w-10xl mx-auto mb-12 md:text-justify"
+          >
+            Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture extérieure. Depuis 1997, nous mettons notre expertise au service de vos projets de rénovation et d'embellissement de façades dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
             className="bg-card p-8 rounded-xl shadow-lg mb-16"
           >
+      
             <h2 className="text-2xl font-semibold mb-6 text-white">Pourquoi Choisir Joël Pauget et ses fils ?</h2>
             <ul className="space-y-4 text-white/90">
               <li className="flex items-start gap-2">
