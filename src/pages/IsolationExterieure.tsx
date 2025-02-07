@@ -127,7 +127,7 @@ const IsolationExterieure = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative h-[600px] rounded-xl overflow-hidden shadow-lg"
+              className="relative h-[480px] rounded-xl overflow-hidden shadow-lg"
             >
               <img
                 src="/lovable-uploads/isolation-exterieure.jpg"
