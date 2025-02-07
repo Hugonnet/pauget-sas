@@ -81,7 +81,7 @@ const IsolationInterieure = () => {
       </section>
 
       {/* Section Expertise */}
-      <section className="py-12 bg-gradient-to-b from-background to-card/30">
+      <section className="py-8 bg-gradient-to-b from-background to-card/30">
         <div className="container">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
