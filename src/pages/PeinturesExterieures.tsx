@@ -1,3 +1,4 @@
+
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -56,8 +57,6 @@ const PeinturesExterieures = () => {
       {/* Services Section */}
       <section className="py-32">
         <div className="container">
-        
-
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -96,7 +95,6 @@ const PeinturesExterieures = () => {
             </motion.div>
           </div>
 
-        <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -125,7 +123,6 @@ const PeinturesExterieures = () => {
             transition={{ delay: 0.8 }}
             className="bg-card p-8 rounded-xl shadow-lg mb-16"
           >
-      
             <h2 className="text-2xl font-semibold mb-6 text-white">Pourquoi Choisir Joël Pauget et ses fils ?</h2>
             <ul className="space-y-4 text-white/90">
               <li className="flex items-start gap-2">
