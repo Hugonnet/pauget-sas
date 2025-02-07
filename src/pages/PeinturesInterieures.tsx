@@ -81,7 +81,7 @@ const PeinturesInterieures = () => {
       </section>
 
       {/* Section Présentation */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="container">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
