@@ -130,7 +130,7 @@ const IsolationExterieure = () => {
               className="relative h-[600px] rounded-xl overflow-hidden shadow-lg"
             >
               <img
-                src="https://images.unsplash.com/photo-1486718448742-163732cd1544"
+                src="/lovable-uploads/isolation-exterieure.jpg"
                 alt="Expertise en isolation extérieure"
                 className="object-cover w-full h-full"
               />
