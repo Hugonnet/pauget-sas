@@ -1,3 +1,4 @@
+
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -87,14 +88,28 @@ const PeinturesInterieures = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-8xl mx-auto"
+            className="max-w-8xl mx-auto grid md:grid-cols-2 gap-8 items-center"
           >
-            <h2 className="text-3xl font-bold mb-6 text-center">
-              Sublimez Vos Espaces avec Joël Pauget et ses fils
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed text-justify">
-              Spécialistes en peinture intérieure, nous apportons élégance et modernité à vos espaces. Que ce soit pour une rénovation ou une construction neuve, nous appliquons des peintures de qualité adaptées à chaque surface : murs, plafonds, boiseries. Grâce à notre expertise, nous vous conseillons sur les finitions et les teintes idéales pour harmoniser votre intérieur. Nous utilisons des produits durables et respectueux de l'environnement pour un rendu impeccable et pérenne. Faites confiance à Joël Pauget et ses fils pour embellir votre habitat avec professionnalisme et savoir-faire.
-            </p>
+            <div>
+              <h2 className="text-3xl font-bold mb-6">
+                Sublimez Vos Espaces avec Joël Pauget et ses fils
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                Spécialistes en peinture intérieure, nous apportons élégance et modernité à vos espaces. Que ce soit pour une rénovation ou une construction neuve, nous appliquons des peintures de qualité adaptées à chaque surface : murs, plafonds, boiseries. Grâce à notre expertise, nous vous conseillons sur les finitions et les teintes idéales pour harmoniser votre intérieur. Nous utilisons des produits durables et respectueux de l'environnement pour un rendu impeccable et pérenne. Faites confiance à Joël Pauget et ses fils pour embellir votre habitat avec professionnalisme et savoir-faire.
+              </p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative h-[400px] rounded-xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/lovable-uploads/peintures-interieures.png"
+                alt="Peinture intérieure professionnelle"
+                className="object-cover w-full h-full"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </section>

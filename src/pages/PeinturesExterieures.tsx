@@ -96,13 +96,28 @@ const PeinturesExterieures = () => {
             </motion.div>
           </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-lg text-accent/90 max-w-10xl mx-auto mb-12 md:text-justify"
-          >
-            Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture extérieure. Depuis 1997, nous mettons notre expertise au service de vos projets de rénovation et d'embellissement de façades dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.
-          </motion.p>
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-lg text-accent/90 md:text-justify"
+            >
+              <p>Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture extérieure. Depuis 1997, nous mettons notre expertise au service de vos projets de rénovation et d'embellissement de façades dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative h-[400px] rounded-xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/lovable-uploads/hero-peintures-exterieures.webp"
+                alt="Peinture extérieure professionnelle"
+                className="object-cover w-full h-full"
+              />
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -1,3 +1,4 @@
+
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -81,7 +82,7 @@ const IsolationExterieure = () => {
       </section>
 
       {/* Section Expertise */}
-      <section className="py-20 bg-gradient-to-b from-background to-card/30">
+      <section className="py-8 bg-gradient-to-b from-background to-card/30">
         <div className="container">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -90,10 +91,24 @@ const IsolationExterieure = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold mb-8">Notre Expertise en ITE</h2>
-            <p className="text-lg text-gray-700 mb-12">
-              Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets d'isolation thermique par l'extérieur. 
-              Notre entreprise familiale combine savoir-faire traditionnel et techniques modernes pour des résultats exceptionnels.
-            </p>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <p className="text-lg text-gray-700 mb-12 text-left">
+                Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets d'isolation thermique par l'extérieur. 
+                Notre entreprise familiale combine savoir-faire traditionnel et techniques modernes pour des résultats exceptionnels.
+              </p>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative h-[300px] rounded-xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src="/lovable-uploads/isolation-exterieure.jpg"
+                  alt="Expertise en isolation extérieure"
+                  className="object-cover w-full h-full"
+                />
+              </motion.div>
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
