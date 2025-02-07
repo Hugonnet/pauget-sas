@@ -87,7 +87,7 @@ const PeinturesInterieures = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
+            className="max-w-6xl mx-auto"
           >
             <h2 className="text-3xl font-bold mb-6 text-center">
               Sublimez Vos Espaces avec Joël Pauget et ses fils
