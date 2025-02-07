@@ -91,7 +91,7 @@ const IsolationInterieure = () => {
             className="max-w-10xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold mb-8">Notre Expertise en Isolation Intérieure</h2>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-1 gap-8 items-center">
               <p className="text-lg text-gray-700 mb-12 text-left">
                 Depuis plus de trois décennies, Pauget et Fils met son savoir-faire au service de vos projets d'isolation intérieure. 
                 Notre entreprise familiale combine expertise traditionnelle et techniques modernes pour des résultats exceptionnels.
