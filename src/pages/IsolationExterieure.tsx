@@ -88,7 +88,7 @@ const IsolationExterieure = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-10xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold mb-8">Notre Expertise en ITE</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -96,18 +96,7 @@ const IsolationExterieure = () => {
                 Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets d'isolation thermique par l'extérieur. 
                 Notre entreprise familiale combine savoir-faire traditionnel et techniques modernes pour des résultats exceptionnels.
               </p>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative h-[300px] rounded-xl overflow-hidden shadow-lg"
-              >
-                <img
-                  src="/lovable-uploads/isolation-exterieure.jpg"
-                  alt="Expertise en isolation extérieure"
-                  className="object-cover w-full h-full"
-                />
-              </motion.div>
+            
             </div>
           </motion.div>
 
