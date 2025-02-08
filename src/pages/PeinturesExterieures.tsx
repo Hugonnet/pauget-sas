@@ -110,7 +110,7 @@ const PeinturesExterieures = () => {
               className="relative h-[400px] rounded-xl overflow-hidden shadow-lg"
             >
               <img
-                src="/lovable-uploads/hero-peintures-exterieures.webp"
+                src="/lovable-uploads/peinture-exterieure.webp"
                 alt="Peinture extérieure professionnelle"
                 className="object-cover w-full h-full"
               />
