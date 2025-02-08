@@ -134,7 +134,7 @@ const Etancheite = () => {
               className="relative h-[600px] rounded-xl overflow-hidden shadow-lg"
             >
               <img
-                src="/lovable-uploads/74a83115-7afa-4489-bc0d-6ff5037638f0.png"
+                src="/lovable-uploads/Schema-etancheite-Air.jpg"
                 alt="Expertise en étanchéité à l'air"
                 className="object-cover w-full h-full"
               />
