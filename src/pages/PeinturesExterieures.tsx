@@ -113,7 +113,7 @@ Faites confiance à Joël Pauget et ses fils pour donner une nouvelle vie à vos
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative h-[440px] rounded-xl overflow-hidden shadow-lg"
+              className="relative h-[480px] rounded-xl overflow-hidden shadow-lg"
             >
               <img
                 src="/lovable-uploads/peinture-exterieure.webp"
