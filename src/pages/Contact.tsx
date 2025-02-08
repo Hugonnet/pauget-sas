@@ -173,12 +173,5 @@ const Contact = () => {
     </div>
   );
 };
-{/* CTA Section */}
-      <section className="bg-[#F8EBDF]">
-        <CTASection />
-      </section>
-    </div>
-  );
-};
 
 export default Contact;
