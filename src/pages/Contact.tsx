@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F1F1F1]">
+    <div className="min-h-screen bg-[#F8EBE0]">
       <Helmet>
         <title>Contactez Pauget & Fils | Artisan Plâtrier-Peintre à Port</title>
         <meta 
