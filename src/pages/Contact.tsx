@@ -163,7 +163,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="h-[450px] bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
+            <div className="h-[480px] bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
               <Map />
             </div>
           </div>
