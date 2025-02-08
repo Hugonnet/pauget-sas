@@ -87,7 +87,7 @@ const Etancheite = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-10xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold mb-8">Notre Expertise en Étanchéité à l'Air</h2>
             <p className="text-lg text-gray-700 mb-12">
