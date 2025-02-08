@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -50,7 +51,7 @@ const Contact = () => {
           N'hésitez pas à nous contacter pour obtenir un devis gratuit.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
             
@@ -152,7 +153,7 @@ const Contact = () => {
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">Téléphone:</span>
                   <a href="tel:0672019849" className="text-white hover:underline">
-                  06 72 01 98 49
+                    06 72 01 98 49
                   </a>
                 </p>
                 <p className="flex items-center gap-2">
@@ -164,16 +165,15 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="h-[480px] bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
+            <div className="bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
               <Map />
-              {/* CTA Section */}
-      <section className="bg-[#F8EBDF]">
-        <CTASection />
-      </section>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* CTA Section */}
+      <CTASection />
     </div>
   );
 };
