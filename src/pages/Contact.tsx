@@ -166,6 +166,10 @@ const Contact = () => {
 
             <div className="h-[480px] bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg">
               <Map />
+              {/* CTA Section */}
+      <section className="bg-[#F8EBDF]">
+        <CTASection />
+      </section>
             </div>
           </div>
         </div>
