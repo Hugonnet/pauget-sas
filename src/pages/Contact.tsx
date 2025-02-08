@@ -44,7 +44,7 @@ const Contact = () => {
           content="Contactez Pauget & Fils pour vos projets de plâtrerie, peinture et isolation à Port. Devis gratuit, conseil personnalisé. Plus de 30 ans d'expérience à votre service."
         />
       </Helmet>
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6">
         <h1 className="text-4xl font-bold mb-8">Contact</h1>
         <p className="text-lg mb-12 max-w-2xl">
           Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
