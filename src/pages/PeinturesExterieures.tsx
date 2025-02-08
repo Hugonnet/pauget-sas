@@ -101,7 +101,13 @@ const PeinturesExterieures = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-lg text-accent/90 md:text-justify"
             >
-              <p>Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture extérieure. Depuis 1997, nous mettons notre expertise au service de vos projets de rénovation et d'embellissement de façades dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.</p>
+              <p>Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture extérieure, mettant son savoir-faire au service des particuliers et des professionnels depuis 1997. Nous intervenons pour la rénovation, la protection et l’embellissement de façades, boiseries, menuiseries extérieures et autres surfaces exposées aux intempéries.
+
+Grâce à notre expertise, nous sélectionnons des peintures haute résistance adaptées aux conditions climatiques de l’Ain (01) et de la Haute-Savoie (74), garantissant une excellente tenue dans le temps. Nos interventions couvrent les secteurs de Saint-Julien-en-Genevois, Annemasse, Annecy et leurs environs.
+
+Nous proposons un large choix de finitions et de teintes pour moderniser vos façades et renforcer leur protection contre l’humidité, les UV et la pollution. Que ce soit pour un ravalement, une peinture décorative ou un traitement spécifique, nous vous conseillons sur les meilleures solutions techniques et esthétiques.
+
+Faites confiance à Joël Pauget et ses fils pour donner une nouvelle vie à vos extérieurs ! Contactez-nous dès aujourd’hui pour un devis personnalisé.</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
