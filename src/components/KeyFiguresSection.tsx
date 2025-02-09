@@ -1,3 +1,4 @@
+
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
@@ -103,7 +104,7 @@ export const KeyFiguresSection = () => {
               <CountUp end={figure.number} suffix={figure.suffix || ""} />
             </motion.p>
             <motion.p
-              className="text-gray-600 md:text-justify"
+              className="text-gray-600 text-center"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
@@ -116,3 +117,4 @@ export const KeyFiguresSection = () => {
     </div>
   );
 };
+
