@@ -1,4 +1,3 @@
-
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -88,16 +87,13 @@ const IsolationExterieure = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-10xl mx-auto text-center"
+            className="max-w-10xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-8">Notre Expertise en ITE</h2>
-            <div className="grid md:grid-cols-1 gap-8 items-center">
-              <p className="text-lg text-gray-700 mb-12 text-left">
-                Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets d'isolation thermique par l'extérieur. 
-                Notre entreprise familiale combine savoir-faire traditionnel et techniques modernes pour des résultats exceptionnels.
-              </p>
-            
-            </div>
+            <h2 className="text-3xl font-bold mb-8 text-center">Notre Expertise en ITE</h2>
+            <p className="text-lg text-gray-700 mb-12">
+              Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets d'isolation thermique par l'extérieur. 
+              Notre entreprise familiale combine savoir-faire traditionnel et techniques modernes pour des résultats exceptionnels.
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -206,4 +202,3 @@ const services = [
 ];
 
 export default IsolationExterieure;
-
