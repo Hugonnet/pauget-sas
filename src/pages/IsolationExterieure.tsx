@@ -89,10 +89,9 @@ const IsolationExterieure = () => {
             transition={{ duration: 0.8 }}
             className="max-w-10xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-8 text-center">Notre Expertise en ITE</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Notre Savoir-Faire en ITE</h2>
             <p className="text-lg text-gray-700 mb-12">
-              Depuis plus de trois décennies, Pauget et Fils met son expertise au service de vos projets d'isolation thermique par l'extérieur. 
-              Notre entreprise familiale combine savoir-faire traditionnel et techniques modernes pour des résultats exceptionnels.
+              Fort de notre expertise technique et de notre connaissance approfondie des matériaux, nous garantissons une isolation thermique par l'extérieur parfaitement adaptée à votre habitat.
             </p>
           </motion.div>
 
@@ -104,21 +103,21 @@ const IsolationExterieure = () => {
               className="space-y-6"
             >
               <div className="bg-card p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-white">Diagnostic Complet</h3>
+                <h3 className="text-xl font-semibold mb-3 text-white">Préparation et Protection</h3>
                 <p className="text-white/90">
-                  Analyse approfondie de votre bâtiment pour une solution d'isolation adaptée à vos besoins spécifiques.
+                  Protection minutieuse de vos ouvertures et végétation, préparation soignée des supports pour une adhérence optimale.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-white">Matériaux Performants</h3>
+                <h3 className="text-xl font-semibold mb-3 text-white">Finitions Personnalisées</h3>
                 <p className="text-white/90">
-                  Utilisation de systèmes d'isolation certifiés et éco-responsables pour une efficacité maximale.
+                  Large gamme d'enduits et de revêtements décoratifs pour personnaliser l'aspect final de vos façades.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-white">Installation Experte</h3>
+                <h3 className="text-xl font-semibold mb-3 text-white">Suivi et Garanties</h3>
                 <p className="text-white/90">
-                  Mise en œuvre par des professionnels qualifiés pour une finition impeccable et durable.
+                  Accompagnement complet du projet et garanties décennales sur nos travaux d'isolation.
                 </p>
               </div>
             </motion.div>
