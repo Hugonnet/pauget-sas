@@ -57,6 +57,48 @@ export type Database = {
         }
         Relationships: []
       }
+      realizations: {
+        Row: {
+          content: string
+          created_at: string | null
+          description: string
+          gallery: string[] | null
+          id: string
+          image: string
+          meta_description: string | null
+          slug: string
+          tags: string[] | null
+          title: string
+          updated_at: string | null
+        }
+        Insert: {
+          content: string
+          created_at?: string | null
+          description: string
+          gallery?: string[] | null
+          id?: string
+          image: string
+          meta_description?: string | null
+          slug: string
+          tags?: string[] | null
+          title: string
+          updated_at?: string | null
+        }
+        Update: {
+          content?: string
+          created_at?: string | null
+          description?: string
+          gallery?: string[] | null
+          id?: string
+          image?: string
+          meta_description?: string | null
+          slug?: string
+          tags?: string[] | null
+          title?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       seo_analyses: {
         Row: {
           archived: boolean | null
