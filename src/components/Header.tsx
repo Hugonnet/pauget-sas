@@ -1,12 +1,17 @@
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 import DesktopNav from "./navigation/DesktopNav";
 import MobileNav from "./navigation/MobileNav";
 import { MenuItem } from "./navigation/types";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, signOut } = useAuth();
+  const location = useLocation();
 
   const menuItems: MenuItem[] = [
     { name: "Accueil", path: "/" },
@@ -45,12 +50,31 @@ const Header = () => {
               />
             </Link>
 
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
-            >
-              <Menu size={24} />
-            </button>
+            <div className="flex items-center gap-4">
+              {user ? (
+                <Button
+                  onClick={() => signOut()}
+                  variant="outline"
+                  className="hidden lg:inline-flex"
+                >
+                  Se déconnecter
+                </Button>
+              ) : (
+                <Link
+                  to="/auth"
+                  className="hidden lg:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover"
+                >
+                  Se connecter
+                </Link>
+              )}
+
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
+              >
+                <Menu size={24} />
+              </button>
+            </div>
           </div>
 
           <DesktopNav menuItems={menuItems} />
