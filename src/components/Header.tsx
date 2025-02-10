@@ -6,11 +6,10 @@ import { useAuth } from "@/hooks/useAuth";
 import DesktopNav from "./navigation/DesktopNav";
 import MobileNav from "./navigation/MobileNav";
 import { MenuItem } from "./navigation/types";
-import { Button } from "./ui/button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, signOut } = useAuth();
+  const { user } = useAuth();
   const location = useLocation();
 
   const menuItems: MenuItem[] = [
@@ -50,24 +49,12 @@ const Header = () => {
               />
             </Link>
 
-            <div className="flex items-center gap-4">
-              {user && (
-                <Button
-                  onClick={() => signOut()}
-                  variant="outline"
-                  className="hidden lg:inline-flex"
-                >
-                  Se déconnecter
-                </Button>
-              )}
-
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
-              >
-                <Menu size={24} />
-              </button>
-            </div>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 rounded-md text-secondary-foreground hover:bg-gray-100 transition-colors duration-200"
+            >
+              <Menu size={24} />
+            </button>
           </div>
 
           <DesktopNav menuItems={menuItems} />

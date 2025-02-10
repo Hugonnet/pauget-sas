@@ -1,8 +1,12 @@
 
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "./ui/button";
 
 const Footer = () => {
+  const { user, signOut } = useAuth();
+  
   return (
     <footer className="py-12 border-t-4 border-[#C4A484]" style={{ background: 'linear-gradient(to bottom, #F9EBDF, #998475)' }}>
       <div className="container mx-auto px-4">
@@ -133,7 +137,19 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/90">
-          <p>© {new Date().getFullYear()} Pauget et Fils. Tous droits réservés.</p>
+          <div className="flex justify-between items-center">
+            <p>© {new Date().getFullYear()} Pauget et Fils. Tous droits réservés.</p>
+            {user && (
+              <Button
+                onClick={() => signOut()}
+                variant="outline"
+                size="sm"
+                className="text-white hover:text-white/90"
+              >
+                Se déconnecter
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </footer>

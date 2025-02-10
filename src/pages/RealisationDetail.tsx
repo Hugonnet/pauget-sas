@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +7,7 @@ import { X, Edit2, Plus } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 
 const realisations = {
   "renovation-appartement-haussmannien": {
@@ -17,12 +19,12 @@ const realisations = {
       et la mise en place d'une isolation thermique performante.
     `,
     metaDescription: "Découvrez notre projet de rénovation d'un appartement haussmannien à Lyon. Travaux de plâtrerie, peinture et isolation thermique réalisés par nos artisans.",
-    image: "/lovable-uploads/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
+    image: "/lovable-uploads/platrerie/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
     gallery: [
-      "/lovable-uploads/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
-      "/lovable-uploads/hero-bg.png",
+      "/lovable-uploads/platrerie/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
+      "/lovable-uploads/platrerie/hero-bg.png",
     ],
-    tags: ["Rénovation", "Plâtrerie", "Peinture", "Isolation"]
+    tags: ["Plâtrerie", "Peinture intérieure"]
   },
   "isolation-exterieure-maison": {
     title: "Isolation extérieure d'une maison individuelle",
@@ -33,18 +35,28 @@ const realisations = {
       tout en rénovant l'aspect extérieur.
     `,
     metaDescription: "Découvrez notre projet d'isolation thermique par l'extérieur d'une maison individuelle. Amélioration énergétique et ravalement de façade.",
-    image: "/lovable-uploads/hero-bg.png",
+    image: "/lovable-uploads/isolation-exterieure/hero-bg.png",
     gallery: [
-      "/lovable-uploads/hero-bg.png",
-      "/lovable-uploads/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
+      "/lovable-uploads/isolation-exterieure/hero-bg.png",
+      "/lovable-uploads/isolation-exterieure/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
     ],
-    tags: ["Isolation", "Extérieur", "Ravalement"]
+    tags: ["Isolation extérieure"]
   },
 };
+
+const defaultTags = [
+  "Plâtrerie",
+  "Peinture intérieure",
+  "Peinture extérieure",
+  "Isolation intérieure",
+  "Isolation extérieure",
+  "Etanchéité à l'air"
+];
 
 const RealisationDetail = () => {
   const { slug } = useParams();
   const { toast } = useToast();
+  const { user } = useAuth();
   const [editingTagIndex, setEditingTagIndex] = useState<number | null>(null);
   const [editedTagValue, setEditedTagValue] = useState("");
   const [localTags, setLocalTags] = useState<string[]>([]);
@@ -121,7 +133,7 @@ const RealisationDetail = () => {
           <div className="flex flex-wrap gap-2 mb-8 items-center">
             {localTags.map((tag, index) => (
               <div key={index} className="flex items-center gap-1">
-                {editingTagIndex === index ? (
+                {user && editingTagIndex === index ? (
                   <div className="flex gap-2">
                     <Input
                       value={editedTagValue}
@@ -144,31 +156,35 @@ const RealisationDetail = () => {
                 ) : (
                   <Badge
                     variant="secondary"
-                    className="pr-1 flex items-center gap-1"
+                    className={`pr-1 flex items-center gap-1 ${user ? '' : 'pr-3'}`}
                   >
                     {tag}
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-5 w-5 p-0 hover:bg-transparent"
-                      onClick={() => handleEditTag(index)}
-                    >
-                      <Edit2 className="h-3 w-3" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-5 w-5 p-0 hover:bg-transparent"
-                      onClick={() => handleDeleteTag(index)}
-                    >
-                      <X className="h-3 w-3" />
-                    </Button>
+                    {user && (
+                      <>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-5 w-5 p-0 hover:bg-transparent"
+                          onClick={() => handleEditTag(index)}
+                        >
+                          <Edit2 className="h-3 w-3" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-5 w-5 p-0 hover:bg-transparent"
+                          onClick={() => handleDeleteTag(index)}
+                        >
+                          <X className="h-3 w-3" />
+                        </Button>
+                      </>
+                    )}
                   </Badge>
                 )}
               </div>
             ))}
             
-            {isAddingTag ? (
+            {user && (isAddingTag ? (
               <div className="flex gap-2">
                 <Input
                   value={newTagValue}
@@ -199,7 +215,7 @@ const RealisationDetail = () => {
                 <Plus className="h-4 w-4" />
                 Ajouter un tag
               </Button>
-            )}
+            ))}
           </div>
 
           <div className="relative h-[500px] rounded-xl overflow-hidden mb-8">
