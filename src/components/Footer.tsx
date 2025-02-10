@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -88,6 +89,14 @@ const Footer = () => {
                   className="text-white/90 hover:text-white transition-colors duration-200"
                 >
                   Mentions légales
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/auth"
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Accès privé
                 </Link>
               </li>
             </ul>
