@@ -46,8 +46,10 @@ const RealisationForm = () => {
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)+/g, "");
     
-    const timestamp = new Date().getTime().toString().slice(-4);
-    return `${baseSlug}-${timestamp}`;
+    // Ajout d'un identifiant unique plus long pour éviter les collisions
+    const timestamp = new Date().getTime();
+    const random = Math.random().toString(36).substring(2, 8);
+    return `${baseSlug}-${timestamp}-${random}`;
   };
 
   const onSubmit = async (data: RealisationFormData) => {
@@ -63,7 +65,7 @@ const RealisationForm = () => {
     try {
       setUploading(true);
 
-      // Générer un slug unique
+      // Générer un slug unique avec plus d'entropie
       const uniqueSlug = generateUniqueSlug(data.title);
 
       // Upload des images
