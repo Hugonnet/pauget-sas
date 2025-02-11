@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -16,49 +17,57 @@ const realisations: Realisation[] = [
     title: "Rénovation complète d'un appartement haussmannien",
     description: "Plâtrerie, peinture et isolation thermique pour un appartement de 120m²",
     slug: "renovation-appartement-haussmannien",
-    image: "/lovable-uploads/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
-    tags: ["Rénovation", "Plâtrerie", "Peinture", "Isolation"]
+    image: "/lovable-uploads/platrerie/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
+    tags: ["Plâtrerie", "Peinture intérieure"]
   },
   {
     title: "Isolation extérieure d'une maison individuelle",
     description: "Isolation thermique par l'extérieur et ravalement de façade",
     slug: "isolation-exterieure-maison",
-    image: "/lovable-uploads/hero-bg.png",
-    tags: ["Isolation", "Extérieur", "Ravalement"]
+    image: "/lovable-uploads/isolation-exterieure/hero-bg.png",
+    tags: ["Isolation extérieure"]
   },
   {
     title: "Rénovation d'une cage d'escalier",
     description: "Travaux de plâtrerie et peinture dans une copropriété",
     slug: "renovation-cage-escalier",
-    image: "/lovable-uploads/01d0836d-25c4-4b2e-bc6d-ae8eeaea0cf9.png",
-    tags: ["Plâtrerie", "Peinture", "Copropriété"]
+    image: "/lovable-uploads/peinture-interieure/01d0836d-25c4-4b2e-bc6d-ae8eeaea0cf9.png",
+    tags: ["Plâtrerie", "Peinture intérieure"]
   },
   {
     title: "Isolation des combles perdus",
     description: "Isolation thermique des combles avec laine de verre soufflée",
     slug: "isolation-combles-perdus",
-    image: "/lovable-uploads/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png",
-    tags: ["Isolation", "Combles", "Économies d'énergie"]
+    image: "/lovable-uploads/isolation-interieure/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png",
+    tags: ["Isolation intérieure"]
   },
   {
     title: "Ravalement de façade historique",
     description: "Restauration et mise en valeur d'une façade du XIXe siècle",
     slug: "ravalement-facade-historique",
-    image: "/lovable-uploads/74a83115-7afa-4489-bc0d-6ff5037638f0.png",
-    tags: ["Ravalement", "Restauration", "Patrimoine"]
+    image: "/lovable-uploads/peinture-exterieure/74a83115-7afa-4489-bc0d-6ff5037638f0.png",
+    tags: ["Peinture extérieure"]
   },
   {
     title: "Réfection complète d'une toiture",
     description: "Isolation et étanchéité d'une toiture de 200m²",
     slug: "refection-toiture",
-    image: "/lovable-uploads/9ef8c30e-6313-4fe5-96e7-d72f91236c9b.png",
-    tags: ["Toiture", "Isolation", "Étanchéité"]
+    image: "/lovable-uploads/etancheite/9ef8c30e-6313-4fe5-96e7-d72f91236c9b.png",
+    tags: ["Etanchéité à l'air"]
   }
+];
+
+const defaultTags = [
+  "Plâtrerie",
+  "Peinture intérieure",
+  "Peinture extérieure",
+  "Isolation intérieure",
+  "Isolation extérieure",
+  "Etanchéité à l'air"
 ];
 
 const Realisations = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const allTags = Array.from(new Set(realisations.flatMap(r => r.tags)));
 
   const toggleTag = (tag: string) => {
     setSelectedTags(prev => 
@@ -88,7 +97,7 @@ const Realisations = () => {
         <h1 className="text-4xl font-bold text-center mb-8">Nos Réalisations</h1>
         
         <div className="flex flex-wrap gap-2 mb-8 justify-center">
-          {allTags.map(tag => (
+          {defaultTags.map(tag => (
             <Badge
               key={tag}
               variant={selectedTags.includes(tag) ? "default" : "outline"}
