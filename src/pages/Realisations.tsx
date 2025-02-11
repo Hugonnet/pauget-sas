@@ -78,7 +78,7 @@ const Realisations = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-primary/10">
       <Helmet>
-        <title>Nos Réalisations en Plâtrerie & Peinture à Port | Pauget & Fils</title>
+        <title>Nos Réalisations en Plâtrerie & Peinture | Pauget & Fils</title>
         <meta 
           name="description" 
           content="Découvrez nos réalisations en plâtrerie, peinture et isolation à Port. Projets résidentiels et commerciaux, avant/après, témoignages clients. Plus de 30 ans d'expertise."

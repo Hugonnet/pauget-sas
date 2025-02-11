@@ -1,4 +1,3 @@
-
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2, Plus, X } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 interface RealisationFormData {
   title: string;
@@ -18,6 +18,7 @@ interface RealisationFormData {
   description: string;
   content: string;
   tags: string[];
+  meta_description?: string;
 }
 
 const RealisationForm = () => {
@@ -145,6 +146,14 @@ const RealisationForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-primary/10">
+      <Helmet>
+        <title>Ajouter une réalisation | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Ajoutez une nouvelle réalisation à notre portfolio de travaux en plâtrerie, peinture et isolation."
+        />
+      </Helmet>
+
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-8">Ajouter une réalisation</h1>
 
@@ -221,6 +230,25 @@ const RealisationForm = () => {
                       <Textarea
                         placeholder="Description détaillée de la réalisation"
                         className="min-h-[200px] resize-none"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="meta_description"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Meta Description (SEO)</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Description pour les moteurs de recherche (max 160 caractères)"
+                        className="resize-none"
+                        maxLength={160}
                         {...field}
                       />
                     </FormControl>
