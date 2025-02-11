@@ -86,8 +86,11 @@ export type Database = {
           gallery: string[] | null
           id: string
           image: string
+          image_order: string[] | null
+          location: string | null
           meta_description: string | null
           slug: string
+          subtitle: string | null
           tags: string[] | null
           title: string
           updated_at: string | null
@@ -99,8 +102,11 @@ export type Database = {
           gallery?: string[] | null
           id?: string
           image: string
+          image_order?: string[] | null
+          location?: string | null
           meta_description?: string | null
           slug: string
+          subtitle?: string | null
           tags?: string[] | null
           title: string
           updated_at?: string | null
@@ -112,8 +118,11 @@ export type Database = {
           gallery?: string[] | null
           id?: string
           image?: string
+          image_order?: string[] | null
+          location?: string | null
           meta_description?: string | null
           slug?: string
+          subtitle?: string | null
           tags?: string[] | null
           title?: string
           updated_at?: string | null

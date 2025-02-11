@@ -1,61 +1,24 @@
 
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
 
 interface Realisation {
+  id: string;
   title: string;
+  subtitle: string;
   description: string;
+  location: string;
   slug: string;
   image: string;
   tags: string[];
 }
-
-const realisations: Realisation[] = [
-  {
-    title: "Rénovation complète d'un appartement haussmannien",
-    description: "Plâtrerie, peinture et isolation thermique pour un appartement de 120m²",
-    slug: "renovation-appartement-haussmannien",
-    image: "/lovable-uploads/platrerie/63aa80be-f2ba-47b4-984f-a6f43e14e62f.png",
-    tags: ["Plâtrerie", "Peinture intérieure"]
-  },
-  {
-    title: "Isolation extérieure d'une maison individuelle",
-    description: "Isolation thermique par l'extérieur et ravalement de façade",
-    slug: "isolation-exterieure-maison",
-    image: "/lovable-uploads/isolation-exterieure/hero-bg.png",
-    tags: ["Isolation extérieure"]
-  },
-  {
-    title: "Rénovation d'une cage d'escalier",
-    description: "Travaux de plâtrerie et peinture dans une copropriété",
-    slug: "renovation-cage-escalier",
-    image: "/lovable-uploads/peinture-interieure/01d0836d-25c4-4b2e-bc6d-ae8eeaea0cf9.png",
-    tags: ["Plâtrerie", "Peinture intérieure"]
-  },
-  {
-    title: "Isolation des combles perdus",
-    description: "Isolation thermique des combles avec laine de verre soufflée",
-    slug: "isolation-combles-perdus",
-    image: "/lovable-uploads/isolation-interieure/459a21ce-f9b4-4ef3-8530-2f918b95fae8.png",
-    tags: ["Isolation intérieure"]
-  },
-  {
-    title: "Ravalement de façade historique",
-    description: "Restauration et mise en valeur d'une façade du XIXe siècle",
-    slug: "ravalement-facade-historique",
-    image: "/lovable-uploads/peinture-exterieure/74a83115-7afa-4489-bc0d-6ff5037638f0.png",
-    tags: ["Peinture extérieure"]
-  },
-  {
-    title: "Réfection complète d'une toiture",
-    description: "Isolation et étanchéité d'une toiture de 200m²",
-    slug: "refection-toiture",
-    image: "/lovable-uploads/etancheite/9ef8c30e-6313-4fe5-96e7-d72f91236c9b.png",
-    tags: ["Etanchéité à l'air"]
-  }
-];
 
 const defaultTags = [
   "Plâtrerie",
@@ -68,6 +31,35 @@ const defaultTags = [
 
 const Realisations = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [realisations, setRealisations] = useState<Realisation[]>([]);
+  const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
+  const { toast } = useToast();
+
+  useEffect(() => {
+    fetchRealisations();
+  }, []);
+
+  const fetchRealisations = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('realizations')
+        .select('*');
+
+      if (error) throw error;
+
+      setRealisations(data || []);
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Erreur",
+        description: "Impossible de charger les réalisations",
+        variant: "destructive"
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const toggleTag = (tag: string) => {
     setSelectedTags(prev => 
@@ -79,7 +71,7 @@ const Realisations = () => {
 
   const filteredRealisations = selectedTags.length > 0
     ? realisations.filter(r => 
-        selectedTags.every(tag => r.tags.includes(tag))
+        selectedTags.every(tag => r.tags?.includes(tag))
       )
     : realisations;
 
@@ -94,7 +86,17 @@ const Realisations = () => {
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-8">Nos Réalisations</h1>
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-bold">Nos Réalisations</h1>
+          {user && (
+            <Link to="/realisations/new">
+              <Button className="flex items-center gap-2">
+                <Plus className="h-4 w-4" />
+                Ajouter une réalisation
+              </Button>
+            </Link>
+          )}
+        </div>
         
         <div className="flex flex-wrap gap-2 mb-8 justify-center">
           {defaultTags.map(tag => (
@@ -112,7 +114,7 @@ const Realisations = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredRealisations.map((realisation) => (
             <Link
-              key={realisation.slug}
+              key={realisation.id}
               to={`/realisations/${realisation.slug}`}
               className="group"
             >
@@ -134,7 +136,7 @@ const Realisations = () => {
                     {realisation.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {realisation.tags.map(tag => (
+                    {realisation.tags?.map(tag => (
                       <Badge key={tag} variant="secondary" className="text-sm">
                         {tag}
                       </Badge>
