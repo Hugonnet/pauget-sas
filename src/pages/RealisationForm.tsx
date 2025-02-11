@@ -16,7 +16,6 @@ interface RealisationFormData {
   subtitle: string;
   location: string;
   description: string;
-  slug: string;
   content: string;
   tags: string[];
 }
@@ -34,11 +33,22 @@ const RealisationForm = () => {
       subtitle: "",
       location: "",
       description: "",
-      slug: "",
       content: "",
       tags: []
     }
   });
+
+  const generateUniqueSlug = (title: string) => {
+    const baseSlug = title
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)+/g, "");
+    
+    const timestamp = new Date().getTime().toString().slice(-4);
+    return `${baseSlug}-${timestamp}`;
+  };
 
   const onSubmit = async (data: RealisationFormData) => {
     if (!user) {
@@ -52,6 +62,9 @@ const RealisationForm = () => {
 
     try {
       setUploading(true);
+
+      // Générer un slug unique
+      const uniqueSlug = generateUniqueSlug(data.title);
 
       // Upload des images
       const uploadedImages = await Promise.all(
@@ -77,7 +90,7 @@ const RealisationForm = () => {
         subtitle: data.subtitle,
         location: data.location,
         description: data.description,
-        slug: data.slug,
+        slug: uniqueSlug,
         content: data.content,
         tags: data.tags,
         image: uploadedImages[0] || "", // Première image comme image principale
@@ -206,23 +219,6 @@ const RealisationForm = () => {
                       <Textarea
                         placeholder="Description détaillée de la réalisation"
                         className="min-h-[200px] resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="slug"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Slug URL</FormLabel>
-                    <FormControl>
-                      <Input 
-                        placeholder="nom-de-la-realisation"
                         {...field}
                       />
                     </FormControl>
