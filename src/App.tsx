@@ -22,6 +22,7 @@ import IsolationExterieure from "./pages/IsolationExterieure";
 import Etancheite from "./pages/Etancheite";
 import Realisations from "./pages/Realisations";
 import RealisationDetail from "./pages/RealisationDetail";
+import RealisationForm from "./pages/RealisationForm";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import LegalNotice from "./pages/LegalNotice";
 
@@ -50,6 +51,7 @@ const App = () => (
                   <Route path="/isolation/exterieure" element={<IsolationExterieure />} />
                   <Route path="/etancheite" element={<Etancheite />} />
                   <Route path="/realisations" element={<Realisations />} />
+                  <Route path="/realisations/new" element={<RealisationForm />} />
                   <Route path="/realisations/:slug" element={<RealisationDetail />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
