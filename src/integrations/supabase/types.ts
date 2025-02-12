@@ -266,7 +266,13 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      realization_tag:
+        | "Plâtrerie"
+        | "Peinture intérieure"
+        | "Peinture extérieure"
+        | "Isolation intérieure"
+        | "Isolation extérieure"
+        | "Étanchéité à l'air"
     }
     CompositeTypes: {
       [_ in never]: never

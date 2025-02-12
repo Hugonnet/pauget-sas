@@ -11,6 +11,16 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2, Plus, X } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { Badge } from "@/components/ui/badge";
+
+const defaultTags = [
+  "Plâtrerie",
+  "Peinture intérieure",
+  "Peinture extérieure",
+  "Isolation intérieure",
+  "Isolation extérieure",
+  "Étanchéité à l'air"
+];
 
 interface RealisationFormData {
   title: string;
@@ -83,6 +93,7 @@ const RealisationForm = () => {
       const { error } = await supabase.from('realizations').insert({
         title: data.title,
         description: data.description,
+        tags: data.tags,
         slug: uniqueSlug,
         image: uploadedImages[0] || "", // Première image comme image principale
         gallery: uploadedImages,
@@ -175,6 +186,34 @@ const RealisationForm = () => {
                         {...field}
                       />
                     </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="tags"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Types de travaux</FormLabel>
+                    <div className="flex flex-wrap gap-2">
+                      {defaultTags.map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant={field.value.includes(tag) ? "default" : "outline"}
+                          className="cursor-pointer hover:bg-primary/80"
+                          onClick={() => {
+                            const newTags = field.value.includes(tag)
+                              ? field.value.filter((t) => t !== tag)
+                              : [...field.value, tag];
+                            field.onChange(newTags);
+                          }}
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}

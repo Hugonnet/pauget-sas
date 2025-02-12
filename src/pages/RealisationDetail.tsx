@@ -8,13 +8,13 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Pencil } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 interface Realisation {
   id: string;
   title: string;
-  subtitle: string;
   description: string;
-  content: string;
   location: string;
   image: string;
   gallery: string[];
@@ -121,38 +121,26 @@ const RealisationDetail = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="prose max-w-none">
-            {realisation.subtitle && (
-              <h2 className="text-2xl font-semibold mb-4">{realisation.subtitle}</h2>
-            )}
-            
-            {realisation.location && (
-              <p className="text-lg text-gray-600 mb-4">
-                📍 {realisation.location}
-              </p>
-            )}
-
-            <p className="text-lg text-gray-700 mb-8">{realisation.description}</p>
-            
-            <div className="text-gray-700 mb-12 whitespace-pre-wrap">
-              {realisation.content}
-            </div>
+            <h2 className="text-2xl font-bold mb-6">{realisation.title}</h2>
+            <p className="text-lg text-gray-700 mb-12">{realisation.description}</p>
           </div>
 
           {realisation.gallery && realisation.gallery.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {realisation.gallery.map((image, index) => (
-                <div
-                  key={index}
-                  className="relative h-[300px] rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 backdrop-blur-sm bg-white/10"
-                >
-                  <img
-                    src={image}
-                    alt={`${realisation.title} - Image ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+            <PhotoProvider>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {realisation.gallery.map((image, index) => (
+                  <PhotoView key={index} src={image}>
+                    <div className="relative h-[300px] rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 backdrop-blur-sm bg-white/10 cursor-pointer">
+                      <img
+                        src={image}
+                        alt={`${realisation.title} - Image ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </PhotoView>
+                ))}
+              </div>
+            </PhotoProvider>
           )}
         </div>
       </div>
