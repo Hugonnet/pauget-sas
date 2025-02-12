@@ -23,6 +23,7 @@ import Etancheite from "./pages/Etancheite";
 import Realisations from "./pages/Realisations";
 import RealisationDetail from "./pages/RealisationDetail";
 import RealisationForm from "./pages/RealisationForm";
+import RealisationEdit from "./pages/RealisationEdit";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import LegalNotice from "./pages/LegalNotice";
 
@@ -53,6 +54,7 @@ const App = () => (
                   <Route path="/realisations" element={<Realisations />} />
                   <Route path="/realisations/new" element={<RealisationForm />} />
                   <Route path="/realisations/:slug" element={<RealisationDetail />} />
+                  <Route path="/realisations/edit/:slug" element={<RealisationEdit />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
                   <Route path="/mentions-legales" element={<LegalNotice />} />
