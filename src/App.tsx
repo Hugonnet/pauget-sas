@@ -53,8 +53,8 @@ const App = () => (
                   <Route path="/etancheite" element={<Etancheite />} />
                   <Route path="/realisations" element={<Realisations />} />
                   <Route path="/realisations/new" element={<RealisationForm />} />
-                  <Route path="/realisations/:slug" element={<RealisationDetail />} />
                   <Route path="/realisations/edit/:slug" element={<RealisationEdit />} />
+                  <Route path="/realisations/:slug" element={<RealisationDetail />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
                   <Route path="/mentions-legales" element={<LegalNotice />} />
