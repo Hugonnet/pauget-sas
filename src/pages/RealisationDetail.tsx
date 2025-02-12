@@ -1,15 +1,24 @@
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Pencil } from "lucide-react";
+import { Loader2, Pencil, Copy } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+
+const defaultTags = [
+  "Plâtrerie",
+  "Peinture intérieure",
+  "Peinture extérieure",
+  "Isolation intérieure",
+  "Isolation extérieure",
+  "Étanchéité à l'air"
+];
 
 interface Realisation {
   id: string;
@@ -20,6 +29,7 @@ interface Realisation {
   gallery: string[];
   tags: string[];
   meta_description: string;
+  meta_title: string;
   slug: string;
 }
 
@@ -27,8 +37,11 @@ const RealisationDetail = () => {
   const { slug } = useParams();
   const { toast } = useToast();
   const { user } = useAuth();
+  const navigate = useNavigate();
   const [realisation, setRealisation] = useState<Realisation | null>(null);
   const [loading, setLoading] = useState(true);
+  const [editingTags, setEditingTags] = useState(false);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchRealisation = async () => {
@@ -41,6 +54,7 @@ const RealisationDetail = () => {
 
         if (error) throw error;
         setRealisation(data);
+        setSelectedTags(data.tags || []);
       } catch (error) {
         console.error('Erreur:', error);
         toast({
@@ -57,6 +71,76 @@ const RealisationDetail = () => {
       fetchRealisation();
     }
   }, [slug, toast]);
+
+  const handleTagsUpdate = async () => {
+    if (!realisation) return;
+
+    try {
+      const { error } = await supabase
+        .from('realizations')
+        .update({ tags: selectedTags })
+        .eq('id', realisation.id);
+
+      if (error) throw error;
+
+      setRealisation(prev => prev ? { ...prev, tags: selectedTags } : null);
+      setEditingTags(false);
+      
+      toast({
+        title: "Succès",
+        description: "Les tags ont été mis à jour"
+      });
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Erreur",
+        description: "Impossible de mettre à jour les tags",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const handleDuplicate = async () => {
+    if (!realisation) return;
+
+    try {
+      // Générer un nouveau slug unique
+      const timestamp = new Date().getTime();
+      const random = Math.random().toString(36).substring(2, 8);
+      const newSlug = `${realisation.slug}-copie-${timestamp}-${random}`;
+
+      // Créer la copie
+      const { data, error } = await supabase
+        .from('realizations')
+        .insert({
+          ...realisation,
+          id: undefined, // Laisser Supabase générer un nouvel ID
+          title: `${realisation.title} (copie)`,
+          slug: newSlug,
+          meta_title: `${realisation.title} (copie) | Réalisations Pauget & Fils`,
+          created_at: new Date().toISOString()
+        })
+        .select()
+        .single();
+
+      if (error) throw error;
+
+      toast({
+        title: "Succès",
+        description: "La réalisation a été dupliquée"
+      });
+
+      // Rediriger vers la nouvelle réalisation
+      navigate(`/realisations/${data.slug}`);
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Erreur",
+        description: "Impossible de dupliquer la réalisation",
+        variant: "destructive"
+      });
+    }
+  };
 
   if (loading) {
     return (
@@ -77,7 +161,7 @@ const RealisationDetail = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>{realisation.title} | Réalisations Pauget & Fils</title>
+        <title>{realisation.meta_title || `${realisation.title} | Réalisations Pauget & Fils`}</title>
         <meta 
           name="description" 
           content={realisation.meta_description || realisation.description}
@@ -97,9 +181,41 @@ const RealisationDetail = () => {
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold text-white mb-4">{realisation.title}</h1>
-            {realisation.tags && (
+            {editingTags ? (
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {defaultTags.map((tag) => (
+                    <Badge
+                      key={tag}
+                      variant={selectedTags.includes(tag) ? "default" : "outline"}
+                      className="cursor-pointer hover:bg-primary/80"
+                      onClick={() => {
+                        setSelectedTags(prev =>
+                          prev.includes(tag)
+                            ? prev.filter(t => t !== tag)
+                            : [...prev, tag]
+                        );
+                      }}
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex gap-2">
+                  <Button onClick={handleTagsUpdate} variant="default">
+                    Enregistrer
+                  </Button>
+                  <Button onClick={() => {
+                    setEditingTags(false);
+                    setSelectedTags(realisation.tags || []);
+                  }} variant="outline">
+                    Annuler
+                  </Button>
+                </div>
+              </div>
+            ) : (
               <div className="flex flex-wrap gap-2 mb-4">
-                {realisation.tags.map((tag, index) => (
+                {realisation.tags?.map((tag, index) => (
                   <Badge key={index} variant="secondary">
                     {tag}
                   </Badge>
@@ -107,12 +223,23 @@ const RealisationDetail = () => {
               </div>
             )}
             {user && (
-              <Link to={`/realisations/edit/${realisation.slug}`}>
-                <Button variant="secondary" className="flex items-center gap-2">
-                  <Pencil className="h-4 w-4" />
-                  Modifier
+              <div className="flex gap-2">
+                <Link to={`/realisations/edit/${realisation.slug}`}>
+                  <Button variant="secondary" className="flex items-center gap-2">
+                    <Pencil className="h-4 w-4" />
+                    Modifier
+                  </Button>
+                </Link>
+                <Button variant="secondary" className="flex items-center gap-2" onClick={handleDuplicate}>
+                  <Copy className="h-4 w-4" />
+                  Dupliquer
                 </Button>
-              </Link>
+                {!editingTags && (
+                  <Button variant="secondary" onClick={() => setEditingTags(true)}>
+                    Modifier les tags
+                  </Button>
+                )}
+              </div>
             )}
           </div>
         </div>

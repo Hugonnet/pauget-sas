@@ -89,6 +89,7 @@ export type Database = {
           image_order: string[] | null
           location: string | null
           meta_description: string | null
+          meta_title: string | null
           slug: string
           subtitle: string | null
           tags: string[] | null
@@ -105,6 +106,7 @@ export type Database = {
           image_order?: string[] | null
           location?: string | null
           meta_description?: string | null
+          meta_title?: string | null
           slug: string
           subtitle?: string | null
           tags?: string[] | null
@@ -121,6 +123,7 @@ export type Database = {
           image_order?: string[] | null
           location?: string | null
           meta_description?: string | null
+          meta_title?: string | null
           slug?: string
           subtitle?: string | null
           tags?: string[] | null
