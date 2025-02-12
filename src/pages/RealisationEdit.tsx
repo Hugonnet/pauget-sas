@@ -51,9 +51,19 @@ const RealisationEdit = () => {
           .from('realizations')
           .select('*')
           .eq('slug', slug)
-          .single();
+          .maybeSingle();
 
         if (error) throw error;
+        
+        if (!data) {
+          toast({
+            title: "Erreur",
+            description: "Réalisation non trouvée",
+            variant: "destructive"
+          });
+          navigate('/realisations');
+          return;
+        }
 
         form.reset({
           title: data.title,
