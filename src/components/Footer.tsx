@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo Column */}
-          <div className="flex justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start">
             <img 
               src="/lovable-uploads/45177932-0c62-496a-8f4d-dde994c690ba.png" 
               alt="Pauget et Fils Logo" 
@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
 
           {/* Services Column */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h3 className="text-xl font-semibold text-white">Nos Services</h3>
             <ul className="space-y-2">
               <li>
@@ -34,18 +34,34 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/peintures"
+                  to="/peintures/interieures"
                   className="text-white/90 hover:text-white transition-colors duration-200"
                 >
-                  Peintures
+                  Peintures intérieures
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/isolation"
+                  to="/peintures/exterieures"
                   className="text-white/90 hover:text-white transition-colors duration-200"
                 >
-                  Isolation
+                  Peintures extérieures
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/isolation/interieure"
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Isolation intérieure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/isolation/exterieure"
+                  className="text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  Isolation extérieure
                 </Link>
               </li>
               <li>
@@ -60,7 +76,7 @@ const Footer = () => {
           </div>
 
           {/* Information Column */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h3 className="text-xl font-semibold text-white">Informations</h3>
             <ul className="space-y-2">
               <li>
@@ -107,24 +123,24 @@ const Footer = () => {
           </div>
 
           {/* Contact Column */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h3 className="text-xl font-semibold text-white">Pauget et Fils</h3>
             <div className="space-y-2">
               <a
                 href="tel:tel:0672019849"
-                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
+                className="flex items-center justify-center md:justify-start space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Phone size={20} className="text-[#222222]" />
                 <span>0672019849</span>
               </a>
               <a
                 href="mailto:contact@platrerie-peinture-pauget.fr"
-                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
+                className="flex items-center justify-center md:justify-start space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Mail size={20} className="text-[#222222]" />
                 <span>contact@platrerie-peinture-pauget.fr</span>
               </a>
-              <div className="flex items-start space-x-2 text-white/90">
+              <div className="flex items-start justify-center md:justify-start space-x-2 text-white/90">
                 <MapPin size={20} className="mt-1 flex-shrink-0 text-[#222222]" />
                 <span>
                   4 Rue du Commerce,
