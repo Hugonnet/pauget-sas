@@ -136,20 +136,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/90">
-          <div className="flex justify-between items-center">
-            <p>© {new Date().getFullYear()} Pauget et Fils. Tous droits réservés.</p>
-            {user && (
-              <Button
-                onClick={() => signOut()}
-                variant="outline"
-                size="sm"
-                className="text-white hover:text-white/90"
-              >
-                Se déconnecter
-              </Button>
-            )}
-          </div>
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col-reverse md:flex-row items-center justify-between gap-4">
+          <p className="text-center text-sm text-white/90 w-full md:w-auto">
+            © {new Date().getFullYear()} Pauget et Fils. Tous droits réservés.
+          </p>
+          {user && (
+            <Button
+              onClick={() => signOut()}
+              variant="secondary"
+              size="sm"
+              className="bg-[#8B5CF6] text-white hover:bg-[#7C3AED] hover:text-white/90"
+            >
+              Se déconnecter
+            </Button>
+          )}
         </div>
       </div>
     </footer>

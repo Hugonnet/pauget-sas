@@ -8,24 +8,15 @@ import { Helmet } from "react-helmet-async";
 const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignUp, setIsSignUp] = useState(false);
-  const { signIn, signUp } = useAuth();
+  const { signIn } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      if (isSignUp) {
-        await signUp(email, password);
-        toast({
-          title: "Inscription réussie",
-          description: "Veuillez vérifier votre email pour confirmer votre compte.",
-        });
-      } else {
-        await signIn(email, password);
-        navigate("/");
-      }
+      await signIn(email, password);
+      navigate("/");
     } catch (error) {
       toast({
         title: "Erreur",
@@ -38,13 +29,13 @@ const Auth = () => {
   return (
     <>
       <Helmet>
-        <title>{isSignUp ? "Inscription" : "Connexion"} | Pauget et Fils</title>
+        <title>Connexion | Pauget et Fils</title>
       </Helmet>
       <div className="min-h-screen flex items-center justify-center bg-[#F9EBDF]">
         <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-xl shadow-lg">
           <div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              {isSignUp ? "Créer un compte" : "Se connecter"}
+              Se connecter
             </h2>
           </div>
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -88,19 +79,7 @@ const Auth = () => {
                 type="submit"
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               >
-                {isSignUp ? "S'inscrire" : "Se connecter"}
-              </button>
-            </div>
-
-            <div className="text-sm text-center">
-              <button
-                type="button"
-                onClick={() => setIsSignUp(!isSignUp)}
-                className="font-medium text-primary hover:text-primary-hover"
-              >
-                {isSignUp
-                  ? "Déjà un compte ? Se connecter"
-                  : "Pas de compte ? S'inscrire"}
+                Se connecter
               </button>
             </div>
           </form>
