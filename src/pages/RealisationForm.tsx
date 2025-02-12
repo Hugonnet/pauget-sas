@@ -1,3 +1,4 @@
+
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -9,16 +10,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2, Plus, X } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 interface RealisationFormData {
   title: string;
-  subtitle: string;
-  location: string;
   description: string;
-  content: string;
   tags: string[];
-  meta_description?: string;
 }
 
 const RealisationForm = () => {
@@ -31,10 +28,7 @@ const RealisationForm = () => {
   const form = useForm<RealisationFormData>({
     defaultValues: {
       title: "",
-      subtitle: "",
-      location: "",
       description: "",
-      content: "",
       tags: []
     }
   });
@@ -47,7 +41,6 @@ const RealisationForm = () => {
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)+/g, "");
     
-    // Ajout d'un identifiant unique plus long pour éviter les collisions
     const timestamp = new Date().getTime();
     const random = Math.random().toString(36).substring(2, 8);
     return `${baseSlug}-${timestamp}-${random}`;
@@ -66,7 +59,6 @@ const RealisationForm = () => {
     try {
       setUploading(true);
 
-      // Générer un slug unique avec plus d'entropie
       const uniqueSlug = generateUniqueSlug(data.title);
 
       // Upload des images
@@ -90,12 +82,8 @@ const RealisationForm = () => {
       // Créer la réalisation dans la base de données
       const { error } = await supabase.from('realizations').insert({
         title: data.title,
-        subtitle: data.subtitle,
-        location: data.location,
         description: data.description,
         slug: uniqueSlug,
-        content: data.content,
-        tags: data.tags,
         image: uploadedImages[0] || "", // Première image comme image principale
         gallery: uploadedImages,
         image_order: uploadedImages
@@ -165,37 +153,9 @@ const RealisationForm = () => {
                 name="title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Titre</FormLabel>
+                    <FormLabel>Titre avec localisation</FormLabel>
                     <FormControl>
-                      <Input placeholder="Titre de la réalisation" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="subtitle"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Sous-titre</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Sous-titre de la réalisation" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="location"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Localisation</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Ville ou région" {...field} />
+                      <Input placeholder="Ex: Rénovation complète à Oyonnax" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -207,48 +167,11 @@ const RealisationForm = () => {
                 name="description"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Description courte</FormLabel>
+                    <FormLabel>Description</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Brève description de la réalisation"
-                        className="resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="content"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Contenu détaillé</FormLabel>
-                    <FormControl>
-                      <Textarea
                         placeholder="Description détaillée de la réalisation"
-                        className="min-h-[200px] resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="meta_description"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Meta Description (SEO)</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Description pour les moteurs de recherche (max 160 caractères)"
                         className="resize-none"
-                        maxLength={160}
                         {...field}
                       />
                     </FormControl>

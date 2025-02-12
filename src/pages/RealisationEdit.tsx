@@ -14,12 +14,8 @@ import { Helmet } from "react-helmet-async";
 
 interface RealisationFormData {
   title: string;
-  subtitle: string;
-  location: string;
   description: string;
-  content: string;
   tags: string[];
-  meta_description?: string;
 }
 
 const RealisationEdit = () => {
@@ -35,12 +31,8 @@ const RealisationEdit = () => {
   const form = useForm<RealisationFormData>({
     defaultValues: {
       title: "",
-      subtitle: "",
-      location: "",
       description: "",
-      content: "",
-      tags: [],
-      meta_description: ""
+      tags: []
     }
   });
 
@@ -67,12 +59,8 @@ const RealisationEdit = () => {
 
         form.reset({
           title: data.title,
-          subtitle: data.subtitle || "",
-          location: data.location || "",
           description: data.description,
-          content: data.content,
-          tags: data.tags || [],
-          meta_description: data.meta_description || ""
+          tags: data.tags || []
         });
 
         setCurrentImages(data.gallery || []);
@@ -110,7 +98,7 @@ const RealisationEdit = () => {
       // Upload des nouvelles images
       const newUploadedImages = await Promise.all(
         images
-          .filter(img => img.file) // Only upload new images
+          .filter(img => img.file)
           .map(async (image) => {
             const filePath = `${crypto.randomUUID()}.${image.file!.name.split('.').pop()}`;
             const { error: uploadError } = await supabase.storage
@@ -202,10 +190,10 @@ const RealisationEdit = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-primary/10">
       <Helmet>
-        <title>Modifier la réalisation | Pauget & Fils</title>
+        <title>{form.getValues("title")} - Modifier | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Modifier une réalisation dans notre portfolio de travaux en plâtrerie, peinture et isolation."
+          content={form.getValues("description")}
         />
       </Helmet>
 
@@ -220,37 +208,9 @@ const RealisationEdit = () => {
                 name="title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Titre</FormLabel>
+                    <FormLabel>Titre avec localisation</FormLabel>
                     <FormControl>
-                      <Input placeholder="Titre de la réalisation" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="subtitle"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Sous-titre</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Sous-titre de la réalisation" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="location"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Localisation</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Ville ou région" {...field} />
+                      <Input placeholder="Ex: Rénovation complète à Oyonnax" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -262,48 +222,11 @@ const RealisationEdit = () => {
                 name="description"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Description courte</FormLabel>
+                    <FormLabel>Description</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Brève description de la réalisation"
-                        className="resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="content"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Contenu détaillé</FormLabel>
-                    <FormControl>
-                      <Textarea
                         placeholder="Description détaillée de la réalisation"
-                        className="min-h-[200px] resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="meta_description"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Meta Description (SEO)</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Description pour les moteurs de recherche (max 160 caractères)"
                         className="resize-none"
-                        maxLength={160}
                         {...field}
                       />
                     </FormControl>

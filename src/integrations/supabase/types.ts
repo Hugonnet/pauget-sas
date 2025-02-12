@@ -80,7 +80,7 @@ export type Database = {
       }
       realizations: {
         Row: {
-          content: string
+          content: string | null
           created_at: string | null
           description: string
           gallery: string[] | null
@@ -96,7 +96,7 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          content: string
+          content?: string | null
           created_at?: string | null
           description: string
           gallery?: string[] | null
@@ -112,7 +112,7 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          content?: string
+          content?: string | null
           created_at?: string | null
           description?: string
           gallery?: string[] | null
