@@ -57,10 +57,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     try {
       const { error } = await supabase.auth.signInWithPassword({ 
         email, 
-        password,
-        options: {
-          redirectTo: window.location.origin
-        }
+        password
       });
       if (error) throw error;
       navigate("/");
@@ -76,7 +73,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         email, 
         password,
         options: {
-          redirectTo: window.location.origin
+          emailRedirectTo: window.location.origin
         }
       });
       if (error) throw error;
