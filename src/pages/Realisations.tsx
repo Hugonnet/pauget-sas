@@ -4,10 +4,21 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { Plus, Pencil, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 interface Realisation {
   id: string;
@@ -47,7 +58,6 @@ const Realisations = () => {
         .select('*');
 
       if (error) throw error;
-
       setRealisations(data || []);
     } catch (error) {
       console.error('Erreur:', error);
@@ -58,6 +68,32 @@ const Realisations = () => {
       });
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id: string) => {
+    try {
+      const { error } = await supabase
+        .from('realizations')
+        .delete()
+        .eq('id', id);
+
+      if (error) throw error;
+
+      toast({
+        title: "Succès",
+        description: "La réalisation a été supprimée",
+      });
+
+      // Refresh the list
+      fetchRealisations();
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Erreur",
+        description: "Impossible de supprimer la réalisation",
+        variant: "destructive"
+      });
     }
   };
 
@@ -76,18 +112,19 @@ const Realisations = () => {
     : realisations;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-primary/10">
-      <Helmet>
-        <title>Nos Réalisations en Plâtrerie & Peinture | Pauget & Fils</title>
-        <meta 
-          name="description" 
-          content="Découvrez nos réalisations en plâtrerie, peinture et isolation à Port. Projets résidentiels et commerciaux, avant/après, témoignages clients. Plus de 30 ans d'expertise."
-        />
-      </Helmet>
+    <div className="min-h-screen">
+      <div className="relative h-[40vh] bg-gradient-to-br from-primary/80 to-primary overflow-hidden">
+        <div className="absolute inset-0 transform -skew-y-6 bg-gradient-to-r from-background to-primary/10 translate-y-1/3" />
+        <div className="relative container mx-auto px-4 h-full flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-4">Nos Réalisations</h1>
+            <p className="text-xl text-white/90">Découvrez nos projets en plâtrerie, peinture et isolation</p>
+          </div>
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 py-16">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">Nos Réalisations</h1>
           {user && (
             <Link to="/realisations/new">
               <Button className="flex items-center gap-2">
@@ -113,38 +150,72 @@ const Realisations = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredRealisations.map((realisation) => (
-            <Link
-              key={realisation.id}
-              to={`/realisations/${realisation.slug}`}
-              className="group"
-            >
-              <div className="relative h-[400px] rounded-xl overflow-hidden transition-all duration-300 group-hover:scale-[1.02] backdrop-blur-sm bg-white/10">
-                <div className="absolute inset-0">
-                  <img
-                    src={realisation.image}
-                    alt={realisation.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-black/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 backdrop-blur-sm bg-white/10">
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {realisation.title}
-                  </h3>
-                  <p className="text-white/90 mb-3">
-                    {realisation.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {realisation.tags?.map(tag => (
-                      <Badge key={tag} variant="secondary" className="text-sm">
-                        {tag}
-                      </Badge>
-                    ))}
+            <div key={realisation.id} className="relative group">
+              <Link
+                to={`/realisations/${realisation.slug}`}
+                className="block"
+              >
+                <div className="relative h-[400px] rounded-xl overflow-hidden transition-all duration-300 group-hover:scale-[1.02] backdrop-blur-sm bg-white/10">
+                  <div className="absolute inset-0">
+                    <img
+                      src={realisation.image}
+                      alt={realisation.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 backdrop-blur-sm bg-white/10">
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {realisation.title}
+                    </h3>
+                    <p className="text-white/90 mb-3">
+                      {realisation.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {realisation.tags?.map(tag => (
+                        <Badge key={tag} variant="secondary" className="text-sm">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+              {user && (
+                <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Link to={`/realisations/edit/${realisation.slug}`}>
+                    <Button size="icon" variant="secondary">
+                      <Pencil className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button size="icon" variant="destructive">
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Êtes-vous sûr ?</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Cette action est irréversible. Cette réalisation sera définitivement supprimée.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Annuler</AlertDialogCancel>
+                        <AlertDialogAction
+                          onClick={() => handleDelete(realisation.id)}
+                          className="bg-red-500 hover:bg-red-600"
+                        >
+                          Supprimer
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>
