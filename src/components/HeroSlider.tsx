@@ -14,7 +14,7 @@ const slides = [
   {
     title: "Solutions d'isolation performantes",
     description: "Optimisez le confort et l'efficacité énergétique de votre habitat avec nos solutions d'isolation intérieure et extérieure.",
-    image: "/lovable-uploads/hero-isolation-exterieure.webp",
+    image: "/lovable-uploads/hero-bg-isolation-exterieure.webp",
     link: "/isolation"
   }
 ];
