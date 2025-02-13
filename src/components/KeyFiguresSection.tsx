@@ -20,7 +20,7 @@ const figures = [
   },
   {
     number: 15,
-    label: "Artisans qualifiés",
+    label: "Ouvriers qualifiés",
   },
 ];
 
