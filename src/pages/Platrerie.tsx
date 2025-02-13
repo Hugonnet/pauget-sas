@@ -1,5 +1,4 @@
-
-import { ArrowRight, Ruler, Shield, Star, Wrench } from "lucide-react";
+import { ArrowRight, Hammer, Building, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -35,11 +34,11 @@ const Platrerie = () => {
         {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
           <div className="max-w-2xl text-white">
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Expert en Plâtrerie<br />
               Traditionnelle et Moderne
             </h1>
-            <p className="text-xl opacity-90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8">
               Plus de 30 ans d'expertise dans la réalisation de vos projets de plâtrerie, 
               avec un savoir-faire artisanal transmis de génération en génération.
             </p>
@@ -141,12 +140,12 @@ const services = [
   {
     title: "Création de Cloisons et Doublages",
     description: "Nous réalisons la pose de cloisons sèches et de doublages en plaques de plâtre, permettant de structurer vos espaces selon vos besoins. Ces installations offrent une excellente isolation thermique et acoustique, contribuant au confort de votre habitat.",
-    icon: Ruler
+    icon: Building
   },
   {
     title: "Faux Plafonds et Plafonds Suspendus",
     description: "Notre expertise inclut la conception et la mise en place de faux plafonds et de plafonds suspendus, idéaux pour dissimuler les installations techniques, améliorer l'acoustique et apporter une touche esthétique à vos pièces.",
-    icon: Wrench
+    icon: Hammer
   },
   {
     title: "Enduits et Finitions",

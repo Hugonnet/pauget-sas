@@ -50,7 +50,7 @@ export const HeroSlider = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-4xl md:text-6xl font-bold text-white mb-6"
+                className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6"
               >
                 {slide.title}
               </motion.h1>
@@ -58,7 +58,7 @@ export const HeroSlider = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-xl text-white/90 mb-8 md:text-justify"
+                className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8"
               >
                 {slide.description}
               </motion.p>
@@ -69,7 +69,7 @@ export const HeroSlider = () => {
               >
                 <Link
                   to={slide.link}
-                  className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-md transition-colors duration-200"
+                  className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md transition-colors duration-200 text-sm sm:text-base"
                 >
                   <span>Demander un devis</span>
                   <ArrowRight size={20} />
