@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 export const CompanyPresentation = () => {
@@ -10,8 +11,6 @@ export const CompanyPresentation = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto bg-card rounded-2xl p-8 md:p-12 text-white shadow-lg"
         >
-          
-          
           <div className="space-y-6">
             <p className="md:text-justify">
               Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture, plâtrerie traditionnelle et en placoplâtre, ainsi que l'isolation intérieure et l'isolation thermique par l'extérieur (ITE). Depuis 1997, nous mettons notre expertise au service de vos projets de construction et de rénovation dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.
@@ -29,17 +28,23 @@ export const CompanyPresentation = () => {
               Améliorez le confort thermique de votre habitation grâce à nos solutions d'isolation intérieure et d'isolation thermique par l'extérieur (ITE). Nous mettons en œuvre des techniques performantes pour réduire vos consommations énergétiques et améliorer votre confort.
             </p>
 
-            <div className="mt-8 flex flex-col md:flex-row items-center gap-8">
-              <div className="md:w-2/3">
-                <p className="md:text-justify">
-                  Notre entreprise est certifiée Qualibat RGE : le label Qualibat RGE (Reconnu Garant de l'Environnement) est une certification délivrée aux entreprises du bâtiment qui répondent à des critères stricts de qualité et de performance énergétique. Il garantit le sérieux et le savoir-faire des professionnels dans la réalisation de travaux de rénovation énergétique, d'isolation et d'amélioration thermique des bâtiments. Pour les clients, faire appel à une entreprise certifiée <strong>Qualibat RGE</strong> permet non seulement d'assurer des prestations conformes aux normes en vigueur, mais aussi de bénéficier d'aides financières comme MaPrimeRénov' ou l'éco-prêt à taux zéro.
+            <div className="mt-8 grid md:grid-cols-3 gap-8">
+              <div className="md:col-span-2">
+                <p className="md:text-justify mb-6">
+                  Notre entreprise est certifiée Qualibat RGE, un gage de qualité et de professionnalisme reconnu dans le secteur du bâtiment. En tant qu'artisans plâtriers expérimentés, nous maîtrisons aussi bien les techniques traditionnelles que les solutions modernes comme le placoplâtre. Notre expertise nous permet de vous proposer des solutions adaptées à vos besoins, qu'il s'agisse de travaux de rénovation ou de construction neuve. Nos interventions garantissent une excellente isolation thermique et acoustique, une protection efficace contre l'incendie et une régulation optimale de l'humidité. Notre savoir-faire s'étend de la réalisation de cloisons distributives à l'installation de plafonds suspendus, en passant par la pose de portes intérieures. Chaque projet bénéficie d'une finition soignée, préparant parfaitement les surfaces pour les travaux de peinture ultérieurs.
                 </p>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Engagement Environnemental</h3>
+                  <p className="md:text-justify">
+                    Labellisés RGE, nous sommes engagés dans le respect de l'environnement et veillons au tri et au traitement des déchets de nos chantiers.
+                  </p>
+                </div>
               </div>
-              <div className="md:w-1/3 flex justify-center">
+              <div className="flex justify-center items-start">
                 <img 
                   src="/lovable-uploads/qualibat-rge.webp" 
                   alt="Certification Qualibat RGE" 
-                  className="w-48 h-48 object-contain"
+                  className="w-40 h-40 object-contain" // Réduction de 20% (précédemment w-48 h-48)
                 />
               </div>
             </div>
