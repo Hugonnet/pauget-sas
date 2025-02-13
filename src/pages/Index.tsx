@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 import { CTASection } from "@/components/CTASection";
 import { CompanyPresentation } from "@/components/CompanyPresentation";
+import { FAQSection } from "@/components/FAQSection";
+import { HeroSlider } from "@/components/HeroSlider";
 
 const services = [
   {
@@ -58,34 +60,8 @@ const Index = () => {
         <meta name="description" content="Joël Pauget et ses fils, experts en plâtrerie, peinture et isolation à Port, Ain. Depuis 1997, nous réalisons vos travaux de construction et rénovation avec savoir-faire et engagement environnemental." />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-black/30 z-10" />
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/lovable-uploads/hero-bg-accueil.webp')",
-          }}
-        />
-        <div className="container mx-auto px-4 relative z-20">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
-              Experts en plâtrerie et peinture depuis plus de 30 ans
-            </h1>
-            <p className="text-xl text-white/90 mb-8 animate-slideUp md:text-justify">
-              Donnez vie à vos projets avec Pauget et Fils, votre partenaire de confiance
-              pour tous vos travaux de rénovation et d'aménagement.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-md transition-colors duration-200"
-            >
-              <span>Demander un devis</span>
-              <ArrowRight size={20} />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Hero Slider Section */}
+      <HeroSlider />
 
       {/* Company Presentation Section */}
       <CompanyPresentation />
@@ -129,6 +105,9 @@ const Index = () => {
           <KeyFiguresSection />
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section className="bg-[#F8EBDF]">
