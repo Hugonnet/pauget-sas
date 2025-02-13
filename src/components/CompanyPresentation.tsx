@@ -28,9 +28,9 @@ export const CompanyPresentation = () => {
               Améliorez le confort thermique de votre habitation grâce à nos solutions d'isolation intérieure et d'isolation thermique par l'extérieur (ITE). Nous mettons en œuvre des techniques performantes pour réduire vos consommations énergétiques et améliorer votre confort.
             </p>
 
-            <div className="mt-8 grid md:grid-cols-3 gap-8">
+            <div className="gap-8">
               <div className="md:col-span-2">
-                <p className="md:text-justify mb-6">
+                <p className="md:text-justify">
                   Notre entreprise est certifiée Qualibat RGE, un gage de qualité et de professionnalisme reconnu dans le secteur du bâtiment. En tant qu'artisans plâtriers expérimentés, nous maîtrisons aussi bien les techniques traditionnelles que les solutions modernes comme le placoplâtre. Notre expertise nous permet de vous proposer des solutions adaptées à vos besoins, qu'il s'agisse de travaux de rénovation ou de construction neuve. Nos interventions garantissent une excellente isolation thermique et acoustique, une protection efficace contre l'incendie et une régulation optimale de l'humidité. Notre savoir-faire s'étend de la réalisation de cloisons distributives à l'installation de plafonds suspendus, en passant par la pose de portes intérieures. Chaque projet bénéficie d'une finition soignée, préparant parfaitement les surfaces pour les travaux de peinture ultérieurs.
                 </p>
                 <div className="space-y-4 md:flex md:items-center md:space-x-8 md:space-y-0">
