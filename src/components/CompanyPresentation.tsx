@@ -31,13 +31,13 @@ export const CompanyPresentation = () => {
             <div className="gap-8">
               <div className="md:col-span-2">
                 <p className="md:text-justify">
-                  Notre entreprise est certifiée Qualibat RGE, un gage de qualité et de professionnalisme reconnu dans le secteur du bâtiment. En tant qu'artisans plâtriers expérimentés, nous maîtrisons aussi bien les techniques traditionnelles que les solutions modernes comme le placoplâtre. Notre expertise nous permet de vous proposer des solutions adaptées à vos besoins, qu'il s'agisse de travaux de rénovation ou de construction neuve. Nos interventions garantissent une excellente isolation thermique et acoustique, une protection efficace contre l'incendie et une régulation optimale de l'humidité. Notre savoir-faire s'étend de la réalisation de cloisons distributives à l'installation de plafonds suspendus, en passant par la pose de portes intérieures. Chaque projet bénéficie d'une finition soignée, préparant parfaitement les surfaces pour les travaux de peinture ultérieurs.
+                  En tant qu'artisans plâtriers expérimentés, nous maîtrisons aussi bien les techniques traditionnelles que les solutions modernes comme le placoplâtre. Notre expertise nous permet de vous proposer des solutions adaptées à vos besoins, qu'il s'agisse de travaux de rénovation ou de construction neuve. Nos interventions garantissent une excellente isolation thermique et acoustique, une protection efficace contre l'incendie et une régulation optimale de l'humidité. Notre savoir-faire s'étend de la réalisation de cloisons distributives à l'installation de plafonds suspendus, en passant par la pose de portes intérieures. Chaque projet bénéficie d'une finition soignée, préparant parfaitement les surfaces pour les travaux de peinture ultérieurs.
                 </p>
                 <div className="space-y-4 md:flex md:items-center md:space-x-8 md:space-y-0">
                   <div className="md:flex-1">
                     <h3 className="text-xl font-semibold">Engagement Environnemental</h3>
                     <p className="md:text-justify">
-                      Labellisés RGE, nous sommes engagés dans le respect de l'environnement et veillons au tri et au traitement des déchets de nos chantiers.
+                      Notre entreprise est certifiée Qualibat RGE, un gage de qualité et de professionnalisme reconnu dans le secteur du bâtiment. Nous sommes engagés dans le respect de l'environnement et veillons au tri et au traitement des déchets de nos chantiers.
                     </p>
                   </div>
                   <div className="flex justify-center">
