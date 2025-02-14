@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -9,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import Map from "@/components/Map";
 import { CTASection } from "@/components/CTASection";
 import { FAQSection } from "@/components/FAQSection";
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -16,9 +18,11 @@ interface ContactFormData {
   subject: string;
   message: string;
 }
+
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ContactFormData>();
+
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
@@ -31,29 +35,28 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-  return <div className="min-h-screen bg-[#F8EBE0]">
+
+  return (
+    <div className="min-h-screen bg-[#F8EBE0]">
       <Helmet>
         <title>Contactez Pauget & Fils | Artisan Plâtrier-Peintre à Port</title>
-        <meta name="description" content="Contactez Pauget & Fils pour vos projets de plâtrerie, peinture et isolation à Port. Devis gratuit, conseil personnalisé. Plus de 30 ans d'expérience à votre service." />
+        <meta 
+          name="description" 
+          content="Contactez Pauget & Fils pour vos projets de plâtrerie, peinture et isolation à Port. Devis gratuit, conseil personnalisé. Plus de 30 ans d'expérience à votre service."
+        />
       </Helmet>
       <div className="container mx-auto px-4 py-6">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">Contact</h1>
         
-        {/* Premier bloc: Présentation et FAQ */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          <p className="text-base sm:text-lg max-w-2xl md:text-lg">
-            Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
-            N'hésitez pas à nous contacter pour obtenir un devis gratuit.
-          </p>
-
-          <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 px-0 py-0">
-            <FAQSection />
-          </div>
-        </div>
-
-        {/* Deuxième bloc: Coordonnées et Formulaire */}
+        {/* Conteneur principal en deux colonnes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Colonne de gauche */}
           <div className="space-y-8">
+            <p className="text-base sm:text-lg md:text-xl">
+              Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
+              N'hésitez pas à nous contacter pour obtenir un devis gratuit.
+            </p>
+
             <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
               <div className="space-y-4">
@@ -81,62 +84,95 @@ const Contact = () => {
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField control={form.control} name="name" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel>Nom</FormLabel>
                         <FormControl>
                           <Input placeholder="Votre nom" {...field} className="bg-white/90" />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <FormField control={form.control} name="email" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
                           <Input type="email" placeholder="votre@email.com" {...field} className="bg-white/90" />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <FormField control={form.control} name="phone" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel>Téléphone</FormLabel>
                         <FormControl>
                           <Input type="tel" placeholder="Votre numéro de téléphone" {...field} className="bg-white/90" />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <FormField control={form.control} name="subject" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel>Sujet</FormLabel>
                         <FormControl>
                           <Input placeholder="Sujet de votre message" {...field} className="bg-white/90" />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <FormField control={form.control} name="message" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="Votre message" className="min-h-[150px] bg-white/90" {...field} />
+                          <Textarea 
+                            placeholder="Votre message" 
+                            className="min-h-[150px] bg-white/90"
+                            {...field} 
+                          />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary-hover text-white" disabled={isSubmitting}>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary hover:bg-primary-hover text-white"
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? "Envoi en cours..." : "Envoyer"}
                   </Button>
                 </form>
               </Form>
             </div>
+          </div>
+
+          {/* Colonne de droite avec la FAQ */}
+          <div className="bg-[#CAB9AB] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <FAQSection />
           </div>
         </div>
       </div>
@@ -147,6 +183,8 @@ const Contact = () => {
       </div>
       
       <CTASection />
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;
