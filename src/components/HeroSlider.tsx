@@ -30,7 +30,7 @@ export const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative h-[90vh] overflow-hidden">
+    <section className="relative h-[70vh] overflow-hidden">
       {slides.map((slide, index) => (
         <motion.div
           key={index}
@@ -40,17 +40,23 @@ export const HeroSlider = () => {
           transition={{ duration: 0.8 }}
         >
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-8000"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url('${slide.image}')` }}
           />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="container mx-auto px-4 h-full flex items-center relative z-20">
-            <div className="max-w-2xl">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
+            <div className="absolute inset-0 bg-black/10" />
+            <div className="absolute bottom-0 w-full h-32 bg-background transform -skew-y-3 origin-bottom-right translate-y-16" />
+          </div>
+          <div className="container relative z-20 h-full flex items-center">
+            <div className="max-w-2xl text-white">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6"
+                className="font-montserrat text-3xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6"
+                contentEditable="true"
+                suppressContentEditableWarning={true}
               >
                 {slide.title}
               </motion.h1>
@@ -58,7 +64,9 @@ export const HeroSlider = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-base sm:text-lg md:text-xl opacity-90 text-white mb-6 md:mb-8"
+                className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8"
+                contentEditable="true"
+                suppressContentEditableWarning={true}
               >
                 {slide.description}
               </motion.p>
@@ -69,7 +77,7 @@ export const HeroSlider = () => {
               >
                 <Link
                   to={slide.link}
-                  className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md transition-colors duration-200 text-sm sm:text-base"
+                  className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg transition-colors duration-200"
                 >
                   <span>Demander un devis</span>
                   <ArrowRight size={20} />
