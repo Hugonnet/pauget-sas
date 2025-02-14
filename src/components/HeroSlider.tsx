@@ -45,12 +45,12 @@ export const HeroSlider = () => {
           />
           <div className="absolute inset-0 bg-black/30" />
           <div className="container mx-auto px-4 h-full flex items-center relative z-20">
-            <div className="max-w-3xl">
+            <div className="max-w-2xl">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6"
               >
                 {slide.title}
               </motion.h1>
@@ -58,7 +58,7 @@ export const HeroSlider = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8"
+                className="text-base sm:text-lg md:text-xl opacity-90 text-white mb-6 md:mb-8"
               >
                 {slide.description}
               </motion.p>
