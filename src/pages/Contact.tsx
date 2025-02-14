@@ -140,12 +140,15 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Carte en pleine largeur */}
+     
+      
+      <CTASection />
+    </div>
+     {/* Carte en pleine largeur */}
       <div className="h-[480px]">
         <Map />
       </div>
-      
-      <CTASection />
-    </div>;
+    ;
+
 };
 export default Contact;
