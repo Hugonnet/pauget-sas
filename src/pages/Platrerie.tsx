@@ -1,29 +1,20 @@
-
 import { ArrowRight, Hammer, Building, Shield, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-
 const Platrerie = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Helmet>
         <title>Plâtrerie - Pauget & Fils | Expert en plâtrerie traditionnelle</title>
-        <meta 
-          name="description" 
-          content="Découvrez notre expertise en plâtrerie traditionnelle et moderne. Plus de 30 ans d'expérience dans la réalisation de plafonds, cloisons et doublages dans la région de Bourg-en-Bresse." 
-        />
+        <meta name="description" content="Découvrez notre expertise en plâtrerie traditionnelle et moderne. Plus de 30 ans d'expérience dans la réalisation de plafonds, cloisons et doublages dans la région de Bourg-en-Bresse." />
       </Helmet>
 
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
         {/* Image de fond avec overlay diagonal */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/lovable-uploads/hero-bg-platrerie.webp')",
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: "url('/lovable-uploads/hero-bg-platrerie.webp')"
+      }} />
         
         {/* Overlay diagonal avec dégradé */}
         <div className="absolute inset-0">
@@ -35,7 +26,7 @@ const Platrerie = () => {
         {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
           <div className="max-w-2xl text-white">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+            <h1 className="sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-3xl">
               Expert en Plâtrerie<br />
               Traditionnelle et Moderne
             </h1>
@@ -51,21 +42,21 @@ const Platrerie = () => {
       <section className="py-20">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+            {services.map((service, index) => <motion.div key={service.title} initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: index * 0.2
+          }} className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-primary mb-4">
                   <service.icon size={40} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
         </div>
       </section>
@@ -100,11 +91,7 @@ const Platrerie = () => {
               </ul>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
-              <img
-                src="/lovable-uploads/platrerie.webp"
-                alt="Expertise en plâtrerie"
-                className="object-cover w-full h-full"
-              />
+              <img src="/lovable-uploads/platrerie.webp" alt="Expertise en plâtrerie" className="object-cover w-full h-full" />
             </div>
           </div>
         </div>
@@ -122,10 +109,7 @@ const Platrerie = () => {
                 Contactez-nous pour un devis personnalisé et gratuit. Notre équipe d'experts est à votre écoute 
                 pour réaliser vos projets dans les règles de l'art.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg transition-colors duration-200"
-              >
+              <Link to="/contact" className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg transition-colors duration-200">
                 <span>Demander un devis gratuit</span>
                 <ArrowRight size={20} />
               </Link>
@@ -133,26 +117,19 @@ const Platrerie = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
-const services = [
-  {
-    title: "Création de Cloisons et Doublages",
-    description: "Nous réalisons la pose de cloisons sèches et de doublages en plaques de plâtre, permettant de structurer vos espaces selon vos besoins. Ces installations offrent une excellente isolation thermique et acoustique, contribuant au confort de votre habitat.",
-    icon: Building
-  },
-  {
-    title: "Faux Plafonds et Plafonds Suspendus",
-    description: "Notre expertise inclut la conception et la mise en place de faux plafonds et de plafonds suspendus, idéaux pour dissimuler les installations techniques, améliorer l'acoustique et apporter une touche esthétique à vos pièces.",
-    icon: Hammer
-  },
-  {
-    title: "Enduits et Finitions",
-    description: "Nous appliquons des enduits de lissage et de finition pour obtenir des surfaces parfaitement lisses et prêtes à peindre ou à tapisser. Nos techniques garantissent des murs et plafonds aux finitions impeccables, reflétant notre engagement envers la qualité.",
-    icon: Shield
-  }
-];
-
+const services = [{
+  title: "Création de Cloisons et Doublages",
+  description: "Nous réalisons la pose de cloisons sèches et de doublages en plaques de plâtre, permettant de structurer vos espaces selon vos besoins. Ces installations offrent une excellente isolation thermique et acoustique, contribuant au confort de votre habitat.",
+  icon: Building
+}, {
+  title: "Faux Plafonds et Plafonds Suspendus",
+  description: "Notre expertise inclut la conception et la mise en place de faux plafonds et de plafonds suspendus, idéaux pour dissimuler les installations techniques, améliorer l'acoustique et apporter une touche esthétique à vos pièces.",
+  icon: Hammer
+}, {
+  title: "Enduits et Finitions",
+  description: "Nous appliquons des enduits de lissage et de finition pour obtenir des surfaces parfaitement lisses et prêtes à peindre ou à tapisser. Nos techniques garantissent des murs et plafonds aux finitions impeccables, reflétant notre engagement envers la qualité.",
+  icon: Shield
+}];
 export default Platrerie;
