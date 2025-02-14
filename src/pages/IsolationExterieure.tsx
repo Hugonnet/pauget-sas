@@ -112,7 +112,7 @@ Nous intervenons dans l'Ain (01) et la Haute-Savoie (74), notamment dans les sec
           }} transition={{
             duration: 0.8
           }} className="relative h-[480px] rounded-xl overflow-hidden shadow-lg">
-              <img src="/lovable-uploads/isolation-exterieure.webp" alt="Isolation extérieure professionnelle" className="object-cover w-full h-full" />
+              <img src="/lovable-uploads/isolation-exterieure.jpg" alt="Isolation extérieure professionnelle" className="object-cover w-full h-full" />
             </motion.div>
           </div>
 
