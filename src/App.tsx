@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import { AuthProvider } from "@/hooks/useAuth";
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
@@ -29,29 +30,31 @@ const App = () => {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/platrerie" element={<Platrerie />} />
-                <Route path="/peintures" element={<Peintures />} />
-                <Route path="/peintures/interieures" element={<PeinturesInterieures />} />
-                <Route path="/peintures/exterieures" element={<PeinturesExterieures />} />
-                <Route path="/isolation" element={<Isolation />} />
-                <Route path="/isolation/interieure" element={<IsolationInterieure />} />
-                <Route path="/isolation/exterieure" element={<IsolationExterieure />} />
-                <Route path="/etancheite" element={<Etancheite />} />
-                <Route path="/realisations" element={<Realisations />} />
-                <Route path="/realisations/:slug" element={<RealisationDetail />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/realisations/edit/:slug" element={<RealisationEdit />} />
-              </Routes>
-            </main>
-            <Footer />
-            <CookieBanner />
-            <Toaster position="top-right" />
-          </div>
+          <AuthProvider>
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/platrerie" element={<Platrerie />} />
+                  <Route path="/peintures" element={<Peintures />} />
+                  <Route path="/peintures/interieures" element={<PeinturesInterieures />} />
+                  <Route path="/peintures/exterieures" element={<PeinturesExterieures />} />
+                  <Route path="/isolation" element={<Isolation />} />
+                  <Route path="/isolation/interieure" element={<IsolationInterieure />} />
+                  <Route path="/isolation/exterieure" element={<IsolationExterieure />} />
+                  <Route path="/etancheite" element={<Etancheite />} />
+                  <Route path="/realisations" element={<Realisations />} />
+                  <Route path="/realisations/:slug" element={<RealisationDetail />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/realisations/edit/:slug" element={<RealisationEdit />} />
+                </Routes>
+              </main>
+              <Footer />
+              <CookieBanner />
+              <Toaster position="top-right" />
+            </div>
+          </AuthProvider>
         </BrowserRouter>
       </QueryClientProvider>
     </HelmetProvider>
