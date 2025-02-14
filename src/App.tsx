@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import { AuthProvider } from "@/hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
@@ -31,9 +32,24 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <AuthProvider>
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col min-h-screen w-full">
+              <Helmet>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#FDE1D3" />
+                <meta name="description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction." />
+                <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Pauget & Fils - Plâtrerie Peinture Isolation à Port (01)" />
+                <meta property="og:description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE." />
+                <meta name="geo.region" content="FR-ARA" />
+                <meta name="geo.placename" content="Port" />
+                <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+                <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
+                <title>Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils</title>
+              </Helmet>
               <Header />
-              <main className="flex-grow">
+              <main className="flex-grow w-full">
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/platrerie" element={<Platrerie />} />
