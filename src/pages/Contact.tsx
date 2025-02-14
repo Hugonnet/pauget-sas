@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -9,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Map from "@/components/Map";
 import { CTASection } from "@/components/CTASection";
+import { FAQSection } from "@/components/FAQSection";
 
 interface ContactFormData {
   name: string;
@@ -45,8 +45,8 @@ const Contact = () => {
         />
       </Helmet>
       <div className="container mx-auto px-4 py-6">
-        <h1 className="text-4xl font-bold mb-8">Contact</h1>
-        <p className="text-lg mb-12 max-w-2xl">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">Contact</h1>
+        <p className="text-base sm:text-lg md:text-xl mb-12 max-w-2xl">
           Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
           N'hésitez pas à nous contacter pour obtenir un devis gratuit.
         </p>
@@ -171,6 +171,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      {/* FAQ Section */}
+      <FAQSection />
       
       {/* CTA Section */}
       <CTASection />

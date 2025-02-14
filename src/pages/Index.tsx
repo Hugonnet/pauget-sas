@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
 import { CTASection } from "@/components/CTASection";
 import { CompanyPresentation } from "@/components/CompanyPresentation";
-import { FAQSection } from "@/components/FAQSection";
 import { HeroSlider } from "@/components/HeroSlider";
 
 const services = [
@@ -105,9 +104,6 @@ const Index = () => {
           <KeyFiguresSection />
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <FAQSection />
 
       {/* CTA Section */}
       <section className="bg-[#F8EBDF]">
