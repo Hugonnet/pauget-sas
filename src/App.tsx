@@ -37,16 +37,12 @@ const App = () => {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#FDE1D3" />
-                <meta name="description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction." />
                 <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Pauget & Fils - Plâtrerie Peinture Isolation à Port (01)" />
-                <meta property="og:description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE." />
                 <meta name="geo.region" content="FR-ARA" />
                 <meta name="geo.placename" content="Port" />
                 <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
                 <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
-                <title>Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils</title>
               </Helmet>
               <Header />
               <main className="flex-grow w-full">
