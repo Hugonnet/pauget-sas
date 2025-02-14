@@ -1,4 +1,3 @@
-
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Badge } from "@/components/ui/badge";
@@ -161,11 +160,19 @@ const RealisationDetail = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>{realisation.meta_title || `${realisation.title} | Réalisations Pauget & Fils`}</title>
+        <title>{realisation?.meta_title || `${realisation?.title} | Réalisations Pauget & Fils`}</title>
         <meta 
           name="description" 
-          content={realisation.meta_description || realisation.description}
+          content={realisation?.meta_description || `Découvrez notre réalisation ${realisation?.title}. ${realisation?.description}`}
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://www.platrerie-peinture-pauget.fr/realisations/${realisation?.slug}`} />
+        {realisation?.location && (
+          <>
+            <meta name="geo.region" content="FR-ARA" />
+            <meta name="geo.placename" content={realisation.location} />
+          </>
+        )}
       </Helmet>
 
       <div className="relative h-[60vh] overflow-hidden">

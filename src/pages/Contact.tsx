@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Map from "@/components/Map";
 import { CTASection } from "@/components/CTASection";
 import { FAQSection } from "@/components/FAQSection";
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -16,9 +17,11 @@ interface ContactFormData {
   subject: string;
   message: string;
 }
+
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ContactFormData>();
+
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
@@ -31,17 +34,22 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-  return <div className="min-h-screen bg-[#F8EBE0]">
+
+  return (
+    <div className="min-h-screen bg-[#F8EBE0]">
       <Helmet>
         <title>Contactez Pauget & Fils | Artisan Plâtrier-Peintre à Port</title>
-        <meta name="description" content="Contactez Pauget & Fils pour vos projets de plâtrerie, peinture et isolation à Port. Devis gratuit, conseil personnalisé. Plus de 30 ans d'expérience à votre service." />
+        <meta 
+          name="description" 
+          content="Contactez Pauget & Fils pour vos projets de plâtrerie, peinture et isolation à Port. Devis gratuit, conseil personnalisé. Expertise en travaux de rénovation et d'isolation thermique."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/contact" />
       </Helmet>
       <div className="container mx-auto px-4 py-6">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">Contact</h1>
         
-        {/* Conteneur principal en deux colonnes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Colonne de gauche */}
           <div className="space-y-8">
             <p className="text-base sm:text-lg md:text-base">
               Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
@@ -133,7 +141,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Colonne de droite avec la FAQ */}
           <div className="bg-[#CAB9AB] rounded-xl">
             <FAQSection />
           </div>
@@ -142,10 +149,11 @@ const Contact = () => {
 
       <CTASection />
       
-      {/* Carte en pleine largeur */}
       <div className="h-[480px]">
         <Map />
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Contact;

@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Isolation = () => {
   return (
@@ -10,8 +10,10 @@ const Isolation = () => {
         <title>Services d'Isolation Thermique à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en isolation thermique à Port. Solutions d'isolation intérieure et extérieure pour une meilleure performance énergétique. Devis gratuit et conseils personnalisés."
+          content="Expert en isolation thermique à Port. Solutions d'isolation intérieure et extérieure pour une meilleure performance énergétique. Devis gratuit et conseils personnalisés. Intervention dans l'Ain (01)."
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
