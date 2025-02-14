@@ -82,8 +82,8 @@ const Realisations = () => {
         <div className="absolute inset-0 transform -skew-y-6 bg-gradient-to-r from-background to-primary/10 translate-y-1/3" />
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 className="font-bold text-white mb-4 text-3xl">Nos Réalisations</h1>
-            <p className="text-xl text-white/90">Découvrez nos projets en plâtrerie, peinture et isolation</p>
+            <h1 className="font-bold mb-4 text-3xl text-slate-600">Nos Réalisations</h1>
+            <p className="text-slate-700 text-lg">Découvrez nos projets en plâtrerie, peinture et isolation</p>
           </div>
         </div>
       </div>
