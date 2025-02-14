@@ -11,19 +11,14 @@ const Platrerie = () => {
 
       {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Image de fond avec overlay diagonal */}
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: "url('/lovable-uploads/hero-bg-platrerie.webp')"
       }} />
-        
-        {/* Overlay diagonal avec dégradé */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
           <div className="absolute inset-0 bg-black/10" />
           <div className="absolute bottom-0 w-full h-32 bg-background transform -skew-y-3 origin-bottom-right translate-y-16" />
         </div>
-        
-        {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
           <div className="max-w-2xl text-white">
             <h1 className="sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-3xl">
@@ -38,7 +33,6 @@ const Platrerie = () => {
         </div>
       </section>
 
-      {/* Section Services */}
       <section className="py-20">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -61,7 +55,6 @@ const Platrerie = () => {
         </div>
       </section>
 
-      {/* Section Expertise */}
       <section className="py-20 bg-gradient-to-b from-background to-card/30">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-16">Notre Expertise en Plâtrerie</h2>
@@ -97,7 +90,6 @@ const Platrerie = () => {
         </div>
       </section>
 
-      {/* Section CTA */}
       <section className="py-20">
         <div className="container">
           <div className="bg-[#CAB9AB] rounded-2xl p-12 text-center relative overflow-hidden">
