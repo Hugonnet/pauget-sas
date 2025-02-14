@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -46,11 +47,38 @@ const Contact = () => {
       </Helmet>
       <div className="container mx-auto px-4 py-6">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">Contact</h1>
-        <p className="text-base sm:text-lg md:text-xl mb-12 max-w-2xl">
-          Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
-          N'hésitez pas à nous contacter pour obtenir un devis gratuit.
-        </p>
+        
+        {/* Premier bloc: Présentation et Coordonnées */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <p className="text-base sm:text-lg md:text-xl max-w-2xl">
+            Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
+            N'hésitez pas à nous contacter pour obtenir un devis gratuit.
+          </p>
 
+          <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
+            <div className="space-y-4">
+              <p className="flex items-center gap-2">
+                <span className="font-semibold">Adresse:</span>
+                <span>4 Rue du Commerce, 01460 Port</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="font-semibold">Téléphone:</span>
+                <a href="tel:0672019849" className="text-white hover:underline">
+                  06 72 01 98 49
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="font-semibold">Email:</span>
+                <a href="mailto:contact@platrerie-peinture-pauget" className="text-white hover:underline">
+                  contact@platrerie-peinture-pauget.fr
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Deuxième bloc: Formulaire et FAQ */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
@@ -142,40 +170,17 @@ const Contact = () => {
             </Form>
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
-              <div className="space-y-4">
-                <p className="flex items-center gap-2">
-                  <span className="font-semibold">Adresse:</span>
-                  <span>4 Rue du Commerce, 01460 Port</span>
-                </p>
-                <p className="flex items-center gap-2">
-                  <span className="font-semibold">Téléphone:</span>
-                  <a href="tel:0672019849" className="text-white hover:underline">
-                    06 72 01 98 49
-                  </a>
-                </p>
-                <p className="flex items-center gap-2">
-                  <span className="font-semibold">Email:</span>
-                  <a href="mailto:contact@platrerie-peinture-pauget" className="text-white hover:underline">
-                    contact@platrerie-peinture-pauget.fr
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-[#CAB9AB] rounded-xl overflow-hidden shadow-lg h-[480px]">
-              <Map />
-            </div>
+          <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <FAQSection />
           </div>
         </div>
       </div>
+
+      {/* Carte en pleine largeur */}
+      <div className="h-[480px]">
+        <Map />
+      </div>
       
-      {/* FAQ Section */}
-      <FAQSection />
-      
-      {/* CTA Section */}
       <CTASection />
     </div>
   );
