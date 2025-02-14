@@ -7,11 +7,17 @@ const PeinturesInterieures = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Peinture Intérieure à Port | Pauget & Fils</title>
+        <title>Expert Peinture Intérieure à Port (01) | Finitions Soignées | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Experts en peinture intérieure à Port. Finitions soignées, conseils personnalisés et devis gratuit pour tous vos projets de peinture intérieure."
+          content="Entreprise de peinture intérieure à Port (01). Finitions haut de gamme, conseils déco personnalisés. Artisans qualifiés, intervention rapide. Devis gratuit pour vos travaux."
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/interieures" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">

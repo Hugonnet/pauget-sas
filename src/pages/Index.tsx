@@ -55,8 +55,17 @@ const Index = () => {
   return (
     <div className="flex flex-col space-y-0">
       <Helmet>
-        <title>Entreprise de Plâtrerie, Peinture et Isolation à Port - Joël Pauget et ses fils</title>
-        <meta name="description" content="Joël Pauget et ses fils, experts en plâtrerie, peinture et isolation à Port, Ain. Depuis 1997, nous réalisons vos travaux de construction et rénovation avec savoir-faire et engagement environnemental." />
+        <title>Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils - Artisans depuis 1997</title>
+        <meta 
+          name="description" 
+          content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       {/* Hero Slider Section */}
