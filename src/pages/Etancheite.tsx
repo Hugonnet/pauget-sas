@@ -5,13 +5,19 @@ import { Helmet } from "react-helmet-async";
 
 const Etancheite = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Helmet>
-        <title>Test d'Étanchéité à l'Air RT2012 à Port | Pauget & Fils</title>
+        <title>Étanchéité à l'Air à Port (01) | Test Infiltrométrie | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Tests d'infiltrométrie et solutions d'étanchéité à l'air à Port. Conformité RT2012, optimisation énergétique, diagnostic professionnel. Intervention rapide et devis gratuit."
+          content="Expert en étanchéité à l'air à Port. Tests d'infiltrométrie, optimisation énergétique RT2012/RE2020. Solutions professionnelles pour une parfaite étanchéité de votre habitat."
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/etancheite" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">

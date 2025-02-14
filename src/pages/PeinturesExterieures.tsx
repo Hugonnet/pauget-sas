@@ -6,13 +6,19 @@ import { ArrowRight, Star } from "lucide-react";
 
 const PeinturesExterieures = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Helmet>
-        <title>Peinture Extérieure à Port | Pauget & Fils</title>
+        <title>Peinture Extérieure à Port | Expert Façades | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Experts en peinture extérieure à Port. Solutions durables pour protéger et embellir vos façades. Devis gratuit pour vos travaux de peinture extérieure."
+          content="Experts en peinture extérieure à Port (01). Protection et embellissement de façades, revêtements durables. Devis gratuit, intervention dans toute la région Auvergne-Rhône-Alpes."
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/exterieures" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">

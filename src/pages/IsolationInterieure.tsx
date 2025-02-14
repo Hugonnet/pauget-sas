@@ -1,4 +1,3 @@
-
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,10 +7,10 @@ const IsolationInterieure = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Expert Isolation Intérieure à Port (01) | Devis Gratuit | Pauget & Fils</title>
+        <title>Isolation Intérieure à Port (01) | Certification RGE | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Leader de l'isolation intérieure à Port (01). Solutions performantes pour l'isolation thermique et phonique. Certifié RGE, économies d'énergie garanties. Devis gratuit sous 48h."
+          content="Spécialistes en isolation intérieure à Port. Entreprise certifiée RGE, solutions thermiques performantes. Économies d'énergie garanties, devis gratuit pour vos travaux d'isolation."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
