@@ -1,4 +1,3 @@
-
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -33,22 +32,20 @@ const PeinturesInterieures = () => {
         {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
           <div className="max-w-2xl text-white">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl font-bold mb-6"
+            <h1 
+              className="font-montserrat text-3xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6"
+              contentEditable="true"
+              suppressContentEditableWarning={true}
             >
               Peinture Intérieure Professionnelle
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl opacity-90"
+            </h1>
+            <p 
+              className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8"
+              contentEditable="true"
+              suppressContentEditableWarning={true}
             >
               Transformez vos espaces intérieurs avec nos services de peinture sur mesure.
-            </motion.p>
+            </p>
           </div>
         </div>
       </section>

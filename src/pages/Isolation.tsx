@@ -14,6 +14,42 @@ const Isolation = () => {
         />
       </Helmet>
 
+      <section className="relative h-[70vh] overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/lovable-uploads/hero-bg-isolation-exterieure.webp')",
+          }}
+        />
+        
+        {/* Overlay diagonal avec dégradé */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
+          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute bottom-0 w-full h-32 bg-background transform -skew-y-3 origin-bottom-right translate-y-16" />
+        </div>
+        
+        {/* Contenu du hero */}
+        <div className="container relative z-20 h-full flex items-center">
+          <div className="max-w-2xl text-white">
+            <h1 
+              className="font-montserrat text-3xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6"
+              contentEditable="true"
+              suppressContentEditableWarning={true}
+            >
+              Solutions d'Isolation Performantes
+            </h1>
+            <p 
+              className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8"
+              contentEditable="true"
+              suppressContentEditableWarning={true}
+            >
+              Optimisez le confort thermique de votre habitat avec nos solutions d'isolation intérieure et extérieure.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container">
           <motion.h1 

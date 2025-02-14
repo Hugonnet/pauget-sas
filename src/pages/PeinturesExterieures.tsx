@@ -1,21 +1,19 @@
-
-import { ArrowRight, Star } from "lucide-react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const PeinturesExterieures = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Peinture Extérieure & Ravalement de Façade à Port | Pauget & Fils</title>
+        <title>Peinture Extérieure à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Experts en peinture extérieure et ravalement de façade à Port. Protection durable, embellissement et valorisation de votre patrimoine. Devis gratuit."
+          content="Experts en peinture extérieure à Port. Solutions durables pour protéger et embellir vos façades. Devis gratuit pour vos travaux de peinture extérieure."
         />
       </Helmet>
 
-      {/* Hero Section avec Design Diagonal */}
       <section className="relative h-[70vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -34,27 +32,24 @@ const PeinturesExterieures = () => {
         {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
           <div className="max-w-2xl text-white">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl font-bold mb-6"
+            <h1 
+              className="font-montserrat text-3xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6"
+              contentEditable="true"
+              suppressContentEditableWarning={true}
             >
-              Peinture Extérieure Professionnelle
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl opacity-90"
+              Expert en Peinture Extérieure
+            </h1>
+            <p 
+              className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8"
+              contentEditable="true"
+              suppressContentEditableWarning={true}
             >
-              Embellissez et protégez durablement vos façades avec nos services de peinture sur mesure.
-            </motion.p>
+              Protection et embellissement de vos façades avec des solutions durables et adaptées à vos besoins.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-32">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -153,7 +148,7 @@ Faites confiance à Joël Pauget et ses fils pour donner une nouvelle vie à vos
             className="text-center"
           >
             <p className="text-lg text-accent/90 max-w-10xl mx-auto mb-8">
-              Confiez vos travaux de peinture extérieure à une équipe de professionnels passionnés. Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.
+              Confiez vos travaux de peinture extérieure à une équipe de professionnels passionnés. Contactez-nous dès aujourd’hui pour discuter de votre projet et obtenir un devis personnalisé.
             </p>
             <Link
               to="/contact"
