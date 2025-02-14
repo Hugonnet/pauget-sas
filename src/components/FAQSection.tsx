@@ -43,10 +43,10 @@ export const FAQSection = () => {
       }} transition={{
         duration: 0.5
       }} className="max-w-4xl mx-auto px-[10px] py-[6px]">
-          <h2 className="text-3xl font-bold text-center mb-12">Foire aux questions</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 px-[10px] mx-0 my-[10px]">Foire aux questions</h2>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-lg overflow-hidden border-none">
-                <AccordionTrigger className="p-6 text-white hover:no-underline px-[14px] py-0 my-[20px] bg-card-hover rounded">
+                <AccordionTrigger className="p-6 text-white hover:no-underline px-[14px] py-0 my-[20px] bg-card-hover rounded-xl">
                   <span className="text-left py-[10px]">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="p-6 pt-0 text-white/90">
