@@ -138,7 +138,7 @@ const Etancheite = () => {
       </section>
 
       {/* Section CTA */}
-      <section className="py-20">
+      <section className="py-20 bg-[#f7efe8]">
         <div className="container">
           <motion.div initial={{
           opacity: 0,
