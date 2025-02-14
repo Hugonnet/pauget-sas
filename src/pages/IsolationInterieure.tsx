@@ -1,3 +1,4 @@
+
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,11 +8,17 @@ const IsolationInterieure = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Isolation Intérieure à Port | Pauget & Fils</title>
+        <title>Isolation Intérieure à Port - Expert Isolation Thermique | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en isolation intérieure à Port. Solutions sur mesure pour une meilleure performance énergétique de votre habitat. Devis gratuit et conseils personnalisés."
+          content="Spécialiste de l'isolation intérieure à Port (01). Solutions sur mesure pour une meilleure performance énergétique de votre habitat. Plus de 30 ans d'expertise, certifié RGE. Devis gratuit et conseils personnalisés."
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
