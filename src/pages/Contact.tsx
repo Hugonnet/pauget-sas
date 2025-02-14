@@ -48,7 +48,7 @@ const Contact = () => {
       <div className="container mx-auto px-4 py-6">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">Contact</h1>
         
-        {/* Premier bloc: Présentation et Coordonnées */}
+        {/* Premier bloc: Présentation et FAQ */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <p className="text-base sm:text-lg md:text-xl max-w-2xl">
             Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
@@ -56,122 +56,124 @@ const Contact = () => {
           </p>
 
           <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
-            <div className="space-y-4">
-              <p className="flex items-center gap-2">
-                <span className="font-semibold">Adresse:</span>
-                <span>4 Rue du Commerce, 01460 Port</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="font-semibold">Téléphone:</span>
-                <a href="tel:0672019849" className="text-white hover:underline">
-                  06 72 01 98 49
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="font-semibold">Email:</span>
-                <a href="mailto:contact@platrerie-peinture-pauget" className="text-white hover:underline">
-                  contact@platrerie-peinture-pauget.fr
-                </a>
-              </p>
-            </div>
+            <FAQSection />
           </div>
         </div>
 
-        {/* Deuxième bloc: Formulaire et FAQ */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
-            
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Nom</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Votre nom" {...field} className="bg-white/90" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+        {/* Deuxième bloc: Coordonnées et Formulaire */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-8">
+            <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
+              <div className="space-y-4">
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold">Adresse:</span>
+                  <span>4 Rue du Commerce, 01460 Port</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold">Téléphone:</span>
+                  <a href="tel:0672019849" className="text-white hover:underline">
+                    06 72 01 98 49
+                  </a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold">Email:</span>
+                  <a href="mailto:contact@platrerie-peinture-pauget" className="text-white hover:underline">
+                    contact@platrerie-peinture-pauget.fr
+                  </a>
+                </p>
+              </div>
+            </div>
 
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="votre@email.com" {...field} className="bg-white/90" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+            <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
+              
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Nom</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Votre nom" {...field} className="bg-white/90" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Téléphone</FormLabel>
-                      <FormControl>
-                        <Input type="tel" placeholder="Votre numéro de téléphone" {...field} className="bg-white/90" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="votre@email.com" {...field} className="bg-white/90" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Sujet</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Sujet de votre message" {...field} className="bg-white/90" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Téléphone</FormLabel>
+                        <FormControl>
+                          <Input type="tel" placeholder="Votre numéro de téléphone" {...field} className="bg-white/90" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Votre message" 
-                          className="min-h-[150px] bg-white/90"
-                          {...field} 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Sujet</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Sujet de votre message" {...field} className="bg-white/90" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-primary-hover text-white"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Envoi en cours..." : "Envoyer"}
-                </Button>
-              </form>
-            </Form>
-          </div>
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Votre message" 
+                            className="min-h-[150px] bg-white/90"
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-          <div className="bg-[#CAB9AB] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <FAQSection />
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary hover:bg-primary-hover text-white"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+                  </Button>
+                </form>
+              </Form>
+            </div>
           </div>
         </div>
       </div>
