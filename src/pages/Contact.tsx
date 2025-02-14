@@ -41,7 +41,7 @@ const Contact = () => {
         
         {/* Premier bloc: Présentation et FAQ */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          <p className="text-base sm:text-lg md:text-xl max-w-2xl">
+          <p className="text-base sm:text-lg max-w-2xl md:text-lg">
             Nous sommes à votre écoute pour tous vos projets de plâtrerie, peinture et isolation.
             N'hésitez pas à nous contacter pour obtenir un devis gratuit.
           </p>
