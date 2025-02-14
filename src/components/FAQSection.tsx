@@ -33,7 +33,7 @@ const faqs = [{
 }];
 export const FAQSection = () => {
   return <section className="bg-[#F8EBDF] py-0">
-      <div className="container mx-auto bg-transparent px-[6px]">
+      <div className="container mx-auto px-[6px] bg-transparent">
         <motion.div initial={{
         opacity: 0,
         y: 20
