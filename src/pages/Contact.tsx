@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -171,7 +170,7 @@ const Contact = () => {
           </div>
 
           {/* Colonne de droite avec la FAQ */}
-          <div className="bg-[#CAB9AB] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-[#CAB9AB] rounded-xl">
             <FAQSection />
           </div>
         </div>

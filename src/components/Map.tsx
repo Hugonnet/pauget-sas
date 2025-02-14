@@ -39,9 +39,17 @@ const Map = () => {
           styles: [
             {
               featureType: "all",
-              elementType: "all",
+              elementType: "geometry",
               stylers: [
-                { saturation: -100 }
+                { saturation: -60 },
+                { hue: "#C4A484" }
+              ]
+            },
+            {
+              featureType: "all",
+              elementType: "labels",
+              stylers: [
+                { saturation: -60 }
               ]
             }
           ]
