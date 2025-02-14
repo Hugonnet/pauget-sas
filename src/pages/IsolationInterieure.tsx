@@ -5,19 +5,22 @@ import { Helmet } from "react-helmet-async";
 
 const IsolationInterieure = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Helmet>
-        <title>Isolation Intérieure à Port (01) | Certification RGE | Pauget & Fils</title>
+        <title>Isolation Intérieure & Phonique à Port | RGE | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Spécialistes en isolation intérieure à Port. Entreprise certifiée RGE, solutions thermiques performantes. Économies d'énergie garanties, devis gratuit pour vos travaux d'isolation."
+          content="Expert en isolation thermique et phonique intérieure à Port (01). Laine de verre, laine de roche, solutions techniques certifiées RGE. Économies d'énergie garanties, confort optimal." 
         />
+        <meta name="keywords" content="isolation intérieure, isolation phonique, RGE, Port, économies énergie, confort thermique" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
+        <meta property="og:title" content="Isolation Intérieure Certifiée RGE | Pauget & Fils" />
+        <meta property="og:description" content="Solutions d'isolation thermique et phonique intérieure sur mesure. Artisans certifiés RGE." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
-        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
-        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">

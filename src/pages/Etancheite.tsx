@@ -1,3 +1,4 @@
+
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,17 +8,20 @@ const Etancheite = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Étanchéité à l'Air à Port (01) | Test Infiltrométrie | Pauget & Fils</title>
+        <title>Test d'Étanchéité à l'Air RT2012/RE2020 à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en étanchéité à l'air à Port. Tests d'infiltrométrie, optimisation énergétique RT2012/RE2020. Solutions professionnelles pour une parfaite étanchéité de votre habitat."
+          content="Spécialiste des tests d'infiltrométrie et de l'étanchéité à l'air à Port (01). Conformité RT2012/RE2020, mesures précises, rapport détaillé. Optimisation de la performance énergétique." 
         />
+        <meta name="keywords" content="test infiltrométrie, étanchéité air, RT2012, RE2020, Port, performance énergétique" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/etancheite" />
+        <meta property="og:title" content="Expert en Tests d'Étanchéité à l'Air | Pauget & Fils" />
+        <meta property="og:description" content="Tests d'infiltrométrie professionnels pour RT2012/RE2020. Optimisez la performance énergétique de votre habitat." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/etancheite" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
-        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
-        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">

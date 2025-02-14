@@ -59,10 +59,16 @@ const Index = () => {
         <title>Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils - Artisans depuis 1997</title>
         <meta 
           name="description" 
-          content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction."
+          content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, artisans qualifiés, entreprise certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction neuve."
         />
+        <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr" />
+        <meta property="og:title" content="Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils" />
+        <meta property="og:description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation. Plus de 25 ans d'expertise à votre service." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr" />
+        <meta property="og:image" content="/logo.png" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
         <meta name="geo.position" content="46.16690444946289;5.568050861358643" />

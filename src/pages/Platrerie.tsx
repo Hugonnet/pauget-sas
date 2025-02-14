@@ -2,11 +2,24 @@ import { ArrowRight, Hammer, Building, Shield, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+
 const Platrerie = () => {
   return <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Plâtrerie - Pauget & Fils | Expert en plâtrerie traditionnelle</title>
-        <meta name="description" content="Découvrez notre expertise en plâtrerie traditionnelle et moderne. Plus de 30 ans d'expérience dans la réalisation de plafonds, cloisons et doublages dans la région de Bourg-en-Bresse." />
+        <title>Plâtrerie Traditionnelle à Port (01) | Cloisons & Plafonds | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Artisans plâtriers qualifiés à Port. Spécialistes en plâtrerie traditionnelle, cloisons, doublages et faux-plafonds. Devis gratuit, conseil personnalisé pour vos travaux de plâtrerie." 
+        />
+        <meta name="keywords" content="plâtrerie, cloisons, doublages, faux-plafonds, Port, Ain, plâtrier traditionnel" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/platrerie" />
+        <meta property="og:title" content="Expert en Plâtrerie Traditionnelle | Pauget & Fils" />
+        <meta property="og:description" content="Plus de 25 ans d'expertise en plâtrerie traditionnelle. Travaux de qualité pour vos cloisons, plafonds et doublages." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/platrerie" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
       </Helmet>
 
       {/* Hero Section avec Design Diagonal */}
@@ -111,6 +124,7 @@ const Platrerie = () => {
       </section>
     </div>;
 };
+
 const services = [{
   title: "Création de Cloisons et Doublages",
   description: "Nous réalisons la pose de cloisons sèches et de doublages en plaques de plâtre, permettant de structurer vos espaces selon vos besoins. Ces installations offrent une excellente isolation thermique et acoustique, contribuant au confort de votre habitat.",
@@ -124,4 +138,5 @@ const services = [{
   description: "Nous appliquons des enduits de lissage et de finition pour obtenir des surfaces parfaitement lisses et prêtes à peindre ou à tapisser. Nos techniques garantissent des murs et plafonds aux finitions impeccables, reflétant notre engagement envers la qualité.",
   icon: Shield
 }];
+
 export default Platrerie;
