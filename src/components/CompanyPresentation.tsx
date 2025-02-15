@@ -1,16 +1,16 @@
+
 import { motion } from "framer-motion";
+
 export const CompanyPresentation = () => {
-  return <section className="py-32 bg-[#f7efe8]">
+  return (
+    <section className="py-32 bg-[#F8EBDF]">
       <div className="container mx-auto px-4">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.5
-      }} className="mx-auto bg-card rounded-2xl p-8 md:p-12 text-white shadow-lg">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto bg-card rounded-2xl p-8 md:p-12 text-white shadow-lg"
+        >
           <div className="space-y-6">
             <p className="md:text-justify">
               Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture, plâtrerie traditionnelle et en placoplâtre, ainsi que l'isolation intérieure et l'isolation thermique par l'extérieur (ITE). Depuis 1997, nous mettons notre expertise au service de vos projets de construction et de rénovation dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.
@@ -33,15 +33,19 @@ export const CompanyPresentation = () => {
                 <p className="md:text-justify">
                   En tant qu'artisans plâtriers expérimentés, nous maîtrisons aussi bien les techniques traditionnelles que les solutions modernes comme le placoplâtre. Notre expertise nous permet de vous proposer des solutions adaptées à vos besoins, qu'il s'agisse de travaux de rénovation ou de construction neuve. Nos interventions garantissent une excellente isolation thermique et acoustique, une protection efficace contre l'incendie et une régulation optimale de l'humidité. Notre savoir-faire s'étend de la réalisation de cloisons distributives à l'installation de plafonds suspendus, en passant par la pose de portes intérieures. Chaque projet bénéficie d'une finition soignée, préparant parfaitement les surfaces pour les travaux de peinture ultérieurs.
                 </p>
-                <div className="space-y-8 md:space-y-0 md:flex md:items-center md:space-x-8 mt-8">
+                <div className="space-y-4 md:flex md:items-center md:space-x-8 md:space-y-0">
                   <div className="md:flex-1">
-                    <h3 className="text-xl font-semibold mb-4">Engagement Environnemental</h3>
+                    <h3 className="text-xl font-semibold">Engagement Environnemental</h3>
                     <p className="md:text-justify">
                       Notre entreprise est certifiée Qualibat RGE, un gage de qualité et de professionnalisme reconnu dans le secteur du bâtiment. Nous sommes engagés dans le respect de l'environnement et veillons au tri et au traitement des déchets de nos chantiers.
                     </p>
                   </div>
-                  <div className="flex justify-center mt-6 md:mt-0">
-                    <img src="/lovable-uploads/qualibat-rge.webp" alt="Certification Qualibat RGE" className="w-32 h-32 object-contain" />
+                  <div className="flex justify-center">
+                    <img 
+                      src="/lovable-uploads/qualibat-rge.webp" 
+                      alt="Certification Qualibat RGE" 
+                      className="w-32 h-32 object-contain" // Réduction supplémentaire de 20% (précédemment w-40 h-40)
+                    />
                   </div>
                 </div>
               </div>
@@ -65,5 +69,6 @@ export const CompanyPresentation = () => {
           </div>
         </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };

@@ -1,4 +1,4 @@
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -7,26 +7,20 @@ const Etancheite = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Étanchéité à l'Air - Test Infiltrométrie à Port | Pauget & Fils</title>
+        <title>Test d'Étanchéité à l'Air RT2012 à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en étanchéité à l'air et test d'infiltrométrie à Port (01). Optimisez la performance énergétique de votre habitat. Certification RT2012." 
+          content="Tests d'infiltrométrie et solutions d'étanchéité à l'air à Port. Conformité RT2012, optimisation énergétique, diagnostic professionnel. Intervention rapide et devis gratuit."
         />
-        <meta name="keywords" content="étanchéité air, test infiltrométrie, RT2012, Port, Ain" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/etancheite" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Expert en Étanchéité à l'Air | Pauget & Fils" />
-        <meta property="og:description" content="Solutions professionnelles pour l'étanchéité à l'air de votre habitat. Tests et diagnostics certifiés." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/etancheite" />
-        <meta name="geo.region" content="FR-ARA" />
-        <meta name="geo.placename" content="Port" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: "url('/lovable-uploads/hero-bg-etancheite-a-l-air.webp')"
-      }} />
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/lovable-uploads/hero-bg-etancheite-a-l-air.webp')"
+          }}
+        />
         
         {/* Overlay diagonal avec dégradé */}
         <div className="absolute inset-0">
@@ -38,54 +32,63 @@ const Etancheite = () => {
         {/* Contenu du hero */}
         <div className="container relative z-20 h-full flex items-center">
           <div className="max-w-2xl text-white">
-            <h1 className="font-montserrat text-3xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6" contentEditable="true" suppressContentEditableWarning={true}>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl font-bold mb-6"
+            >
               Étanchéité à l'Air
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8" contentEditable="true" suppressContentEditableWarning={true}>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl opacity-90"
+            >
               Optimisez la performance énergétique de votre habitat avec nos solutions d'étanchéité à l'air professionnelles.
-            </p>
+            </motion.p>
           </div>
         </div>
       </section>
 
       {/* Section Services */}
-      <section className="py-32 bg-[#f7efe8]">
+      <section className="py-32">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => <motion.div key={service.title} initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: index * 0.2
-          }} className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
                 <h3 className="text-xl font-semibold mb-4 text-white">{service.title}</h3>
                 <p className="text-white/90 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => <li key={idx} className="flex items-center space-x-2 text-white/80">
-                      <Shield className="w-4 h-4" />
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-2 text-white/80">
+                      <Star className="w-4 h-4" />
                       <span>{feature}</span>
-                    </li>)}
+                    </li>
+                  ))}
                 </ul>
-              </motion.div>)}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Section Expertise */}
-      <section className="py-20 from-background to-card/30 bg-[transparen] bg-[#f7efe8]">
-        <div className="container bg-[#f7efe8]">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8
-        }} className="max-w-10xl mx-auto text-center">
+      <section className="py-20 bg-gradient-to-b from-background to-card/30">
+        <div className="container">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-10xl mx-auto text-center"
+          >
             <h2 className="text-3xl font-bold mb-8">Notre Expertise en Étanchéité à l'Air</h2>
             <p className="text-lg text-gray-700 mb-12">
               L'étanchéité à l'air est un élément crucial pour l'efficacité énergétique de votre habitat. 
@@ -95,15 +98,12 @@ const Etancheite = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            x: -20
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.8
-          }} className="space-y-6">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
               <div className="bg-card p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3 text-white">Test d'Infiltrométrie</h3>
                 <p className="text-white/90">
@@ -127,33 +127,31 @@ const Etancheite = () => {
               </div>
             </motion.div>
 
-            <motion.div initial={{
-            opacity: 0,
-            x: 20
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.8
-          }} className="relative h-[450px] rounded-xl overflow-hidden shadow-lg">
-              <img src="/lovable-uploads/Schema-etancheite-Air.webp" alt="Expertise en étanchéité à l'air" className="object-cover w-full h-full" />
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative h-[450px] rounded-xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="/lovable-uploads/Schema-etancheite-Air.webp"
+                alt="Expertise en étanchéité à l'air"
+                className="object-cover w-full h-full"
+              />
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Section CTA */}
-      <section className="py-20 bg-[#f7efe8]">
+      <section className="py-20">
         <div className="container">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8
-        }} className="bg-card rounded-2xl p-12 text-center relative overflow-hidden">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-card rounded-2xl p-12 text-center relative overflow-hidden"
+          >
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-6 text-white">
                 Optimisez la Performance Énergétique de Votre Habitat
@@ -162,7 +160,10 @@ const Etancheite = () => {
                 Contactez-nous pour un diagnostic personnalisé de l'étanchéité à l'air de votre habitat. 
                 Nos experts sont à votre disposition pour vous conseiller et vous proposer les meilleures solutions.
               </p>
-              <Link to="/contact" className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg transition-colors duration-200">
+              <Link
+                to="/contact"
+                className="inline-flex items-center space-x-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg transition-colors duration-200"
+              >
                 <span>Demander un devis gratuit</span>
                 <ArrowRight size={20} />
               </Link>
@@ -174,18 +175,35 @@ const Etancheite = () => {
   );
 };
 
-const services = [{
-  title: "Test d'Étanchéité",
-  description: "Mesure précise des fuites d'air pour identifier les points d'amélioration.",
-  features: ["Test de la porte soufflante", "Mesure du débit de fuite", "Rapport détaillé"]
-}, {
-  title: "Traitement des Fuites",
-  description: "Solutions efficaces pour éliminer les pertes d'énergie.",
-  features: ["Colmatage des fuites", "Pose de membranes", "Joints d'étanchéité"]
-}, {
-  title: "Certification RT2012",
-  description: "Validation de la conformité aux normes en vigueur.",
-  features: ["Test final", "Rapport de conformité", "Certification officielle"]
-}];
+const services = [
+  {
+    title: "Test d'Étanchéité",
+    description: "Mesure précise des fuites d'air pour identifier les points d'amélioration.",
+    features: [
+      "Test de la porte soufflante",
+      "Mesure du débit de fuite",
+      "Rapport détaillé"
+    ]
+  },
+  {
+    title: "Traitement des Fuites",
+    description: "Solutions efficaces pour éliminer les pertes d'énergie.",
+    features: [
+      "Colmatage des fuites",
+      "Pose de membranes",
+      "Joints d'étanchéité"
+    ]
+  },
+  {
+    title: "Certification RT2012",
+    description: "Validation de la conformité aux normes en vigueur.",
+    features: [
+      "Test final",
+      "Rapport de conformité",
+      "Certification officielle"
+    ]
+  }
+];
 
 export default Etancheite;
+

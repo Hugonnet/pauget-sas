@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,24 +7,11 @@ const Peintures = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Services de Peinture Intérieure et Extérieure à Port | Pauget & Fils</title>
+        <title>Services de Peinture Professionnelle à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Découvrez nos services de peinture à Port (01). Experts en peinture intérieure, décoration et ravalement de façade. Devis gratuit pour vos projets."
+          content="Découvrez nos services de peinture intérieure et extérieure à Port. Expertise professionnelle, finitions impeccables et conseils personnalisés pour tous vos projets."
         />
-        <meta name="keywords" content="peinture intérieure, peinture extérieure, décoration, ravalement façade, Port, Ain" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Peinture Intérieure et Extérieure | Pauget & Fils" />
-        <meta property="og:description" content="Artisan peintre à Port. Solutions personnalisées pour l'intérieur et l'extérieur de votre habitat." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures" />
-        <meta property="og:image" content="/lovable-uploads/hero-peintures-interieures.webp" />
-        <meta property="og:image:alt" content="Services de peinture professionnelle Pauget & Fils" />
-        <meta name="geo.region" content="FR-ARA" />
-        <meta name="geo.placename" content="Port" />
-        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
-        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="py-20">
@@ -43,7 +29,7 @@ const Peintures = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-card p-8 rounded-xl shadow-lg"
             >
               <h2 className="text-2xl font-semibold mb-4 text-white">Peinture Intérieure</h2>
               <p className="text-white/90 mb-6">
@@ -52,7 +38,7 @@ const Peintures = () => {
               </p>
               <Link 
                 to="/peintures/interieures"
-                className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-200"
+                className="inline-flex items-center space-x-2 text-primary hover:text-primary/80"
               >
                 <span>En savoir plus</span>
                 <ArrowRight size={20} />
@@ -63,7 +49,7 @@ const Peintures = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-card p-8 rounded-xl shadow-lg"
             >
               <h2 className="text-2xl font-semibold mb-4 text-white">Peinture Extérieure</h2>
               <p className="text-white/90 mb-6">
@@ -72,7 +58,7 @@ const Peintures = () => {
               </p>
               <Link 
                 to="/peintures/exterieures"
-                className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-200"
+                className="inline-flex items-center space-x-2 text-primary hover:text-primary/80"
               >
                 <span>En savoir plus</span>
                 <ArrowRight size={20} />

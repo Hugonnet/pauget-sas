@@ -1,64 +1,18 @@
-
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const Isolation = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Solutions d'Isolation Thermique à Port | RGE | Pauget & Fils</title>
+        <title>Services d'Isolation Thermique à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en isolation thermique à Port (01). Solutions intérieures et extérieures, certification RGE. Optimisez vos performances énergétiques avec nos solutions sur-mesure." 
+          content="Expert en isolation thermique à Port. Solutions d'isolation intérieure et extérieure pour une meilleure performance énergétique. Devis gratuit et conseils personnalisés."
         />
-        <meta name="keywords" content="isolation thermique, isolation maison, RGE, Port, Ain, économies énergie" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Expert en Isolation Thermique | Pauget & Fils" />
-        <meta property="og:description" content="Améliorez votre confort et réduisez vos factures avec nos solutions d'isolation certifiées RGE." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation" />
-        <meta name="geo.region" content="FR-ARA" />
-        <meta name="geo.placename" content="Port" />
       </Helmet>
-
-      <section className="relative h-[70vh] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/lovable-uploads/hero-bg-isolation-exterieure.webp')",
-          }}
-        />
-        
-        {/* Overlay diagonal avec dégradé */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="absolute bottom-0 w-full h-32 bg-background transform -skew-y-3 origin-bottom-right translate-y-16" />
-        </div>
-        
-        {/* Contenu du hero */}
-        <div className="container relative z-20 h-full flex items-center">
-          <div className="max-w-2xl text-white">
-            <h1 
-              className="font-montserrat text-3xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6"
-              contentEditable="true"
-              suppressContentEditableWarning={true}
-            >
-              Solutions d'Isolation Performantes
-            </h1>
-            <p 
-              className="text-base sm:text-lg md:text-xl opacity-90 mb-6 md:mb-8"
-              contentEditable="true"
-              suppressContentEditableWarning={true}
-            >
-              Optimisez le confort thermique de votre habitat avec nos solutions d'isolation intérieure et extérieure.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section className="py-20">
         <div className="container">
