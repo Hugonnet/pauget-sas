@@ -13,10 +13,12 @@ const IsolationInterieure = () => {
           content="Experts en isolation intérieure à Port (01). Isolation des murs, combles et plafonds. Solutions performantes pour un confort optimal toute l'année." 
         />
         <meta name="keywords" content="isolation intérieure, isolation murs, isolation combles, Port, Ain" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Isolation Intérieure Port | Pauget & Fils" />
         <meta property="og:description" content="Solutions d'isolation intérieure performantes. Améliorez votre confort et réduisez vos factures énergétiques." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

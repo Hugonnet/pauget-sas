@@ -1,4 +1,4 @@
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -7,16 +7,18 @@ const PeinturesInterieures = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Peinture Intérieure à Port | Décoration & Finitions | Pauget & Fils</title>
+        <title>Peinture Intérieure Professionnelle à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en peinture intérieure à Port (01). Peintures écologiques, finitions haut de gamme, conseils déco personnalisés. Rénovation et décoration d'intérieur." 
+          content="Expert en peinture intérieure à Port (01). Finitions soignées, conseil déco personnalisé. Transformez votre intérieur avec nos solutions sur-mesure." 
         />
-        <meta name="keywords" content="peinture intérieure, décoration, finitions, Port, peintre décorateur, rénovation intérieure" />
+        <meta name="keywords" content="peinture intérieure, décoration, finition, Port, Ain" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/interieures" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Expert Peinture Intérieure & Décoration | Pauget & Fils" />
-        <meta property="og:description" content="Transformez votre intérieur avec nos services de peinture professionnelle. Conseils personnalisés et finitions soignées." />
+        <meta property="og:title" content="Peinture Intérieure Port | Pauget & Fils" />
+        <meta property="og:description" content="Sublimez votre intérieur avec nos services de peinture professionnelle. Expertise et conseil personnalisé." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures/interieures" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

@@ -7,16 +7,18 @@ const Etancheite = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Étanchéité à l'Air | Test Infiltrométrie Port | Pauget & Fils</title>
+        <title>Étanchéité à l'Air - Test Infiltrométrie à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en étanchéité à l'air à Port (01). Test d'infiltrométrie, optimisation énergétique, RT2012. Solutions professionnelles pour une parfaite étanchéité." 
+          content="Expert en étanchéité à l'air et test d'infiltrométrie à Port (01). Optimisez la performance énergétique de votre habitat. Certification RT2012." 
         />
         <meta name="keywords" content="étanchéité air, test infiltrométrie, RT2012, Port, Ain" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/etancheite" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Expert Étanchéité à l'Air | Pauget & Fils" />
-        <meta property="og:description" content="Solutions professionnelles pour l'étanchéité à l'air. Tests et diagnostics pour optimiser votre habitat." />
+        <meta property="og:title" content="Expert en Étanchéité à l'Air | Pauget & Fils" />
+        <meta property="og:description" content="Solutions professionnelles pour l'étanchéité à l'air de votre habitat. Tests et diagnostics certifiés." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/etancheite" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

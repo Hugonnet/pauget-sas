@@ -1,3 +1,4 @@
+
 import { ArrowRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,13 +11,15 @@ const IsolationExterieure = () => {
         <title>Isolation Thermique par l'Extérieur ITE à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Spécialiste de l'isolation thermique par l'extérieur (ITE) à Port (01). Solutions performantes, garantie décennale, certification RGE. Devis gratuit pour vos travaux d'isolation." 
+          content="Spécialiste de l'isolation thermique par l'extérieur (ITE) à Port (01). Solutions durables et performantes, entreprise RGE. Réduisez vos factures énergétiques." 
         />
-        <meta name="keywords" content="ITE, isolation extérieure, isolation thermique, Port, Ain, RGE" />
+        <meta name="keywords" content="isolation extérieure, ITE, isolation thermique, Port, Ain, RGE" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/exterieure" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Expert ITE Port | Pauget & Fils" />
-        <meta property="og:description" content="Isolation thermique par l'extérieur performante. Protection durable et valorisation de votre habitat." />
+        <meta property="og:title" content="Expert en Isolation Thermique par l'Extérieur | Pauget & Fils" />
+        <meta property="og:description" content="Solutions d'isolation par l'extérieur performantes. Améliorez l'efficacité énergétique de votre habitat." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation/exterieure" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

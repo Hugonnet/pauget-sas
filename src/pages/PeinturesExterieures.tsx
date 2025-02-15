@@ -1,3 +1,4 @@
+
 import { ArrowRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,13 +11,15 @@ const PeinturesExterieures = () => {
         <title>Peinture Extérieure & Ravalement de Façade à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Spécialiste en peinture extérieure à Port (01). Ravalement de façade, traitement des surfaces, protection durable. Intervention sur l'Ain et la Haute-Savoie." 
+          content="Spécialiste en peinture extérieure et ravalement de façade à Port (01). Protection et embellissement durables de votre habitat. Devis gratuit." 
         />
-        <meta name="keywords" content="peinture extérieure, ravalement façade, traitement façade, Port, Ain" />
+        <meta name="keywords" content="peinture extérieure, ravalement façade, Port, Ain" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/exterieures" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Expert en Peinture Extérieure | Pauget & Fils" />
-        <meta property="og:description" content="Protection et embellissement de vos façades. Solutions durables et esthétiques pour votre extérieur." />
+        <meta property="og:description" content="Solutions professionnelles pour la peinture de vos façades. Protection et esthétique garanties." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures/exterieures" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>
