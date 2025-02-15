@@ -1,16 +1,16 @@
-
 import { motion } from "framer-motion";
-
 export const CompanyPresentation = () => {
-  return (
-    <section className="py-32 bg-[#F8EBDF]">
+  return <section className="py-32 bg-[#f7efe8]">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto bg-card rounded-2xl p-8 md:p-12 text-white shadow-lg"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }} className="mx-auto bg-card rounded-2xl p-8 md:p-12 text-white shadow-lg">
           <div className="space-y-6">
             <p className="md:text-justify">
               Joël Pauget et ses fils est une entreprise familiale spécialisée dans les travaux de peinture, plâtrerie traditionnelle et en placoplâtre, ainsi que l'isolation intérieure et l'isolation thermique par l'extérieur (ITE). Depuis 1997, nous mettons notre expertise au service de vos projets de construction et de rénovation dans l'Ain (01) et la Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy.
@@ -41,11 +41,7 @@ export const CompanyPresentation = () => {
                     </p>
                   </div>
                   <div className="flex justify-center mt-6 md:mt-0">
-                    <img 
-                      src="/lovable-uploads/qualibat-rge.webp" 
-                      alt="Certification Qualibat RGE" 
-                      className="w-32 h-32 object-contain"
-                    />
+                    <img src="/lovable-uploads/qualibat-rge.webp" alt="Certification Qualibat RGE" className="w-32 h-32 object-contain" />
                   </div>
                 </div>
               </div>
@@ -69,6 +65,5 @@ export const CompanyPresentation = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
