@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import { AuthProvider } from "@/hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 import { Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
 import Platrerie from './pages/Platrerie';
@@ -23,15 +24,20 @@ import Contact from './pages/Contact';
 import RealisationEdit from './pages/RealisationEdit';
 
 const queryClient = new QueryClient();
-const helmetContext = {}; // Ajout du contexte Helmet
 
 const App = () => {
   return (
-    <HelmetProvider context={helmetContext}>
+    <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <HashRouter>
           <AuthProvider>
             <div className="flex flex-col min-h-screen w-full">
+              <Helmet>
+                <html lang="fr" />
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#FDE1D3" />
+              </Helmet>
               <Header />
               <main className="flex-grow w-full">
                 <Routes>

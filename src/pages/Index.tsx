@@ -54,20 +54,16 @@ const services = [
 const Index = () => {
   return (
     <div className="flex flex-col space-y-0">
-      <Helmet defaultTitle="Pauget & Fils | Plâtrerie Peinture Isolation Port 01" prioritizeSeoTags={true}>
-        <html lang="fr" />
-        <title>Pauget & Fils | Plâtrerie Peinture Isolation Port 01</title>
+      <Helmet>
+        <title>Pauget & Fils | Expert Plâtrerie Peinture Isolation à Port (01)</title>
         <meta 
           name="description" 
-          content="Artisans plâtriers-peintres depuis 1997 à Port. Experts en plâtrerie traditionnelle, peinture décorative, isolation thermique. Entreprise familiale, certifiée RGE, intervention Ain et Haute-Savoie." 
+          content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation depuis 1997 à Port. Experts en rénovation et construction, certifiée RGE. Intervention Ain et Haute-Savoie." 
         />
         <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr" />
-        <meta property="og:title" content="Entreprise Pauget & Fils | Artisans du Bâtiment Port 01" />
-        <meta property="og:description" content="25 ans d'expertise en plâtrerie, peinture et isolation. Savoir-faire artisanal, solutions sur-mesure, qualité garantie." />
+        <meta property="og:title" content="Pauget & Fils | Artisan Plâtrier-Peintre à Port" />
+        <meta property="og:description" content="25 ans d'expertise en plâtrerie, peinture et isolation. Solutions sur-mesure, qualité garantie." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr" />
         <meta property="og:image" content="/logo.png" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
