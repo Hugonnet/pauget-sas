@@ -5,11 +5,18 @@ import App from './App.tsx'
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async';
 
-const helmetContext = { helmet: undefined }; // Créez un contexte explicite avec une valeur initiale
+const helmetContext = { helmet: undefined }; 
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  // Retirons le StrictMode qui peut causer des problèmes avec react-helmet-async
+const rootElement = document.getElementById('root')!;
+
+const app = (
   <HelmetProvider context={helmetContext}>
     <App />
   </HelmetProvider>
-)
+);
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootElement, app);
+} else {
+  ReactDOM.createRoot(rootElement).render(app);
+}

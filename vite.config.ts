@@ -21,6 +21,12 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     sourcemap: true,
-    target: 'esnext'
+    target: 'esnext',
+    // Optimisations pour le pre-rendering
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 }));
