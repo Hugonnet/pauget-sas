@@ -1,5 +1,5 @@
 
-import { ArrowRight, Shield, Star } from "lucide-react"; // Ajout de l'import Star
+import { ArrowRight, Shield, Star } from "lucide-react"; 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -14,12 +14,12 @@ const PeinturesInterieures = () => {
           content="Expert en peinture intérieure à Port (01). Finitions soignées, conseil déco personnalisé. Transformez votre intérieur avec nos solutions sur-mesure." 
         />
         <meta name="keywords" content="peinture intérieure, décoration, finition, Port, Ain" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/interieures" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Peinture Intérieure Port | Pauget & Fils" />
         <meta property="og:description" content="Sublimez votre intérieur avec nos services de peinture professionnelle. Expertise et conseil personnalisé." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures/interieures" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>
