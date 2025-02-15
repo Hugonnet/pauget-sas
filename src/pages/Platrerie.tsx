@@ -1,3 +1,4 @@
+
 import { ArrowRight, Hammer, Building, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -13,16 +14,18 @@ const Platrerie = () => {
           content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction." 
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/platrerie" />
-        <meta name="geo.region" content="FR-ARA" />
-        <meta name="geo.placename" content="Port" />
-        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
-        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
         <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
         <meta property="og:title" content="Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils" />
         <meta property="og:description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation. Plus de 25 ans d'expertise, certifiée RGE." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/platrerie" />
+        <meta property="og:image" content="/lovable-uploads/hero-bg-platrerie.webp" />
+        <meta property="og:image:alt" content="Services de plâtrerie professionnelle Pauget & Fils" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/platrerie" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
