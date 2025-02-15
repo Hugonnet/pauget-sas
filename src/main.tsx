@@ -1,36 +1,29 @@
 
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async';
-import { hydrate, render } from "react-dom";
 
 const helmetContext = { helmet: undefined }; 
-
 const rootElement = document.getElementById('root')!;
 
 const app = (
-  <HelmetProvider context={helmetContext}>
-    <App />
-  </HelmetProvider>
+  <React.StrictMode>
+    <HelmetProvider context={helmetContext}>
+      <App />
+    </HelmetProvider>
+  </React.StrictMode>
 );
 
-if (rootElement.hasChildNodes()) {
-  hydrate(app, rootElement);
-} else {
-  render(app, rootElement);
-}
-
-// Ajout de la configuration pour react-snap
-if (typeof document !== 'undefined') {
-  const rootElement = document.getElementById("root")!;
+// Si le script s'exécute côté client
+if (typeof window !== 'undefined') {
+  // Si la page a été pré-rendue par react-snap
   if (rootElement.hasChildNodes()) {
-    hydrate(app, rootElement);
+    hydrateRoot(rootElement, app);
   } else {
-    render(app, rootElement);
+    createRoot(rootElement).render(app);
   }
 }
 
-// Pour le pre-rendering
 export default app;

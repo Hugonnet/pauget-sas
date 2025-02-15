@@ -1,60 +1,51 @@
-import { motion } from "framer-motion";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-const faqs = [{
-  question: "Quels types de travaux réalisez-vous ?",
-  answer: "Nous sommes spécialisés dans les travaux de plâtrerie, peinture intérieure et extérieure, ainsi que l'isolation thermique par l'intérieur et l'extérieur (ITE). Nous intervenons aussi bien en construction neuve qu'en rénovation pour les particuliers et les professionnels."
-}, {
-  question: "Intervenez-vous uniquement dans l'Ain ?",
-  answer: "Nous réalisons nos prestations principalement dans l'Ain (01) et en Haute-Savoie (74), notamment autour de Saint-Julien-en-Genevois, Annemasse et Annecy. N'hésitez pas à nous contacter pour vérifier la faisabilité de votre projet dans votre secteur."
-}, {
-  question: "Quels sont les avantages de la peinture extérieure pour ma maison ?",
-  answer: "Une peinture extérieure de qualité protège votre façade contre les intempéries, les UV, la pollution et l'humidité, tout en améliorant son aspect esthétique. Nous utilisons des produits adaptés aux conditions climatiques locales pour garantir une durabilité optimale."
-}, {
-  question: "Pourquoi choisir l'isolation thermique par l'extérieur (ITE) ?",
-  answer: "L'ITE permet d'améliorer les performances énergétiques de votre habitation en limitant les pertes de chaleur. Elle offre également un gain esthétique en rénovant votre façade et peut donner accès à des aides financières pour la rénovation énergétique."
-}, {
-  question: "Quelle est la différence entre plâtrerie traditionnelle et placoplâtre ?",
-  answer: "La plâtrerie traditionnelle consiste à appliquer du plâtre directement sur les murs pour une finition lisse et durable. Le placoplâtre (Placo®) est une solution plus rapide, utilisée pour la création de cloisons, faux plafonds et doublages, avec d'excellentes performances en isolation phonique et thermique."
-}, {
-  question: "Proposez-vous des conseils pour choisir les couleurs et les finitions ?",
-  answer: "Oui, nous vous accompagnons dans le choix des couleurs, textures et finitions adaptées à votre intérieur et extérieur. Nous prenons en compte votre style, l'ambiance souhaitée et les contraintes techniques pour un rendu harmonieux et durable."
-}, {
-  question: "Quelle est la durée moyenne d'un chantier ?",
-  answer: "La durée dépend de la nature des travaux (plâtrerie, peinture, isolation) et de la surface concernée. Nous établissons un planning précis avant chaque intervention afin de garantir un travail rapide et efficace, tout en respectant les délais convenus."
-}, {
-  question: "Vos travaux ouvrent-ils droit à des aides financières ?",
-  answer: "Oui, certains travaux d'isolation thermique peuvent être éligibles aux aides de l'État (MaPrimeRénov', éco-prêt à taux zéro, aides locales). En tant qu'entreprise RGE (Reconnu Garant de l'Environnement), nous vous accompagnons dans les démarches pour bénéficier de ces aides."
-}, {
-  question: "Travaillez-vous avec des produits respectueux de l'environnement ?",
-  answer: "Nous privilégions des matériaux et peintures écologiques, sans solvants nocifs, garantissant un environnement sain tout en respectant les normes environnementales en vigueur."
-}, {
-  question: "Comment obtenir un devis ?",
-  answer: "Vous pouvez nous contacter par téléphone ou via notre formulaire en ligne pour une demande de devis gratuit. Nous analysons votre projet et vous proposons une estimation détaillée et personnalisée."
-}];
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 export const FAQSection = () => {
-  return <section className="py-0">
-      <div className="container mx-auto px-[6px] bg-transparent">
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.5
-      }} className="max-w-4xl mx-auto px-[10px] py-[6px]">
-          <h2 className="text-3xl font-bold text-center mb-12 px-[10px] mx-0 my-[20px]">Foire aux questions</h2>
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-lg overflow-hidden border-none">
-                <AccordionTrigger className="p-6 text-white hover:no-underline px-[14px] py-0 my-[20px] bg-card-hover rounded-xl">
-                  <span className="text-left py-[10px]">{faq.question}</span>
-                </AccordionTrigger>
-                <AccordionContent className="p-6 pt-0 text-white/90">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>)}
-          </Accordion>
-        </motion.div>
+  return (
+    <section className="py-20">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">Questions fréquentes</h2>
+        <Accordion type="single" collapsible className="max-w-3xl mx-auto">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              Quels sont vos délais d'intervention ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Nos délais d'intervention varient selon la période et l'ampleur des travaux. Nous nous engageons à vous donner un planning précis lors de notre premier rendez-vous.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              Êtes-vous certifiés RGE ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Oui, nous sommes certifiés RGE (Reconnu Garant de l'Environnement), ce qui vous permet de bénéficier d'aides financières pour vos travaux de rénovation énergétique.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>
+              Proposez-vous des devis gratuits ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Oui, nous réalisons gratuitement les devis après une visite sur site pour évaluer précisément vos besoins et les contraintes du chantier.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>
+              Quelle est la garantie sur vos travaux ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Tous nos travaux sont garantis. La durée de garantie varie selon le type de prestation, de 2 ans pour la garantie de parfait achèvement à 10 ans pour la garantie décennale.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
-    </section>;
+    </section>
+  );
 };
