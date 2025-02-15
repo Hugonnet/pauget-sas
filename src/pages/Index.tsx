@@ -3,12 +3,12 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import HeroSlider from "@/components/HeroSlider";
-import CompanyPresentation from "@/components/CompanyPresentation";
-import FAQSection from "@/components/FAQSection";
-import KeyFiguresSection from "@/components/KeyFiguresSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import CTASection from "@/components/CTASection";
+import { HeroSlider } from "@/components/HeroSlider";
+import { CompanyPresentation } from "@/components/CompanyPresentation";
+import { FAQSection } from "@/components/FAQSection";
+import { KeyFiguresSection } from "@/components/KeyFiguresSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { CTASection } from "@/components/CTASection";
 
 const Index = () => {
   console.log("Index page rendered");
@@ -17,7 +17,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        {console.log("Inside Helmet component")}
         <title>Pauget & Fils | Plâtrerie, Peinture, Isolation à Port (01)</title>
         <meta 
           name="description" 
