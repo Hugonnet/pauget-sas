@@ -24,6 +24,10 @@ const Platrerie = () => {
         <meta property="og:description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation. Plus de 25 ans d'expertise, certifiée RGE." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/platrerie" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
+          rel="stylesheet"
+        />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
