@@ -5,12 +5,11 @@ import App from './App.tsx'
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async';
 
-const helmetContext = {};
+const helmetContext = { helmet: undefined }; // Créez un contexte explicite avec une valeur initiale
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider context={helmetContext}>
-      <App />
-    </HelmetProvider>
-  </React.StrictMode>,
+  // Retirons le StrictMode qui peut causer des problèmes avec react-helmet-async
+  <HelmetProvider context={helmetContext}>
+    <App />
+  </HelmetProvider>
 )
