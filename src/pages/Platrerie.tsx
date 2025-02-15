@@ -1,3 +1,4 @@
+
 import { ArrowRight, Hammer, Building, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,20 +8,22 @@ const Platrerie = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Plâtrerie Traditionnelle à Port (01) | Cloisons & Plafonds | Pauget & Fils</title>
+        <title>Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils - Artisans depuis 1997</title>
         <meta 
           name="description" 
-          content="Artisans plâtriers qualifiés à Port. Spécialistes en plâtrerie traditionnelle, cloisons, doublages et faux-plafonds. Devis gratuit, conseil personnalisé pour vos travaux de plâtrerie." 
+          content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction." 
         />
-        <meta name="keywords" content="plâtrerie, cloisons, doublages, faux-plafonds, Port, Ain, plâtrier traditionnel" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/platrerie" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Expert en Plâtrerie Traditionnelle | Pauget & Fils" />
-        <meta property="og:description" content="Plus de 25 ans d'expertise en plâtrerie traditionnelle. Travaux de qualité pour vos cloisons, plafonds et doublages." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/platrerie" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/platrerie" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
+        <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
+        <meta property="og:title" content="Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils" />
+        <meta property="og:description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation. Plus de 25 ans d'expertise, certifiée RGE." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/platrerie" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
