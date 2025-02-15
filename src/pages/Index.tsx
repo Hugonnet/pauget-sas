@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet-async";
 import { HeroSlider } from "@/components/HeroSlider";
 import { CompanyPresentation } from "@/components/CompanyPresentation";
 import { KeyFiguresSection } from "@/components/KeyFiguresSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 
 const Index = () => {
