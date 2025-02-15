@@ -1,5 +1,5 @@
 
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -29,10 +29,11 @@ const App = () => {
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <HashRouter>
           <AuthProvider>
             <div className="flex flex-col min-h-screen w-full">
               <Helmet>
+                <title>TEST HELMET - Pauget & Fils</title>
                 <html lang="fr" />
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,7 +62,7 @@ const App = () => {
               <Toaster position="top-right" />
             </div>
           </AuthProvider>
-        </BrowserRouter>
+        </HashRouter>
       </QueryClientProvider>
     </HelmetProvider>
   );
