@@ -70,7 +70,7 @@ const Etancheite = () => {
       </section>
 
       {/* Section Expertise */}
-      <section className="py-20 from-background to-card/30 bg-[transparen] bg-transparent">
+      <section className="py-20 from-background to-card/30 bg-[transparen] bg-[#f7efe8]">
         <div className="container bg-[#f7efe8]">
           <motion.div initial={{
           opacity: 0,
