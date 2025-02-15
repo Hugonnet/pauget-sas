@@ -1,4 +1,5 @@
-import { ArrowRight, Shield } from "lucide-react";
+
+import { ArrowRight, Shield, Star } from "lucide-react"; // Ajout de l'import Star
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
