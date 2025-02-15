@@ -62,11 +62,11 @@ const Index = () => {
           content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation depuis 1997 à Port. Experts en rénovation et construction, certifiée RGE. Intervention Ain et Haute-Savoie." 
         />
         <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/" />
+        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr" />
         <meta property="og:title" content="Pauget & Fils | Artisan Plâtrier-Peintre à Port" />
         <meta property="og:description" content="25 ans d'expertise en plâtrerie, peinture et isolation. Solutions sur-mesure, qualité garantie." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr" />
         <meta property="og:image" content="/logo.png" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
