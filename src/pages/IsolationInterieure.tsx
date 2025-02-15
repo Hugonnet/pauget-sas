@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -63,7 +63,7 @@ const IsolationInterieure = () => {
                 <p className="text-white/90 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => <li key={idx} className="flex items-center space-x-2 text-white/80">
-                      <Star className="w-4 h-4" />
+                      <Shield className="w-4 h-4" />
                       <span>{feature}</span>
                     </li>)}
                 </ul>

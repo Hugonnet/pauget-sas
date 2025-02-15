@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -134,15 +134,15 @@ Nous intervenons dans l'Ain (01) et la Haute-Savoie (74), notamment dans les sec
             <h2 className="text-2xl font-semibold mb-6 text-white">Pourquoi Choisir Joël Pauget et ses fils ?</h2>
             <ul className="space-y-4 text-white/90">
               <li className="flex items-start gap-2">
-                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
                 <p><span className="font-semibold">Expertise et Savoir-Faire :</span> Forts de notre expérience, nous maîtrisons les techniques d'isolation extérieure et vous garantissons un résultat de qualité, durable et esthétique.</p>
               </li>
               <li className="flex items-start gap-2">
-                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
                 <p><span className="font-semibold">Certification RGE :</span> Notre certification RGE vous permet de bénéficier d'aides financières et de crédits d'impôt pour la réalisation de vos travaux d'isolation extérieure.</p>
               </li>
               <li className="flex items-start gap-2">
-                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
                 <p><span className="font-semibold">Accompagnement Personnalisé :</span> Nous vous accompagnons dans toutes les étapes de votre projet, de l'étude thermique à la réalisation des travaux, en vous conseillant sur les meilleures solutions et les matériaux les plus adaptés à vos besoins.</p>
               </li>
             </ul>

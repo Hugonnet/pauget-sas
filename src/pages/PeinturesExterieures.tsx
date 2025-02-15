@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -136,15 +136,15 @@ Faites confiance à Joël Pauget et ses fils pour donner une nouvelle vie à vos
             <h2 className="text-2xl font-semibold mb-6 text-white">Pourquoi Choisir Joël Pauget et ses fils ?</h2>
             <ul className="space-y-4 text-white/90">
               <li className="flex items-start gap-2">
-                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
                 <p><span className="font-semibold">Expérience et Savoir-Faire :</span> Avec plus de 20 ans d'expérience, nous maîtrisons les techniques de peinture extérieure et utilisons des matériaux de qualité pour des résultats durables.</p>
               </li>
               <li className="flex items-start gap-2">
-                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
                 <p><span className="font-semibold">Engagement Environnemental :</span> Labellisés RGE, nous sommes engagés dans le respect de l'environnement et veillons au tri et au traitement des déchets de nos chantiers.</p>
               </li>
               <li className="flex items-start gap-2">
-                <Star className="w-6 h-6 flex-shrink-0 mt-1" />
+                <Shield className="w-6 h-6 flex-shrink-0 mt-1" />
                 <p><span className="font-semibold">Proximité et Réactivité :</span> Entreprise familiale, nous offrons un accompagnement personnalisé et une communication transparente tout au long de vos projets.</p>
               </li>
             </ul>
