@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 export const CTASection = () => {
-  return <section className="py-8">
+  return <section className="py-8 bg-[#f7efe8]">
       <div className="container mx-auto px-4">
         <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-16 bg-white rounded-lg p-8 shadow-sm">
           <div className="flex flex-col items-center md:items-start">
