@@ -32,12 +32,23 @@ const App = () => {
         <HashRouter>
           <AuthProvider>
             <div className="flex flex-col min-h-screen w-full">
-              <Helmet>
-                <title>TEST HELMET - Pauget & Fils</title>
+              <Helmet prioritizeSeoTags>
+                <title>TEST HELMET PRIORITIZED - Pauget & Fils</title>
                 <html lang="fr" />
                 <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation à Port (01). Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux de rénovation et construction." />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr" />
                 <meta name="theme-color" content="#FDE1D3" />
+                <meta property="og:title" content="Plâtrerie Peinture Isolation à Port (01) | Pauget & Fils - Artisans depuis 1997" />
+                <meta property="og:description" content="Entreprise familiale spécialisée en plâtrerie, peinture et isolation. Plus de 25 ans d'expertise, certifiée RGE. Devis gratuit pour vos travaux." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr" />
+                <meta name="geo.region" content="FR-ARA" />
+                <meta name="geo.placename" content="Port" />
+                <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+                <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
               </Helmet>
               <Header />
               <main className="flex-grow w-full">
