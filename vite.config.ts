@@ -22,11 +22,14 @@ export default defineConfig(({ mode }) => ({
   build: {
     sourcemap: true,
     target: 'esnext',
-    // Optimisations pour le pre-rendering
+    // Configuration optimisée pour react-snap
     rollupOptions: {
       output: {
         manualChunks: undefined
       }
-    }
+    },
+    outDir: 'dist',
+    // Assure que l'application est buildée de manière statique
+    ssr: true
   }
 }));
