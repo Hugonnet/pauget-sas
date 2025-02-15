@@ -1,18 +1,23 @@
+
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const IsolationExterieure = () => {
   return <div className="min-h-screen">
       <Helmet>
-        <title>Expert Isolation Extérieure à Port (01) | ITE Certifiée | Pauget & Fils</title>
-        <meta name="description" content="Spécialiste isolation thermique par l'extérieur à Port (01). Solutions ITE performantes, entreprise certifiée RGE. Rénovation énergétique globale, devis gratuit pour vos travaux." />
+        <title>Isolation Thermique par l'Extérieur (ITE) à Port | Pauget & Fils</title>
+        <meta name="description" content="Spécialiste de l'isolation par l'extérieur à Port. Solutions ITE performantes, rénovation énergétique certifiée RGE. Amélioration du confort thermique, réduction des factures énergétiques." />
+        <meta name="keywords" content="ITE, isolation extérieure, rénovation énergétique, Port, RGE, façade isolation" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/exterieure" />
+        <meta property="og:title" content="Expert en Isolation Thermique par l'Extérieur | Pauget & Fils" />
+        <meta property="og:description" content="Solutions d'isolation par l'extérieur performantes et durables. Certification RGE, aides disponibles." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation/exterieure" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
-        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
-        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
@@ -163,4 +168,5 @@ Nous intervenons dans l'Ain (01) et la Haute-Savoie (74), notamment dans les sec
       </section>
     </div>;
 };
+
 export default IsolationExterieure;

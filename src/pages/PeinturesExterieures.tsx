@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -5,14 +6,17 @@ import { ArrowRight, Star } from "lucide-react";
 const PeinturesExterieures = () => {
   return <div className="min-h-screen">
       <Helmet>
-        <title>Peinture Extérieure à Port | Expert Façades | Pauget & Fils</title>
-        <meta name="description" content="Experts en peinture extérieure à Port (01). Protection et embellissement de façades, revêtements durables. Devis gratuit, intervention dans toute la région Auvergne-Rhône-Alpes." />
+        <title>Ravalement de Façade & Peinture Extérieure à Port | Pauget & Fils</title>
+        <meta name="description" content="Entreprise spécialisée en ravalement de façade et peinture extérieure à Port. Protection anti-humidité, traitement des fissures, embellissement durable. Intervention dans l'Ain." />
+        <meta name="keywords" content="ravalement façade, peinture extérieure, façade maison, Port, Ain, protection façade" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/exterieures" />
+        <meta property="og:title" content="Expert en Ravalement de Façade | Pauget & Fils" />
+        <meta property="og:description" content="Solutions professionnelles pour la rénovation et la protection de vos façades. Devis gratuit pour vos travaux extérieurs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures/exterieures" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
-        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
-        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="relative h-[70vh] overflow-hidden">
