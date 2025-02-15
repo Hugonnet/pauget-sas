@@ -123,7 +123,7 @@ const Platrerie = () => {
               className="relative h-[480px] rounded-xl overflow-hidden shadow-lg"
             >
               <img 
-                src="/lovable-uploads/platrerie-traditionnelle.webp" 
+                src="/lovable-uploads/platrerie.webp" 
                 alt="Plâtrerie traditionnelle et moderne" 
                 className="object-cover w-full h-full" 
               />
