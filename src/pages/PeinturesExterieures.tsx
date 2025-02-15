@@ -1,20 +1,22 @@
-
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Star } from "lucide-react";
+
 const PeinturesExterieures = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Ravalement de Façade & Peinture Extérieure à Port | Pauget & Fils</title>
-        <meta name="description" content="Entreprise spécialisée en ravalement de façade et peinture extérieure à Port. Protection anti-humidité, traitement des fissures, embellissement durable. Intervention dans l'Ain." />
-        <meta name="keywords" content="ravalement façade, peinture extérieure, façade maison, Port, Ain, protection façade" />
+        <title>Peinture Extérieure & Ravalement de Façade à Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Spécialiste en peinture extérieure à Port (01). Ravalement de façade, traitement des surfaces, protection durable. Intervention sur l'Ain et la Haute-Savoie." 
+        />
+        <meta name="keywords" content="peinture extérieure, ravalement façade, traitement façade, Port, Ain" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/exterieures" />
-        <meta property="og:title" content="Expert en Ravalement de Façade | Pauget & Fils" />
-        <meta property="og:description" content="Solutions professionnelles pour la rénovation et la protection de vos façades. Devis gratuit pour vos travaux extérieurs." />
+        <meta property="og:title" content="Expert en Peinture Extérieure | Pauget & Fils" />
+        <meta property="og:description" content="Protection et embellissement de vos façades. Solutions durables et esthétiques pour votre extérieur." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures/exterieures" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>
@@ -167,6 +169,8 @@ Faites confiance à Joël Pauget et ses fils pour donner une nouvelle vie à vos
           </motion.div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default PeinturesExterieures;

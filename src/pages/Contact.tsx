@@ -1,7 +1,7 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { Helmet } from "react-helmet-async";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -36,15 +36,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8EBE0]">
+    <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contactez Pauget & Fils | Artisan Plâtrier-Peintre à Port</title>
+        <title>Contact | Pauget & Fils | Artisan Plâtrier-Peintre à Port</title>
         <meta 
           name="description" 
-          content="Contactez Pauget & Fils pour vos projets de plâtrerie, peinture et isolation à Port. Devis gratuit, conseil personnalisé. Expertise en travaux de rénovation et d'isolation thermique."
+          content="Contactez Pauget & Fils à Port (01). Devis gratuit pour vos travaux de plâtrerie, peinture et isolation. Intervention sur l'Ain et la Haute-Savoie." 
         />
+        <meta name="keywords" content="contact, devis, plâtrerie, peinture, isolation, Port, Ain" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/contact" />
+        <meta property="og:title" content="Contact Pauget & Fils | Port" />
+        <meta property="og:description" content="Demandez un devis gratuit pour vos travaux. Réponse rapide et conseils personnalisés." />
+        <meta property="og:type" content="website" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
       </Helmet>
       <div className="container mx-auto px-4 py-6">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">Contact</h1>

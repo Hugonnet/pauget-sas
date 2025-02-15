@@ -1,19 +1,22 @@
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+
 const IsolationInterieure = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Isolation Intérieure & Phonique à Port | RGE | Pauget & Fils</title>
-        <meta name="description" content="Expert en isolation thermique et phonique intérieure à Port (01). Laine de verre, laine de roche, solutions techniques certifiées RGE. Économies d'énergie garanties, confort optimal." />
-        <meta name="keywords" content="isolation intérieure, isolation phonique, RGE, Port, économies énergie, confort thermique" />
+        <title>Isolation Intérieure | Combles & Murs | Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Experts en isolation intérieure à Port (01). Isolation des murs, combles et plafonds. Solutions performantes pour un confort optimal toute l'année." 
+        />
+        <meta name="keywords" content="isolation intérieure, isolation murs, isolation combles, Port, Ain" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
-        <meta property="og:title" content="Isolation Intérieure Certifiée RGE | Pauget & Fils" />
-        <meta property="og:description" content="Solutions d'isolation thermique et phonique intérieure sur mesure. Artisans certifiés RGE." />
+        <meta property="og:title" content="Isolation Intérieure Port | Pauget & Fils" />
+        <meta property="og:description" content="Solutions d'isolation intérieure performantes. Améliorez votre confort et réduisez vos factures énergétiques." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation/interieure" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>
@@ -164,8 +167,10 @@ const IsolationInterieure = () => {
           </motion.div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 const services = [{
   title: "Isolation des Murs",
   description: "Solutions complètes pour l'isolation thermique et phonique de vos murs intérieurs.",
@@ -179,4 +184,5 @@ const services = [{
   description: "Amélioration du confort acoustique de votre habitat.",
   features: ["Isolation phonique", "Correction acoustique", "Membranes acoustiques"]
 }];
+
 export default IsolationInterieure;

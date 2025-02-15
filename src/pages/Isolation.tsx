@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,18 +7,16 @@ const Isolation = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Services d'Isolation Thermique à Port | Pauget & Fils</title>
+        <title>Solutions d'Isolation Thermique à Port | RGE | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Expert en isolation thermique à Port. Solutions d'isolation intérieure et extérieure pour une meilleure performance énergétique. Devis gratuit et conseils personnalisés. Intervention dans l'Ain (01)."
+          content="Expert en isolation thermique à Port (01). Solutions intérieures et extérieures, certification RGE. Optimisez vos performances énergétiques avec nos solutions sur-mesure." 
         />
-        <meta name="keywords" content="isolation thermique, isolation intérieure, isolation extérieure, Port, Ain, économies énergie" />
+        <meta name="keywords" content="isolation thermique, isolation maison, RGE, Port, Ain, économies énergie" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation" />
-        <meta property="og:title" content="Solutions d'Isolation Thermique | Pauget & Fils" />
-        <meta property="og:description" content="Optimisez votre confort thermique avec nos solutions d'isolation. Entreprise certifiée RGE." />
+        <meta property="og:title" content="Expert en Isolation Thermique | Pauget & Fils" />
+        <meta property="og:description" content="Améliorez votre confort et réduisez vos factures avec nos solutions d'isolation certifiées RGE." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

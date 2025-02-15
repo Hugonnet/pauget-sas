@@ -13,11 +13,9 @@ const Platrerie = () => {
         />
         <meta name="keywords" content="plâtrerie, cloisons, doublages, faux-plafonds, Port, Ain, plâtrier traditionnel" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/platrerie" />
         <meta property="og:title" content="Expert en Plâtrerie Traditionnelle | Pauget & Fils" />
         <meta property="og:description" content="Plus de 25 ans d'expertise en plâtrerie traditionnelle. Travaux de qualité pour vos cloisons, plafonds et doublages." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/platrerie" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

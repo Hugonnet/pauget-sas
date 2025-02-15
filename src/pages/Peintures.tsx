@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -11,15 +10,13 @@ const Peintures = () => {
         <title>Services de Peinture Professionnelle à Port | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Artisans peintres qualifiés à Port (01). Peinture intérieure et extérieure, décoration, ravalement de façade. Solutions sur-mesure pour particuliers et professionnels."
+          content="Artisan peintre décorateur à Port (01). Peinture intérieure et extérieure, décoration, ravalement de façade. Solutions sur-mesure pour particuliers et professionnels."
         />
         <meta name="keywords" content="peinture, décoration, ravalement façade, Port, Ain, artisan peintre" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures" />
         <meta property="og:title" content="Services de Peinture Professionnelle | Pauget & Fils" />
         <meta property="og:description" content="Découvrez nos services de peinture intérieure et extérieure. Expertise artisanale pour tous vos projets." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

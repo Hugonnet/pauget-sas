@@ -7,18 +7,16 @@ const PeinturesInterieures = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Peintre Décorateur Intérieur à Port | Finitions Pro | Pauget & Fils</title>
+        <title>Peinture Intérieure à Port | Décoration & Finitions | Pauget & Fils</title>
         <meta 
           name="description" 
-          content="Artisan peintre décorateur à Port (01). Peintures écologiques, finitions haut de gamme, conseil déco personnalisé. Expertise en peinture intérieure, revêtements muraux et décoration." 
+          content="Expert en peinture intérieure à Port (01). Peintures écologiques, finitions haut de gamme, conseils déco personnalisés. Rénovation et décoration d'intérieur." 
         />
-        <meta name="keywords" content="peinture intérieure, décoration, finitions, Port, revêtements muraux, peintre décorateur" />
+        <meta name="keywords" content="peinture intérieure, décoration, finitions, Port, peintre décorateur, rénovation intérieure" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/peintures/interieures" />
         <meta property="og:title" content="Expert Peinture Intérieure & Décoration | Pauget & Fils" />
-        <meta property="og:description" content="Rénovation et décoration d'intérieur par des artisans peintres qualifiés. Conseils personnalisés et finitions soignées." />
+        <meta property="og:description" content="Transformez votre intérieur avec nos services de peinture professionnelle. Conseils personnalisés et finitions soignées." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures/interieures" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>

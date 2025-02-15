@@ -1,21 +1,22 @@
-
-import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const IsolationExterieure = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Isolation Thermique par l'Extérieur (ITE) à Port | Pauget & Fils</title>
-        <meta name="description" content="Spécialiste de l'isolation par l'extérieur à Port. Solutions ITE performantes, rénovation énergétique certifiée RGE. Amélioration du confort thermique, réduction des factures énergétiques." />
-        <meta name="keywords" content="ITE, isolation extérieure, rénovation énergétique, Port, RGE, façade isolation" />
+        <title>Isolation Thermique par l'Extérieur ITE à Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Spécialiste de l'isolation thermique par l'extérieur (ITE) à Port (01). Solutions performantes, garantie décennale, certification RGE. Devis gratuit pour vos travaux d'isolation." 
+        />
+        <meta name="keywords" content="ITE, isolation extérieure, isolation thermique, Port, Ain, RGE" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/isolation/exterieure" />
-        <meta property="og:title" content="Expert en Isolation Thermique par l'Extérieur | Pauget & Fils" />
-        <meta property="og:description" content="Solutions d'isolation par l'extérieur performantes et durables. Certification RGE, aides disponibles." />
+        <meta property="og:title" content="Expert ITE Port | Pauget & Fils" />
+        <meta property="og:description" content="Isolation thermique par l'extérieur performante. Protection durable et valorisation de votre habitat." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/isolation/exterieure" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>
@@ -166,7 +167,8 @@ Nous intervenons dans l'Ain (01) et la Haute-Savoie (74), notamment dans les sec
           </motion.div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
 
 export default IsolationExterieure;

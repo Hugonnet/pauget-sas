@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+
 interface Realisation {
   id: string;
   title: string;
@@ -18,7 +19,9 @@ interface Realisation {
   image: string;
   tags: string[];
 }
+
 const defaultTags = ["Plâtrerie", "Peinture intérieure", "Peinture extérieure", "Isolation intérieure", "Isolation extérieure", "Etanchéité à l'air"];
+
 const Realisations = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [realisations, setRealisations] = useState<Realisation[]>([]);
@@ -29,9 +32,11 @@ const Realisations = () => {
   const {
     toast
   } = useToast();
+
   useEffect(() => {
     fetchRealisations();
   }, []);
+
   const fetchRealisations = async () => {
     try {
       const {
@@ -51,6 +56,7 @@ const Realisations = () => {
       setLoading(false);
     }
   };
+
   const handleDelete = async (id: string) => {
     try {
       const {
@@ -73,11 +79,30 @@ const Realisations = () => {
       });
     }
   };
+
   const toggleTag = (tag: string) => {
     setSelectedTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]);
   };
+
   const filteredRealisations = selectedTags.length > 0 ? realisations.filter(r => selectedTags.every(tag => r.tags?.includes(tag))) : realisations;
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
+      <Helmet>
+        <title>Nos Réalisations | Portfolio Travaux | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Découvrez nos réalisations en plâtrerie, peinture et isolation à Port et ses environs. Photos et détails de nos chantiers. Expertise et savoir-faire depuis 1997." 
+        />
+        <meta name="keywords" content="réalisations, portfolio, travaux, plâtrerie, peinture, isolation, Port, Ain" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Portfolio Réalisations | Pauget & Fils" />
+        <meta property="og:description" content="Découvrez nos plus belles réalisations en plâtrerie, peinture et isolation. L'excellence artisanale en images." />
+        <meta property="og:type" content="website" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Port" />
+      </Helmet>
+
       <div className="relative h-[40vh] bg-gradient-to-br from-primary/80 to-primary overflow-hidden">
         <div className="absolute inset-0 transform -skew-y-6 bg-gradient-to-r from-background to-primary/10 translate-y-1/3" />
         <div className="relative container mx-auto px-4 h-full flex items-center justify-center">
@@ -159,6 +184,8 @@ const Realisations = () => {
             </div>)}
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Realisations;

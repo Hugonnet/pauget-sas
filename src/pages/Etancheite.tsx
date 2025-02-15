@@ -1,19 +1,22 @@
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+
 const Etancheite = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Test d'Étanchéité à l'Air RT2012/RE2020 à Port | Pauget & Fils</title>
-        <meta name="description" content="Spécialiste des tests d'infiltrométrie et de l'étanchéité à l'air à Port (01). Conformité RT2012/RE2020, mesures précises, rapport détaillé. Optimisation de la performance énergétique." />
-        <meta name="keywords" content="test infiltrométrie, étanchéité air, RT2012, RE2020, Port, performance énergétique" />
+        <title>Étanchéité à l'Air | Test Infiltrométrie Port | Pauget & Fils</title>
+        <meta 
+          name="description" 
+          content="Expert en étanchéité à l'air à Port (01). Test d'infiltrométrie, optimisation énergétique, RT2012. Solutions professionnelles pour une parfaite étanchéité." 
+        />
+        <meta name="keywords" content="étanchéité air, test infiltrométrie, RT2012, Port, Ain" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.platrerie-peinture-pauget.fr/etancheite" />
-        <meta property="og:title" content="Expert en Tests d'Étanchéité à l'Air | Pauget & Fils" />
-        <meta property="og:description" content="Tests d'infiltrométrie professionnels pour RT2012/RE2020. Optimisez la performance énergétique de votre habitat." />
+        <meta property="og:title" content="Expert Étanchéité à l'Air | Pauget & Fils" />
+        <meta property="og:description" content="Solutions professionnelles pour l'étanchéité à l'air. Tests et diagnostics pour optimiser votre habitat." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/etancheite" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
       </Helmet>
@@ -165,8 +168,10 @@ const Etancheite = () => {
           </motion.div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 const services = [{
   title: "Test d'Étanchéité",
   description: "Mesure précise des fuites d'air pour identifier les points d'amélioration.",
@@ -180,4 +185,5 @@ const services = [{
   description: "Validation de la conformité aux normes en vigueur.",
   features: ["Test final", "Rapport de conformité", "Certification officielle"]
 }];
+
 export default Etancheite;
