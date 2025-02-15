@@ -20,8 +20,12 @@ const Peintures = () => {
         <meta property="og:description" content="Découvrez nos services de peinture intérieure et extérieure. Expertise artisanale pour tous vos projets." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.platrerie-peinture-pauget.fr/peintures" />
+        <meta property="og:image" content="/lovable-uploads/hero-peintures-interieures.webp" />
+        <meta property="og:image:alt" content="Services de peinture professionnelle Pauget & Fils" />
         <meta name="geo.region" content="FR-ARA" />
         <meta name="geo.placename" content="Port" />
+        <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
+        <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
       </Helmet>
 
       <section className="py-20">
