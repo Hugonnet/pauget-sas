@@ -7,8 +7,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import { AuthProvider } from "@/hooks/useAuth";
-import { Helmet } from "react-helmet-async";
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
 import Platrerie from './pages/Platrerie';
@@ -25,25 +23,15 @@ import Contact from './pages/Contact';
 import RealisationEdit from './pages/RealisationEdit';
 
 const queryClient = new QueryClient();
+const helmetContext = {}; // Ajout du contexte Helmet
 
 const App = () => {
   return (
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <QueryClientProvider client={queryClient}>
         <HashRouter>
           <AuthProvider>
             <div className="flex flex-col min-h-screen w-full">
-              <Helmet>
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="theme-color" content="#FDE1D3" />
-                <meta name="keywords" content="plâtrerie, peinture, isolation, Port, Ain, rénovation, construction, artisan" />
-                <meta property="og:type" content="website" />
-                <meta name="geo.region" content="FR-ARA" />
-                <meta name="geo.placename" content="Port" />
-                <meta name="geo.position" content="46.16690444946289;5.568050861358643" />
-                <meta name="ICBM" content="46.16690444946289, 5.568050861358643" />
-              </Helmet>
               <Header />
               <main className="flex-grow w-full">
                 <Routes>

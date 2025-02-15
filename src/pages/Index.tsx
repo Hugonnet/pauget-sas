@@ -54,7 +54,8 @@ const services = [
 const Index = () => {
   return (
     <div className="flex flex-col space-y-0">
-      <Helmet>
+      <Helmet defaultTitle="Pauget & Fils | Plâtrerie Peinture Isolation Port 01" prioritizeSeoTags={true}>
+        <html lang="fr" />
         <title>Pauget & Fils | Plâtrerie Peinture Isolation Port 01</title>
         <meta 
           name="description" 
